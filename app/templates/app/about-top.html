@@ -1,0 +1,42 @@
+{% extends 'app/page-layout.html' %}
+{% load static %}
+
+
+{% block title %}ABOUT{% endblock %}
+{% block css %}{% static 'app/css/about-top.css' %}{% endblock %}
+
+{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
+{% block page_title %}ABOUT{% endblock %}
+{% block page_minititle %}このサイトについて{% endblock %}
+
+{% block body_detail %}
+<div class="block_space"></div>
+<div class="box1">
+  <img src="{% static 'app/img/home7.png' %}" class="imgh7">
+  <div class="cover2"></div>
+  <p class="box1-text1">FINSWIMMING</p>
+  <p class="box1-text2">フィンスイミング</p>
+  <div class="bar2"></div>
+  <p class="box1-text3">
+    お試しの文章です。大学フィンスイミングチームについての説明が入ります。
+    お試しの文章です。大学フィンスイミングチームについての説明が入ります。
+    お試しの文章です。大学フィンスイミングチームについての説明。
+  </p>
+</div>
+<div class="block_mini_space"></div>
+<div class="box2">
+  <img src="{% static 'app/img/home7.png' %}" class="imgh7">
+  <div class="cover2"></div>
+  <p class="box2-text1">JFSA</p>
+  <p class="box2-text2">日本フィンスイミング学生連合</p>
+  <div class="bar3"></div>
+  <p class="box2-text3">
+    お試しの文章です。大学フィンスイミングチームについての説明が入ります。
+    お試しの文章です。大学フィンスイミングチームについての説明が入ります。
+    お試しの文章です。大学フィンスイミングチームについての説明。
+  </p>
+</div>
+<div class="block_mini_space"></div>
+
+
+{% endblock %}

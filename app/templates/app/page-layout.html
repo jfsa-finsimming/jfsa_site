@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang=ja dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% block css %}{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/page-layout.css' %}">
+    <script src="https://kit.fontawesome.com/b51ecb5f42.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+      <img src="{% block page_top_img %}{% endblock %}" class="img_top" alt="img">
+      <div class="cover"></div>
+
+      <ul id="menu1">
+        <li><a href="{% url 'top' %}">HOME</a></li>
+        <li><a href="{% url 'trial' %}">TRIAL</a></li>
+
+        <li><a href="{% url 'team' %}">TEAM</a>
+          <ul>
+            <li><a href="{% url 'college' %}">COLLEGE</a></li>
+            <li><a href="{% url 'club' %}">CLUB</a></li>
+            <li><a href="{% url 'national' %}">NATIONAL</a></li>
+          </ul>
+        </li>
+
+        <li><a href="{% url 'training' %}">TRAINING</a>
+          <ul>
+            <li><a href="{% url 'training_jfsa' %}">TRAINING JFSA</a></li>
+            <li><a href="{% url 'training_story' %}">TRAINING STORY</a></li>
+          </ul>
+        </li>
+
+        <li><a href="{% url 'race' %}">RACE</a>
+          <ul>
+            <li><a href="{% url 'race_jfsa' %}"> JFSA CUP</a></li>
+          </ul>
+        </li>
+
+        <li><a href="{% url 'news' %}">NEWS</a></li>
+
+        <li><a href="{% url 'about' %}">ABOUT</a>
+          <ul>
+            <li><a href="{% url 'about_finswimming' %}">FINSWIMMING</a></li>
+            <li><a href="{% url 'about_jfsa' %}">JFSA</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div id="nav-drawer">
+       <input id="nav-input" type="checkbox" class="nav-unshown">
+       <label id="nav-open" for="nav-input"><span></span></label>
+       <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+       <div id="nav-content">
+      <ul id="menu3">
+        <li><a href="{% url 'top' %}">HOME</a></li>
+        <li><a href="{% url 'trial' %}">TRIAL</a></li>
+
+        <li><a href="{% url 'team' %}">TEAM</a>
+          <ul>
+            <li><a href="{% url 'college' %}">COLLEGE</a></li>
+            <li><a href="{% url 'club' %}">CLUB</a></li>
+            <li><a href="{% url 'national' %}">NATIONAL</a></li>
+          </ul>
+        </li>
+
+        <li><a href="{% url 'training' %}">TRAINING</a>
+          <ul>
+            <li><a href="{% url 'training_jfsa' %}">TRAINING JFSA</a></li>
+            <li><a href="{% url 'training_story' %}">TRAINING STORY</a></li>
+          </ul>
+        </li>
+
+        <li><a href="{% url 'race' %}">RACE</a>
+          <ul>
+            <li><a href="{% url 'race_jfsa' %}"> JFSA CUP</a></li>
+          </ul>
+        </li>
+
+        <li><a href="{% url 'news' %}">NEWS</a></li>
+
+        <li><a href="{% url 'about' %}">ABOUT</a>
+          <ul>
+            <li><a href="{% url 'about_finswimming' %}">FINSWIMMING</a></li>
+            <li><a href="{% url 'about_jfsa' %}">JFSA</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      </div>
+      </div>
+
+      <p class="page_title">{% block page_title %}{% endblock %}</p>
+      <div id="page_minititle">{% block page_minititle %}{% endblock %}</div>
+      <div id="page_minititlele_bar"></div>
+      <div class="header_space"></div>
+
+<script src="{% static 'app/js/page-layout.js' %}"></script>
+
+{% block body_detail %}{% endblock %}
+
+<!-- コンテンツとフッター部分の間のスペース -->
+<div class="footer_space"></div>
+
+<!-- カレンダー全体のブロック指定 -->
+<div class="calendar_block">
+  <!-- カレンダーのみの表示 -->
+  <div class="calendar">
+    <p class="month">{{month_current.month}}</p>
+    <table>
+      <thead>
+       <tr>
+         {% for w in week_names %}
+          <th>{{ w }}</th>
+         {% endfor %}
+       </tr>
+    </thead>
+    <tbody>
+      {% for week in month_days %}
+      <tr>
+        {% for day in week %}
+          {% if now == day %}
+          <td>
+          {% else %}
+          <td>
+          {% endif %}
+          {% if month_current.month != day.month %}
+            {{ day | date:"m/d" }}
+          {% else %}
+            {{ day.day }}
+          {% endif %}
+          </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <div class="calendar_trial_mark"></div>
+  <p class="calendar_trial">体験会</p>
+  <div class="calendar_training_mark"></div>
+  <p class="calendar_training">練習会</p>
+  <div class="calendar_race_mark"></div>
+  <p class="calendar_race">競技会</p>
+</div>
+
+<div class="footer_space"></div>
+
+<div class="footer_block">
+  <ul id="footer_menu">
+    <li><a href="{% url 'top' %}">HOME</a></li>
+    <li><a href="{% url 'trial' %}">TRIAL</a></li>
+    <li><a href="{% url 'team' %}">TEAM</a></li>
+    <li><a href="{% url 'training' %}">TRAINING</a></li>
+    <li><a href="{% url 'race' %}">RACE</a></li>
+    <li><a href="{% url 'news' %}">NEWS</a></li>
+    <li><a href="{% url 'about' %}">ABOUT</a></li>
+  </ul>
+  <p class="footer_mail">Mail : fin.univ.assoc@gmail.com</p>
+  <div class="footer_icons">
+    <div class="footer_icon">
+      <a href="#">
+        <i class="fab fa-line footer_line"></i>
+      </a>
+    </div>
+    <div class="footer_icon">
+      <a href="#">
+        <i class="fab fa-instagram-square footer_inst"></i>
+      </a>
+    </div>
+    <div class="footer_icon">
+      <a href="#">
+        <i class="fab fa-facebook-square footer_facebook"></i>
+      </a>
+    </div>
+    <div class="footer_icon">
+      <a href="#">
+        <i class="fab fa-twitter-square footer_twitter"></i>
+      </a>
+    </div>
+  </div>
+  <p class="jfsa_romaji">JAPAN FINSWIMMING STUDENT ASSOCIATION</p>
+  <p class="jfsa">日本フィンスイミング学生連合</p>
+</div>
+<div class="bottom_space"></div>
+</body>
+</html>

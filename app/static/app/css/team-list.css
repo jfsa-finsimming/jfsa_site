@@ -1,0 +1,135 @@
+/* ブラウザの横幅が750px以上の時のCSS */
+@media screen and (min-width:751px){
+.space{
+  width: 100%;
+  height: 368px;
+  position:relative;
+  margin:0 auto;
+}
+.detail_bar1{
+  width: 80px;
+  height: 8px;
+  background-color: #D6E1F4;
+  position:absolute;top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.detail_bar2{
+  width: 40px;
+  height: 8px;
+  background-color: #D6E1F4;
+  position:absolute;top: 216px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.detail_bar3{
+  width: 12px;
+  height: 8px;
+  background-color: #D6E1F4;
+  position:absolute;top: 232px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+#team_all{
+  position: relative;top:0px;
+  width:940px;
+  margin: 0 auto;
+  color: #D6E1F4;
+  font-family: "Hiragino Sans";
+}
+#team1,#team2,#team3,#team4,#team5,#team6,#team7,#team8{
+  width: 440px;
+  height: 380px;
+}
+#team1{
+  position: absolute;top:0px;
+}
+#team2{
+  position: absolute;top:120px;right:0px;
+}
+#team3{
+  position: absolute;top:500px;
+}
+#team4{
+  position: absolute;top:620px;right:0px;
+}
+#team5{
+  position: absolute;top:1000px;
+}
+#team6{
+  position: absolute;top:1120px;right:0px;
+}
+#team7{
+  position: absolute;top:1500px;
+}
+#team8{
+  position: absolute;top:1620px;right:0px;
+}
+.triangle{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 360px 300px 0;
+  border-color: transparent #3A1581 transparent transparent;
+  position: absolute;bottom: 0px;right: 0px;
+}
+.team_thumnail{
+  position: absolute;top: 0px;left: 0px;
+}
+.team_shortname{
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;top: 168px;left: 80px;
+}
+.team_owner{
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;top: 188px;right: 40px;
+}
+.team_description{
+  width: 320px;
+  font-size: 16px;
+  position: absolute;top: 222px;left: 80px;
+}
+.iconset{
+  position: absolute;bottom: 8px;left: 80px;
+  display: flex;
+}
+.icon{
+  margin-right:16px;
+}
+.fa-pager{
+  color: #D6E1F4;
+  font-size: 2em;
+}
+.fa-instagram-square{
+  color: #D6E1F4;
+  font-size: 2em;
+}
+.fa-twitter-square{
+  color: #D6E1F4;
+  font-size: 2em;
+}
+.fa-facebook-square{
+  color: #D6E1F4;
+  font-size: 2em;
+}
+.fa-envelope{
+  color: #D6E1F4;
+  font-size: 2em;
+}
+.pagination{
+  height: 324px;
+  font-family: impact;
+  font-size: 24px;
+  margin: 0 auto;
+  text-align: center;
+  color: #D6E1F4;
+}
+}

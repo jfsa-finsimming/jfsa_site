@@ -1,0 +1,125 @@
+/* ブラウザの横幅が750px以上の時のCSS */
+@media screen and (min-width:750px){
+
+  #news_all{
+    position: relative;
+    width:880px;
+    margin: 0 auto;
+  }
+  /* それぞれのニュースの大きさを設定 */
+  #news1,#news2,#news3,#news4,#news5,#news6,#news7,#news8{
+    width:400px;
+    height:400px;
+  }
+  /* それぞれのニュースの位置を設定 */
+  #news1{
+    position: absolute;top:120px;
+  }
+  #news2{
+    position: absolute;top:120px;right: 0;
+  }
+  #news3{
+    position: absolute;top:600px;
+  }
+  #news4{
+    position: absolute;top:600px;right: 0;
+  }
+  #news5{
+    position: absolute;top:1080px;
+  }
+  #news6{
+    position: absolute;top:1080px;right: 0;
+  }
+  #news7{
+    position: absolute;top:1560px;
+  }
+  #news8{
+    position: absolute;top:1560px;right: 0;
+  }
+  /* サムネイルの位置を指定 */
+  .news_thumnail{
+    position: absolute;top:0px;left:0px;
+  }
+  /* ニュースの文字が書いてある場所のマスクを作成・指定 */
+  .news_cover{
+    width:400px;
+    height:200px;
+    background-color: black;
+    position: absolute;top: 200px;left: 0px;
+    opacity: 0.5;
+  }
+  /* 左上の三角マークを作成・指定 */
+  .triangle_upper_left{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 80px 120px 0 0;
+    border-color: #3A1581 transparent transparent transparent;
+    position: absolute;top: 200px;left: 0px;
+  }
+  /* 右下の三角マークの作成・指定 */
+  .triangle_lower_right{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 80px 120px;
+  border-color: transparent transparent #3A1581 transparent;
+  position: absolute;top: 320px;right: 0px;
+  }
+  /* 記事の作成日を指定 */
+  .published_date{
+    font-size: 24px;
+    color: #D6E1F4;
+    font-family: impact;
+    height: 29px;
+    position: absolute;top:200px;left: 24px;
+    text-align: left;
+  }
+  /* trial/race/trainingのマークを作成 */
+  .trial_mark,.race_mark,.training_mark{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;top:229px;right:223px;
+  }
+  /* それぞれのマークの色を指定 */
+  .trial_mark{
+    background-color: #8BE043;
+  }
+  .race_mark{
+    background-color: #6AABF7;
+  }
+  .training_mark{
+    background-color: #E07F43;
+  }
+  /* ニュースのタイトルを指定 */
+  .news_title{
+    font-size: 24px;
+    color: #D6E1F4;
+    font-family: "Hiragino Sans";
+    font-weight: 700;
+    height: 24px;
+    position: absolute;top:237px;left: 24px;
+    text-align: left;
+  }
+  /* ニュースの65文字に省略されたコンテンツ部分の指定 */
+  .news_contents{
+    font-size: 16px;
+    color: #D6E1F4;
+    font-family: "Hiragino Sans";
+    font-weight: 700;
+    width:352px;
+    height:83px;
+    position: absolute;top:289px;left: 24px;
+    text-align: left;
+  }
+  /* ページネーションを指定 */
+  .pagination{
+    font-family: impact;
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
+    color: #D6E1F4;
+    position: relative;
+  }
+}

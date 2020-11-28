@@ -1,0 +1,302 @@
+.block_space{
+  width: 100%;
+  height: 120px;
+  position:relative;
+  margin:0 auto;
+}
+.race_schedule{
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+.race_schedule_title{
+  font-size: 72px;
+  color: #D6E1F4;
+  font-weight: 700;
+  font-family: impact;
+  text-align: center;
+}
+.race_schedule_bar{
+  width: 60px;
+  height: 12px;
+  background-color: #D6E1F4;
+  position:relative;top: -72px;
+  margin: 0 auto;
+}
+.trial_description{
+  width: 980px;
+  height: 745px;
+  margin: 0 auto;
+  position: relative;
+}
+.trial_img1{
+  position: absolute;
+}
+.trial_img2{
+  position: absolute;right: 0px;
+}
+.description1{
+  width: 742px;
+  height: 395px;
+  position: absolute;top: 350px;right: 0px;
+}
+.description2{
+  width: 742px;
+  height: 395px;
+  position: absolute;top: 350px;left: 0px;
+}
+.description_cover{
+  width:742px;
+  height:395px;
+  background-color: black;
+  position: absolute;
+  opacity: 0.5;
+}
+.triangle_upper_right{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 240px 160px 0;
+  border-color: transparent #3A1581 transparent transparent;
+  position: absolute;top: 0px;right: 0px;
+}
+.triangle_lower_left{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 160px 0 0 240px;
+  border-color: transparent transparent transparent #3A1581;
+  position: absolute;top: 235px;left: 0px;
+}
+.description_title{
+  font-size: 40px;
+  color: #D6E1F4;
+  font-family: "Hiragino Sans";
+  font-weight: 700;
+  position: absolute;top: 0px;left: 40px;
+}
+.description_text{
+  width: 662px;
+  font-size: 20px;
+  color: #D6E1F4;
+  font-family: "Hiragino Sans";
+  font-weight: 400;
+  position: absolute;top: 96px;left: 40px;
+}
+.style_block{
+  position: relative;top:0px;
+  width:940px;
+  height:1138px;
+  margin: 0 auto;
+  color: #D6E1F4;
+  font-family: "Hiragino Sans";
+}
+.apnea,.surface,.bifin,.immersion{
+  width: 440px;
+  height: 380px;
+}
+.apnea{
+  position: absolute;top:174px;
+}
+.surface{
+  position: absolute;top:254px;right: 0px;
+}
+.bifin{
+  position: absolute;top:674px;
+}
+.immersion{
+  position: absolute;top:754px;right: 0px;
+}
+.style_thumnail{
+  position: absolute;top: 0px;left: 0px;
+}
+.aboutfin_triangle{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 360px 300px 0;
+  border-color: transparent #3A1581 transparent transparent;
+  position: absolute;bottom: 0px;right: 0px;
+}
+.style_shortname{
+  font-size: 52px;
+  position: absolute;top: 140px;left: 20px;
+  font-family: Impact;
+}
+.style_description{
+  width: 280px;
+  font-size: 16px;
+  position: absolute;top: 180px;left: 80px;
+}
+.button1{
+  width:102px;
+  height:48px;
+  border:2px solid #D6E1F4;
+  float:left;
+  text-align:center;
+  cursor:pointer;
+  position:absolute;top: 330px;right: 80px;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin:0 0 40px 50px;
+}
+.button1 a{
+  font-family:impact;
+  font-size:32px;
+  color:#D6E1F4;
+  text-decoration:none;
+  transition:all .5s ease;
+  z-index:2;
+  position:relative;
+  text-align: center;
+  padding: auto;
+}
+.eff-1{
+  width:102px;
+  height:48px;
+  left:-102px;
+  background:#D6E1F4;
+  position:absolute;
+  transition:all .5s ease;
+  z-index:1;
+}
+.button1:hover .eff-1{
+  left:0;
+}
+.button1:hover a{
+  color:#04111C;
+}
+.tool_block{
+  position: relative;top:0px;
+  width:940px;
+  height:1098px;
+  margin: 0 auto;
+  color: #D6E1F4;
+  font-family: "Hiragino Sans";
+}
+.monofin,.bifin_tool,.sunokel{
+  width: 440px;
+  height:380px;
+}
+.monofin{
+  position: absolute;top:174px;
+}
+.bifin_tool{
+  position: absolute;top:254px;right: 0px;
+}
+.sunokel{
+  position: absolute;top:714px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.tool_thumnail{
+  position: absolute;
+}
+.tool_shortname{
+  font-size: 40px;
+  position: absolute;top: 148px;left: 80px;
+  font-family: Impact;
+}
+.tool_name{
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;top: 184px;right: 80px;
+}
+.tool_description{
+  width: 320px;
+  font-size: 16px;
+  position: absolute;top: 224px;left: 80px;
+}
+
+
+
+
+
+.fin_qa_block{
+  position: relative;top:0px;
+  width:940px;
+  margin: 0 auto;
+  color: #D6E1F4;
+}
+
+.cp_qa *, .cp_qa *:after, .cp_qa *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.cp_qa {
+  border-top: 4px solid #D6E1F4;
+  width: 846px;
+  margin: 0 auto;
+  position: relative;
+}
+.cp_qa .cp_actab {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 1px;
+  color: #D6E1F4;
+}
+.cp_qa .cp_actab input {
+  position: absolute;
+  opacity: 0;
+}
+/* 質問 */
+.cp_qa .cp_actab label {
+  font-weight: 700;
+  font-family: "Hiragino Sans";
+  font-size: 20px;
+  line-height: 1.6;
+  position: relative;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 1em 2em 1em 1em;
+  cursor: pointer;
+  border-bottom: 4px solid #D6E1F4;
+}
+.cp_qa .cp_actab label:hover {
+  color: #D6E1F4;
+  background-color: #000088
+}
+/* 答え */
+.cp_qa .cp_actab .cp_actab-content {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.5s ease;
+          transition: max-height 0.5s ease;
+  color: #ffffff;
+  background: rgba(0, 131, 143, 0.5);
+}
+.cp_qa .cp_actab .cp_actab-content p {
+  margin: 1em;
+}
+/* 質問を開いた時の仕様 */
+/* --アイコン */
+.cp_qa .cp_actab input:checked ~ label {
+  color: #e0dc62;
+}
+/* --答えの高さ */
+.cp_qa .cp_actab input:checked ~ .cp_actab-content {
+  max-height: 40em;
+}
+/* 質問をクリックした時のアイコンの動き */
+.cp_qa .cp_actab label::after {
+  line-height: 1.6;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 3em;
+  margin-top: -12.5px;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  text-align: center;
+}
+.cp_qa .cp_actab input[type=checkbox] + label::after {
+  content: '▽';
+}
+.cp_qa .cp_actab input[type=checkbox]:checked + label::after {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}

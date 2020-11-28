@@ -1,0 +1,128 @@
+@media screen and (min-width:751px){
+.race_schedule{
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+.race_schedule_title{
+  font-size: 72px;
+  color: #D6E1F4;
+  font-weight: 700;
+  font-family: impact;
+  text-align: center;
+}
+.race_schedule_bar{
+  width: 60px;
+  height: 12px;
+  background-color: #D6E1F4;
+  position:relative;top: -72px;
+  margin: 0 auto;
+}
+.org_miniblock{
+  height: 80px;
+}
+.trial_description{
+  width: 980px;
+  height: 745px;
+  margin: 0 auto;
+  position: relative;
+}
+.trial_img1{
+  position: absolute;
+}
+.trial_img2{
+  position: absolute;right: 0px;
+}
+.description1{
+  width: 742px;
+  height: 395px;
+  position: absolute;top: 350px;right: 0px;
+}
+.description2{
+  width: 742px;
+  height: 395px;
+  position: absolute;top: 350px;left: 0px;
+}
+.description_cover{
+  width:742px;
+  height:395px;
+  background-color: black;
+  position: absolute;
+  opacity: 0.5;
+}
+.triangle_upper_right{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 240px 160px 0;
+  border-color: transparent #3A1581 transparent transparent;
+  position: absolute;top: 0px;right: 0px;
+}
+.triangle_lower_left{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 160px 0 0 240px;
+  border-color: transparent transparent transparent #3A1581;
+  position: absolute;top: 235px;left: 0px;
+}
+.description_title{
+  font-size: 40px;
+  color: #D6E1F4;
+  font-family: "Hiragino Sans";
+  font-weight: 700;
+  position: absolute;top: 0px;left: 40px;
+}
+.description_text{
+  width: 662px;
+  font-size: 20px;
+  color: #D6E1F4;
+  font-family: "Hiragino Sans";
+  font-weight: 400;
+  position: absolute;top: 96px;left: 40px;
+}
+.jfsa_members_all{
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  margin:0 auto
+}
+.member{
+  width: 240px;
+  height: 300px;
+  position: relative;
+}
+.member_name_romaji{
+  font-size: 24px;
+  color: #D6E1F4;
+  font-weight: 700;
+  font-family: impact;
+  position: absolute;top:148px;
+}
+.member_name{
+  font-size: 16px;
+  color: #D6E1F4;
+  font-weight: 700;
+  font-family: "Hiragino Sans";
+  position: absolute;top:188px;
+}
+.member_college{
+  font-size: 16px;
+  color: #D6E1F4;
+  font-weight: 400;
+  font-family:"Hiragino Sans";
+  position: absolute;top:214px;
+}
+.member_position{
+  font-size: 16px;
+  color: #D6E1F4;
+  font-weight: 400;
+  font-family:"Hiragino Sans";
+  position: absolute;top:234px;
+}
+}
+@media screen and (min-width:961px){
+.jfsa_members_all{
+  width: 960px;
+}
+}

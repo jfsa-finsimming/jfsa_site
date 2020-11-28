@@ -1,0 +1,63 @@
+{% extends 'app/page-layout.html' %}
+{% load static %}
+
+
+{% block title %}COLLEGE TEAM{% endblock %}
+{% block css %}{% static 'app/css/team-list.css' %}{% endblock %}
+
+{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
+{% block page_title %}COLLEGE TEAM{% endblock %}
+{% block page_minititle %}大学フィンスイミングチーム{% endblock %}
+
+{% block body_detail %}
+<div class="space">
+  <div class="detail_bar1"></div>
+  <div class="detail_bar2"></div>
+  <div class="detail_bar3"></div>
+</div>
+<div id="team_all">
+{% for team in teams %}
+  <div id="team{{ forloop.counter }}">
+    <div class="triangle"></div>
+    <img class="team_thumnail" src="{{team.image.url}}" width=360>
+    <p class="team_shortname">{{team.short_name}}</p>
+    <p class="team_owner">代表者：{{team.owner}}</p>
+    <p class="team_description">{{team.description}}</p>
+    <div class="iconset">
+      {% if not team.web_url == '' %}
+        <div class="icon"><a href="{{team.web_url}}"><i class="fas fa-pager"></i></a></div>
+      {% endif %}
+      {% if not team.instagram_url == '' %}
+        <div class="icon"><a href="{{team.instagram_url}}"><i class="fab fa-instagram-square"></i></a></div>
+      {% endif %}
+      {% if not team.twitter_url == '' %}
+        <div class="icon"><a href="{{team.twitter_url}}"><i class="fab fa-twitter-square"></i></a></div>
+      {% endif %}
+      {% if not team.facebook_url == '' %}
+        <div class="icon"><a href="{{team.facebook_url}}"><i class="fab fa-facebook-square"></i></a></div>
+      {% endif %}
+      {% if not team.email == '' %}
+        <div class="icon"><a href="{{team.email}}"><i class="fas fa-envelope"></i></a></div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<script src="{% static 'app/js/team-list.js' %}"></script>
+
+<div class="pagination">
+  {% if page_obj.has_previous %}
+    <a href="?page=1"><img src="{% static 'app/img/first_page.png' %}"></a>
+    <a href="?page={{ page_obj.previous_page_number }}"><img src="{% static 'app/img/prev_page.png' %}"></a>
+  {% endif %}
+  <span class="current">
+    {{page_obj.number}} / {{page_obj.paginator.num_pages}}
+  </span>
+  {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}"><img src="{% static 'app/img/next_page.png' %}"></a>
+    <a href="?page={{ page_obj.paginator.num_pages }}"><img src="{% static 'app/img/last_page.png' %}"></a>
+  {% endif %}
+</div>
+
+{% endblock %}

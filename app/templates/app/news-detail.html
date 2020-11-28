@@ -1,0 +1,37 @@
+{% extends 'app/page-layout.html' %}
+{% load static %}
+
+
+{% block title %}NEWS{% endblock %}
+{% block css %}{% static 'app/css/news_detail.css' %}{% endblock %}
+
+{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
+{% block page_title %}NEWS{% endblock %}
+{% block page_minititle %}お知らせを見る{% endblock %}
+
+{% block body_detail %}
+
+<div id="news_detail">
+  <img class="news_thumnail" src="{{news_detail.thumnail.url}}" width=800>
+  <div id="news_cover"></div>
+  <div class="triangle_upper_left"></div>
+  <div class="triangle_lower_right"></div>
+  <p class="published_date">{{news_detail.published_at|date:"Y.m.d"}}</p>
+  {% for tag in news_detail.tags.all %}
+    {% if tag.name == 'trial' %}
+      <div class="trial_mark"></div>
+    {% elif tag.name == 'race' %}
+      <div class="race_mark"></div>
+    {% elif tag.name == 'training' %}
+      <div class="training_mark"></div>
+    {% endif %}
+  {% endfor %}
+  <p class="news_title">{{news_detail.title}}</p>
+  <div id="news_contents">
+    {{ news_detail.formatted_markdown|safe }}
+  </div>
+</div>
+
+<script src="{% static 'app/js/news_detail.js' %}"></script>
+
+{% endblock %}

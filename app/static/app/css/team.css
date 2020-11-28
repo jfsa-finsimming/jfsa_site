@@ -1,0 +1,175 @@
+
+/* -----teamページのみに適用されるCSS----- */
+.block_space{
+  height: 120px;
+}
+.block_mini_space{
+  height: 80px;
+}
+.bar2,.bar3,.bar4{
+  width: 354px;
+  height: 4px;
+  position: absolute;top: 68px;left: 530px;
+  background-color: #D6E1F4;
+}
+.bar3{
+  width: 300px;
+}
+.bar4{
+  width: 258px;
+}
+.box1,.box2,.box3{
+  width: 980px;
+  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #3A1581;
+}
+.box2{
+  position: relative;
+}
+.box3{
+  position: relative;
+}
+.box1-text1,.box2-text1,.box3-text1{
+  color: #D6E1F4;
+  font-size: 56px;
+  font-family: impact;
+  position: absolute;top: 60px;left: 83px;
+  width: 310px;
+}
+.box2-text1{
+  width: 450px;
+  position: absolute;top: 60px;left:17px;
+}
+.box3-text1{
+  width: 450px;
+  position: absolute;top: 60px;left:83px;
+}
+.box1-text2,.box1-text3,.box2-text2,.box2-text3,
+.box3-text2,.box3-text3{
+  color: #D6E1F4;
+  font-size: 27px;
+  font-family: "Hiragino Sans";
+  width: 360px;
+  position: absolute;top: 0px; left: 530px;
+  font-weight: 700;
+}
+.box1-text3,.box2-text3,.box3-text3{
+  font-size: 20px;
+  font-weight: 400;
+  width: 410px;
+  height: 165px;
+  position: absolute;top: 80px; left: 530px;
+}
+.cover2{
+  width: 490px;
+  height: 300px;
+  background-color: #04111C;
+  opacity: 0.5;
+  position: absolute;top: 0px;
+}
+.imgh7{
+  width: 490px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+}
+.race_schedule{
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+.race_schedule_title{
+  font-size: 72px;
+  color: #D6E1F4;
+  font-weight: 700;
+  font-family: impact;
+  text-align: center;
+}
+.race_schedule_bar{
+  width: 60px;
+  height: 12px;
+  background-color: #D6E1F4;
+  position:relative;top: -72px;
+  margin: 0 auto;
+}
+.cp_qa *, .cp_qa *:after, .cp_qa *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.cp_qa {
+  border-top: 4px solid #D6E1F4;
+  width: 846px;
+  margin: 0 auto;
+  position: relative;
+}
+.cp_qa .cp_actab {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 1px;
+  color: #D6E1F4;
+}
+.cp_qa .cp_actab input {
+  position: absolute;
+  opacity: 0;
+}
+/* 質問 */
+.cp_qa .cp_actab label {
+  font-weight: 700;
+  font-family: "Hiragino Sans";
+  font-size: 20px;
+  line-height: 1.6;
+  position: relative;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 1em 2em 1em 1em;
+  cursor: pointer;
+  border-bottom: 4px solid #D6E1F4;
+}
+.cp_qa .cp_actab label:hover {
+  color: #D6E1F4;
+  background-color: #000088
+}
+/* 答え */
+.cp_qa .cp_actab .cp_actab-content {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.5s ease;
+          transition: max-height 0.5s ease;
+  color: #ffffff;
+  background: rgba(0, 131, 143, 0.5);
+}
+.cp_qa .cp_actab .cp_actab-content p {
+  margin: 1em;
+}
+/* 質問を開いた時の仕様 */
+/* --アイコン */
+.cp_qa .cp_actab input:checked ~ label {
+  color: #e0dc62;
+}
+/* --答えの高さ */
+.cp_qa .cp_actab input:checked ~ .cp_actab-content {
+  max-height: 40em;
+}
+/* 質問をクリックした時のアイコンの動き */
+.cp_qa .cp_actab label::after {
+  line-height: 1.6;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 3em;
+  margin-top: -12.5px;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  text-align: center;
+}
+.cp_qa .cp_actab input[type=checkbox] + label::after {
+  content: '▽';
+}
+.cp_qa .cp_actab input[type=checkbox]:checked + label::after {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}

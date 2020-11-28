@@ -1,0 +1,130 @@
+{% extends 'app/page-layout.html' %}
+{% load static %}
+
+
+{% block title %}FINSWIMMING{% endblock %}
+{% block css %}{% static 'app/css/about-jfsa.css' %}{% endblock %}
+
+{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
+{% block page_title %}FINSWIMMING{% endblock %}
+{% block page_minititle %}フィンスイミングについて{% endblock %}
+
+{% block body_detail %}
+<div class="block_space"></div>
+<div class="race_schedule">
+  <p class="race_schedule_title">JFSA</p>
+  <div class="race_schedule_bar"></div>
+  <div class="trial_description">
+    <img src="{% static 'app/img/trial2.png' %}" class="trial_img1">
+    <div class="description1">
+      <div class="description_cover"></div>
+      <div class="triangle_upper_right"></div>
+      <div class="triangle_lower_left"></div>
+      <p class="description_title">
+        題名をここに入力
+      </p>
+      <p class="description_text">
+        お試しの文章が入ってますが、
+        今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        今気づいたけど結構な文章量入ります。ここまででも約140文字。
+      </p>
+    </div>
+  </div>
+</div>
+<div class="race_schedule">
+  <p class="race_schedule_title">JFSA ORGANIZATION</p>
+  <div class="race_schedule_bar"></div>
+  <div class="trial_description">
+    <img src="{% static 'app/img/trial2.png' %}" class="trial_img1">
+    <div class="description1">
+      <div class="description_cover"></div>
+      <div class="triangle_upper_right"></div>
+      <div class="triangle_lower_left"></div>
+      <p class="description_title">
+        執行委員会
+      </p>
+      <p class="description_text">
+        お試しの文章が入ってますが、
+        今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        今気づいたけど結構な文章量入ります。ここまででも約140文字。
+      </p>
+    </div>
+  </div>
+  <div class="org_miniblock"></div>
+  <div class="trial_description">
+    <img src="{% static 'app/img/trial2.png' %}" class="trial_img2">
+    <div class="description2">
+      <div class="description_cover"></div>
+      <div class="triangle_upper_right"></div>
+      <div class="triangle_lower_left"></div>
+      <p class="description_title">
+        大会実行委員会
+      </p>
+      <p class="description_text">
+        お試しの文章が入ってますが、
+        今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        今気づいたけど結構な文章量入ります。ここまででも約140文字。
+      </p>
+    </div>
+  </div>
+  <div class="org_miniblock"></div>
+  <div class="trial_description">
+    <img src="{% static 'app/img/trial2.png' %}" class="trial_img1">
+    <div class="description1">
+      <div class="description_cover"></div>
+      <div class="triangle_upper_right"></div>
+      <div class="triangle_lower_left"></div>
+      <p class="description_title">
+        大会実行委員会
+      </p>
+      <p class="description_text">
+        お試しの文章が入ってますが、
+        今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        今気づいたけど結構な文章量入ります。ここまででも約140文字。
+      </p>
+    </div>
+  </div>
+  <div class="org_miniblock"></div>
+  <div class="trial_description">
+    <img src="{% static 'app/img/trial2.png' %}" class="trial_img2">
+    <div class="description2">
+      <div class="description_cover"></div>
+      <div class="triangle_upper_right"></div>
+      <div class="triangle_lower_left"></div>
+      <p class="description_title">
+        大会実行委員会
+      </p>
+      <p class="description_text">
+        お試しの文章が入ってますが、
+        今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
+        今気づいたけど結構な文章量入ります。ここまででも約140文字。
+      </p>
+    </div>
+  </div>
+</div>
+<div class="race_schedule">
+  <p class="race_schedule_title">JFSA MEMBER</p>
+  <div class="race_schedule_bar"></div>
+  <div class="jfsa_members_all">
+    {% for member in members %}
+    <div class="member">
+      <img class="member_thumnail" src="{{member.image.url}}" width=160>
+      <p class="member_name_romaji">{{member.name_romaji}}</p>
+      <p class="member_name">{{member.name}}</p>
+      <p class="member_college">大学：{{member.college.short_name}}</p>
+      <p class="member_position">役職：{{member.position.name}}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock　%}
