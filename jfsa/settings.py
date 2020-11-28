@@ -26,7 +26,14 @@ SECRET_KEY = '5@#uqx%fnr*wpcye+d2he5_+5zvokmyj3hf+z611i)hs02%p_*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
+
 
 
 # Application definition
