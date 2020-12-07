@@ -13,6 +13,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['jfsa.herokuapp.com']
 
+django_heroku.settings(locals())
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
