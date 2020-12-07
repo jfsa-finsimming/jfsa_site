@@ -447,7 +447,7 @@
 body{
   width: 750px;
   background-color: #04111C;
-  background-image: url("img/home11.png");
+  background-image: url("../img/home11.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
