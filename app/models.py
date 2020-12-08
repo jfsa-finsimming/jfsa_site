@@ -4,7 +4,7 @@ from markdownx.utils import markdownify
 from django.utils import timezone
 from django.template.defaultfilters import slugify
 from django.urls import reverse
-
+from cloudinary.models import CloudinaryField
 
 
 class Team(models.Model):
@@ -12,6 +12,8 @@ class Team(models.Model):
     name = models.CharField(max_length=100)
     owner = models.CharField(max_length=30)
     college_or_club = models.CharField(max_length=10)
+    training_place = models.CharField(max_length=50, null=True, black=True)
+    training_term = models.CharField(max_length=50, null=True, black=True)
     description = models.CharField(max_length=300)
     image = models.ImageField(upload_to='teamimages/')
     web_url=models.URLField(blank=True)

@@ -32,6 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'markdownx',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +87,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hzvuiry8d',
+    'API_KEY': '211641447174227',
+    'API_SECRET': 'g2ccPlzn1HtO1uukU1ZAMvxGdeU'
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -104,3 +112,5 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
