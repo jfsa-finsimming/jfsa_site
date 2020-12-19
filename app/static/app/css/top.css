@@ -919,7 +919,7 @@ h3{
 
 @media screen and (max-width:750px){
 body{
-  width: 750px;
+  width: 100%;
   background-color: #04111C;
   background-image: url("../img/backscreen.png");
   background-repeat: no-repeat;
