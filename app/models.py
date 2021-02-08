@@ -33,7 +33,7 @@ class Team(models.Model):
 class NationalMember(models.Model):
     name_romaji = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
-    team = models.ForeignKey(Team, on_delete=models.PROTECT)
+    team = models.ForeignKey(Team, on_delete=models.PROTECT,null=True, blank=True)
     race = models.CharField(max_length=200)
     selected_year = models.DateField(null=True)
     rank = models.IntegerField(default=1)
@@ -64,7 +64,7 @@ class Position(models.Model):
 class Member(models.Model):
     name = models.CharField(max_length=100)
     name_romaji = models.CharField(max_length=100)
-    college = models.ForeignKey(Team, on_delete=models.PROTECT)
+    college = models.ForeignKey(Team, on_delete=models.PROTECT,null=True, blank=True)
     position = models.ForeignKey(Position, on_delete=models.PROTECT)
     image = models.ImageField(upload_to='memberimages/')
 
