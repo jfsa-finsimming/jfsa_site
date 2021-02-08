@@ -324,7 +324,7 @@ body{
 
 @media screen and (max-width:750px){
   body{
-    width: 750px;
+    width: 100vw;
     background-color: #04111C;
     background-image: url("../img/backscreen.png");
     background-repeat: no-repeat;
@@ -332,15 +332,15 @@ body{
     background-size: cover;
   }
   .img_top{
-  width: 750px;
-  height: 800px;
+  width: 100vw;
+  height: 62.5vh;
   object-fit: cover;
   position: absolute;top: 0px;left: 0px;
   vertical-align: bottom;
   }
   .cover{
-  width: 750px;
-  height: 800px;
+  width: 100vw;
+  height: 62.5vh;
   background-color: black;
   position: absolute;top: 0px;left: 0px;
   opacity: 0.5;
@@ -349,31 +349,30 @@ body{
     display: none;
   }
   .imgh1-2{
-    width: 750px;
-    height: 1280px;
+    width: 100vw;
+    height: 100vh;
     position: absolute;top: 0px;left: 0px;
   }
   #menu1{
     display: none;
   }
   #nav-drawer {
-    position: relative;
-    position: absolute;top: 56px;left: 622px;
+    position: absolute;top: 4.4vh;left: 86.6vw;
   }
   .nav-unshown {
     display:none;
   }
   #nav-open {
       display: inline-block;
-      width: 72px;
-      height: 50px;
+      width: 9.6vw;
+      height: 3.9vh;
       vertical-align: middle;
   }
   #nav-open span, #nav-open span:before, #nav-open span:after {
       position: absolute;left: 0px;
-      height: 8px;
-      width: 72px;
-      border-radius: 3px;
+      height: 0.6vh;
+      width: 9.6vw;
+      border-radius: 0.4vw;
       background: white;
       display: block;
       content: '';
@@ -381,10 +380,10 @@ body{
       z-index: 500;
   }
   #nav-open span:before {
-      bottom: -20px;
+      bottom: -1.6vh;
   }
   #nav-open span:after {
-      bottom: -40px;
+      bottom: -3.2vh;
   }
   #nav-close {
       display: none;

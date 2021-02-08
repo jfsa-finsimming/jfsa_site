@@ -919,7 +919,7 @@ h3{
 
 @media screen and (max-width:750px){
 body{
-  width: 100%;
+  width: 100vw;
   background-color: #04111C;
   background-image: url("../img/backscreen.png");
   background-repeat: no-repeat;
@@ -927,33 +927,33 @@ body{
   background-size: cover;
 }
 .allbox{
-  width: 750px;
+  width: 100vw;
   height: 400px;
   max-width: 1366px;
   position: relative;top:3246px;
   margin: 0 auto;
 }
 .box1{
-  width: 750px;
+  width: 100vw;
   height: 300px;
   max-width: 1366px;
   position: relative;top: 1500px;
   margin: 0 auto;
 }
 .box2{
-  width: 750px;
+  width: 100vw;
   height:200px;
   position: relative;top: 1938px;
   margin:0 auto;
 }
 .box3{
-  width: 750px;
+  width: 100vw;
   height: 200px;
   position: relative;top: 0px;
   margin: 0 auto;
 }
 .box4,.box5,.box6{
-  width: 750px;
+  width: 100vw;
   height: 700px;
   position: relative;top: 2892px;
   margin: 0 auto;
