@@ -1,0 +1,33 @@
+%finswimming-exp,.finswimming-exp{
+  display: flex;
+  align-items: left;
+  cursor: pointer;
+  flex-direction: column;
+  position: absolute; bottom: 0; left: 60%;
+  @media screen and (max-width:900px){
+    display: block;
+    position: relative; left: 2%;
+  }
+  &__en{
+    font-family: Impact;
+    font-size: 48px;
+    @media screen and (max-width:549px){
+      font-size: 40px;
+    }
+  }
+  &__ja{
+    font-size: 16px;
+    font-weight: 700;
+    width: 320px;
+    @media screen and (max-width:899px){
+      margin-top: 20px;
+      width: 94%;
+    }
+  }
+  &__btn{
+    margin-top: 16px;
+    @media screen and (max-width:899px){
+      margin: 20px 5% 0 auto ;
+    }
+  }
+}

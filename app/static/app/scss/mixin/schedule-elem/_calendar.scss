@@ -1,0 +1,40 @@
+%calendar,.calendar{
+  font-family: Impact;
+  text-align: center;
+  width: 640px;
+  @media screen and (max-width:639px){
+    width:  96vw;
+  }
+  &__block{
+    @extend .calendar;
+    width: 560px;
+    height: 420px;
+    margin: 0 auto;
+    border-top:solid  4px;
+    border-bottom:solid 4px;
+    @media screen and (max-width:559px){
+      width: 96vw;
+      height: 120vw;
+    }
+  }
+  &__month{
+    @extend .calendar;
+    font-size: 40px;
+    width: auto;
+    vertical-align: top;
+  }
+  &__week{
+    @extend .calendar;
+    font-size: 18px;
+    color: #646464;
+    width: auto;
+    vertical-align: top;
+    padding: 16px 0 16px 0;
+  }
+  &__day{
+    @extend .calendar;
+    font-size: 18px;
+    width: auto;
+    vertical-align: top;
+  }
+}

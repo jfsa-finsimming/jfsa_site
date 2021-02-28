@@ -1,0 +1,12 @@
+%calendar-exp,.calendar-exp{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  width: 88px;
+  &__mark{
+    margin-right: 24px;
+  }
+  &__p{
+    font-weight: 700;
+  }
+}

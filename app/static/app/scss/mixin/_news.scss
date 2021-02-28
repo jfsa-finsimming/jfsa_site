@@ -1,0 +1,10 @@
+@import "./news-elem/news-block";
+@import "./news-elem/news-list";
+
+
+%news,.news{
+  padding: 100px 0 100px 0;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}
