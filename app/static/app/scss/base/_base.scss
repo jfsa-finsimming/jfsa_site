@@ -5,9 +5,9 @@
   font-family: Hiragino Sans;
   color: #04111C;
 }
-html{
-  overflow-y: scroll;
-}
+
 body{
   background-color: #F6F6F6;
+  overflow-y: scroll;
+  width: calc(100vw - 15px);
 }
