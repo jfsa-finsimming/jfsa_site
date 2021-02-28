@@ -88,11 +88,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
- CLOUDINARY_STORAGE = {
-     'CLOUD_NAME': 'hzvuiry8d',
-     'API_KEY': '211641447174227',
-     'API_SECRET': 'g2ccPlzn1HtO1uukU1ZAMvxGdeU'
- }
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hzvuiry8d',
+    'API_KEY': '211641447174227',
+    'API_SECRET': 'g2ccPlzn1HtO1uukU1ZAMvxGdeU'
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -112,14 +112,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
 ]
 #
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+#DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 
