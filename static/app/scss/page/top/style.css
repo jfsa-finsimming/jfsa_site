@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 1124px) { .intro { width: 100%; position: relative; left: 0; } }
 
-.intro__en { font-family: Impact; font-size: 44px; padding: 40px 10% 40px 10%; }
+.intro__en { font-family: 'Anton', sans-serif; font-size: 44px; padding: 40px 10% 40px 10%; }
 
 @media screen and (max-width: 549px) { .intro__en { font-size: 32px; } }
 
@@ -30,7 +30,7 @@
 
 @media screen and (max-width: 900px) { .finswimming-exp { display: block; position: relative; left: 2%; } }
 
-.finswimming-exp__en { font-family: Impact; font-size: 48px; }
+.finswimming-exp__en { font-family: 'Anton', sans-serif; font-size: 48px; }
 
 @media screen and (max-width: 549px) { .finswimming-exp__en { font-size: 40px; } }
 
@@ -86,7 +86,7 @@
 
 @media screen and (max-width: 899px) { .forstudent-block__icon { font-size: 12vw; } }
 
-.forstudent-block__en { font-size: 40px; font-family: Impact; position: absolute; top: 43%; z-index: 4; }
+.forstudent-block__en { font-size: 40px; font-family: 'Anton', sans-serif; position: absolute; top: 43%; z-index: 4; }
 
 @media screen and (min-width: 900px) and (max-width: 1199px) { .forstudent-block__en { font-size: 3.3vw; } }
 
