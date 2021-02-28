@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',
     'app',
     'markdownx',
     'cloudinary',
@@ -87,11 +88,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'hzvuiry8d',
-    'API_KEY': '211641447174227',
-    'API_SECRET': 'g2ccPlzn1HtO1uukU1ZAMvxGdeU'
-}
+ CLOUDINARY_STORAGE = {
+     'CLOUD_NAME': 'hzvuiry8d',
+     'API_KEY': '211641447174227',
+     'API_SECRET': 'g2ccPlzn1HtO1uukU1ZAMvxGdeU'
+ }
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -112,5 +113,20 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
+#
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
+# Sass/SCSS
+SASS_PROCESSOR_AUTO_INCLUDE = False
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
+SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.scss$'
+SASS_PRECISION = 8
+SASS_OUTPUT_STYLE = 'compact'
+SASS_TEMPLATE_EXTS = ['.html', '.haml']
