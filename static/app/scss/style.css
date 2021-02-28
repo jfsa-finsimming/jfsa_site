@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: Hiragino Sans; color: #04111C; }
 
-body { background-color: #F6F6F6; }
+body { background-color: #F6F6F6; overflow-y: scroll; }
 
 .block-name { margin-left: 80px; }
 
