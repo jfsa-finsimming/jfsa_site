@@ -6,7 +6,7 @@ body { background-color: #F6F6F6; }
 
 @media screen and (max-width: 899px) { .block-name { margin-left: 2%; } }
 
-.block-name__en { font-family: Impact; font-size: 60px; }
+.block-name__en { font-family: 'Anton', sans-serif; font-size: 60px; }
 
 .block-name__ja { font-size: 16px; margin-bottom: 16px; }
 
@@ -14,7 +14,7 @@ body { background-color: #F6F6F6; }
 
 .button { display: flex; flex-direction: row; justify-content: center; align-items: center; width: 200px; height: 40px; background-color: #1F3741; border-radius: 24px; text-decoration: none; }
 
-.button__text { color: #F6F6F6; font-family: Apple LiGothic; font-size: 20px; text-align: center; }
+.button__text { color: #F6F6F6; font-family: 'Didact Gothic', sans-serif; font-size: 20px; text-align: center; }
 
 .button__arrow { font-size: 16px; color: #F6F6F6; margin-left: 16px; -webkit-transition: all .3s; transition: all .3s; }
 
@@ -32,7 +32,7 @@ body { background-color: #F6F6F6; }
 
 .calendar-exp__p { font-weight: 700; }
 
-.calendar, .calendar__day, .calendar__week, .calendar__month, .calendar__block { font-family: Impact; text-align: center; width: 640px; }
+.calendar, .calendar__day, .calendar__week, .calendar__month, .calendar__block { font-family: 'Anton', sans-serif; text-align: center; width: 640px; }
 
 @media screen and (max-width: 639px) { .calendar, .calendar__day, .calendar__week, .calendar__month, .calendar__block { width: 96vw; } }
 
@@ -50,9 +50,9 @@ body { background-color: #F6F6F6; }
 
 @media screen and (min-width: 900px) and (max-width: 1079px) { .page-transition { width: auto; } }
 
-@media screen and (min-width: 468px) and (max-width: 899px) { .page-transition { width: 468px; margin: 16px 0 -16px 0; } }
+@media screen and (min-width: 468px) and (max-width: 899px) { .page-transition { width: 468px; margin: 40px 0 -16px 0; } }
 
-@media screen and (max-width: 467px) { .page-transition { width: 100%; margin: 16px 0 -16px 0; } }
+@media screen and (max-width: 467px) { .page-transition { width: 100%; margin: 40px 0 -16px 0; } }
 
 .page-transition__btn { margin-bottom: 16px; }
 
@@ -114,7 +114,7 @@ body { background-color: #F6F6F6; }
 
 @media screen and (max-width: 899px) { .news { padding: 60px 0 60px 0; } }
 
-.footer-left, .footer-left__upname, .footer-left__jfname, .footer-left__saname { font-family: Impact; font-size: 60px; color: #F6F6F6; margin-left: 10%; }
+.footer-left, .footer-left__upname, .footer-left__jfname, .footer-left__saname { font-family: 'Anton', sans-serif; font-size: 60px; color: #F6F6F6; margin-left: 10%; }
 
 .footer-left__upname, .footer-left__jfname, .footer-left__saname { margin-left: 0%; }
 
@@ -134,7 +134,7 @@ body { background-color: #F6F6F6; }
 
 .footer-right { text-align: right; margin-right: 10%; }
 
-.footer-right__mail { margin-top: 8px; font-size: 16px; font-family: Impact; color: #F6F6F6; }
+.footer-right__mail { margin-top: 8px; font-size: 16px; font-family: 'Anton', sans-serif; color: #F6F6F6; }
 
 .footer-sns { margin-top: 8px; display: flex; flex-wrap: wrap; justify-content: flex-end; }
 
@@ -144,7 +144,7 @@ body { background-color: #F6F6F6; }
 
 .header, .header__name { height: 60px; line-height: 60px; position: fixed; top: 0px; left: 0px; z-index: 100; width: 100%; background-color: #1F3741; }
 
-.header__name { padding-left: 5%; letter-spacing: 4px; font-family: Impact; font-size: 32px; color: #F6F6F6; }
+.header__name { padding-left: 5%; letter-spacing: 4px; font-family: 'Anton', sans-serif; font-size: 32px; color: #F6F6F6; }
 
 .navi { display: block; }
 
