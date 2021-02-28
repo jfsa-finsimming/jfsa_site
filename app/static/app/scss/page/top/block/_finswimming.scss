@@ -1,0 +1,12 @@
+@import "./finswimming-elem/finswimming-all";
+@import "./finswimming-elem/finswimming-exp";
+@import "./finswimming-elem/finswimming-movie";
+
+%finswimming,.finswimming{
+  padding: 100px 0 100px 0;
+  background-color: #EFEFEF;
+  @media screen and (max-width:899px){
+    width: 100%;
+    padding: 60px 0 60px 0;
+  }
+}

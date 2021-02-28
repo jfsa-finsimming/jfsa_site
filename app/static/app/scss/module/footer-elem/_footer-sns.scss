@@ -1,0 +1,11 @@
+%footer-sns,.footer-sns{
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+  &__list{
+    color: #F6F6F6;
+    font-size: 32px;
+    margin-left: 24px;
+  }
+}

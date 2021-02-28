@@ -1,0 +1,40 @@
+%news-list,.news-list{
+  display: flex;
+  padding: 20px 0 20px 0;
+  text-decoration:none;
+  border-bottom: solid 2px;
+  @media screen and (max-width:549px){
+    width: 96vw;
+    margin: 0 auto;
+  }
+  &:last-child{
+    border-bottom: none;
+  }
+  &__date{
+    font-family: Impact;
+    margin-left: 4.5%;
+  }
+  &__mark{
+    margin-left: 4.5%;
+  }
+  &__no-mark{
+    margin-left: 4.5%;
+    width: 16px;
+  }
+  &__title{
+    width: 50%;
+    margin-left: 4.5%;
+    @media screen and (max-width:549px){
+      width: 80%;
+    }
+  }
+  &__thumnail{
+    width: 120px;
+    height: 60px;
+    margin-left: 4.5%;
+    object-fit: cover;
+    @media screen and (max-width:549px){
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+%block-name,.block-name{
+  margin-left: 80px;
+  @media screen and (max-width:899px){
+    margin-left: 2%;
+  }
+  &__en{
+    font-family: Impact;
+    font-size: 60px;
+  }
+  &__ja{
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  &__bar{
+    width: 60px;
+    height: 4px;
+    background-color: #04111C;
+  }
+}

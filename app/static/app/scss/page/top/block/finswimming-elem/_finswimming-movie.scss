@@ -1,0 +1,13 @@
+%finswimming-movie,.finswimming-movie{
+  width: 800px;
+  margin-left: 10%;
+  padding-bottom: 120px;
+  @media screen and (max-width:900px){
+    width:96%;
+    margin: 0 auto;
+    padding-bottom: 0;
+  }
+  &__mp4{
+    max-width: 100%;
+  }
+}

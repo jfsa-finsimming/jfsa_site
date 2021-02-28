@@ -1,0 +1,17 @@
+%forstudent-block-left,.forstudent-block-left{
+  display: flex;
+  flex-direction: column;
+  margin: 110px auto 0 auto;
+  @media screen and (max-width:1199px) {
+    display: none;
+  }
+  &__upbar{
+    width: 4px;
+    height: 60px;
+    background-color: #04111C;
+  }
+  &__downbar{
+    @extend .forstudent-block-left__upbar;
+    margin-top: 140px;
+  }
+}

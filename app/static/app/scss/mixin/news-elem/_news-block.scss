@@ -1,0 +1,14 @@
+%news-block,.news-block{
+  display: flex;
+  flex-direction: column;
+  width: 880px;
+  margin: 40px 5% 0 auto;
+  @media screen and (min-width:900px) and (max-width:999px) {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  @media screen and (max-width:899px){
+    width: 96vw;
+    margin: 0 auto;
+  }
+}
