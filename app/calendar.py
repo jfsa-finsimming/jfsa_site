@@ -5,7 +5,7 @@ import datetime
 class BaseCalendarMixin:
     # カレンダー関連Mixinの、基底クラス
     first_weekday = 6  # 0は月曜から、1は火曜から。6なら日曜から
-    week_names = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT','SUN']
+    week_names = ['MON','TUE','WED','THU','FRI','SAT','SUN']
 
     def setup_calendar(self):
         # <内部カレンダーの設定処理>

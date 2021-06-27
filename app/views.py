@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Team, NationalMember, Position, Member, Tag, NewsPost,PostManager
+from .models import Team, NationalMember, Position, Member, Tag, NewsPost,PostManager, Event
 from django.core.paginator import Paginator
 from django.views import generic
 from . import calendar
@@ -50,9 +50,10 @@ class TrialView(CommonTemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        data = NewsPost.objects.order_by('-event_date').filter(tags__name='trial').published().is_public()[0:9]
-        context.update({'trial_events':data})
+        data = Event.objects.filter(tags__name="trial").order_by('-event_date').published().is_public()[0:6]
+        context.update({'events':data})
         return context
+
 
 class TeamView(CommonTemplateView):
     # チームのトップページを表示させるビュー
@@ -115,6 +116,11 @@ class RaceView(CommonTemplateView):
 class RaceJfsaView(CommonTemplateView):
     # 学生記録会のページを表示させるビュー
     template_name = 'app/race-jfsa.html'
+
+
+class RaceOnlineView(CommonTemplateView):
+    # 学生記録会のページを表示させるビュー
+    template_name = 'app/race-online.html'
 
 
 class NewsView(CommonListView):

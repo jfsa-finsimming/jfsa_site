@@ -1,0 +1,23 @@
+.page-topimg { width: 100%; height: 500px; position: relative; display: flex; justify-content: center; }
+
+@media screen and (max-width: 899px) { .page-topimg { height: 50vh; } }
+
+@media screen and (max-width: 549px) { .page-topimg { height: 70vw; } }
+
+.page-topimg__img { width: 100%; height: 100%; object-fit: cover; }
+
+.page-topimg__cover { width: 100%; height: 100%; background-color: #F6F6F6; opacity: 0.5; position: absolute; top: 0; }
+
+.page-topimg__en { font-family: 'Anton', sans-serif; font-size: 96px; position: absolute; top: 40%; }
+
+@media screen and (max-width: 899px) { .page-topimg__en { top: 30%; } }
+
+@media screen and (max-width: 549px) { .page-topimg__en { font-size: 17.5vw; top: 25vw; } }
+
+.page-topimg__ja { font-family: Hiragino Sans; font-size: 32px; font-weight: 700; position: absolute; top: 68%; }
+
+@media screen and (max-width: 549px) { .page-topimg__ja { font-size: 5.8vw; top: 50vw; } }
+
+.page-topimg__bar { width: 100%; height: 4px; background-color: #04111C; }
+
+/*# sourceMappingURL=page-topimg.css.map */

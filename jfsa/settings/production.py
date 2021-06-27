@@ -2,7 +2,7 @@
 
 from .base import *
 import dj_database_url
-import django_heroku
+#import django_heroku
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -13,7 +13,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['jfsa.herokuapp.com']
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases

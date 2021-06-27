@@ -31,9 +31,16 @@
     vertical-align: top;
     padding: 16px 0 16px 0;
   }
-  &__day{
+  &__truday{
     @extend .calendar;
     font-size: 18px;
+    width: auto;
+    vertical-align: top;
+  }
+  &__falday{
+    @extend .calendar;
+    font-size: 18px;
+    color: #8e8e8e;
     width: auto;
     vertical-align: top;
   }

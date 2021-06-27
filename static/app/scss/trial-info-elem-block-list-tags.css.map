@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "trial-info-elem-block-list-tags.css",
+	"sources": [
+		"trial-info-elem-block-list-tags.scss"
+	],
+	"names": [],
+	"mappings": "AAAiC,AAAjC,gCAAiE,CAAA,EAC/D,KAAK,EAAC,IAAI,EACV,MAAM,EAAE,GAAG,EACX,QAAQ,EAAE,QAAQ,EAAE,MAAM,EAAE,CAAC,EAC7B,OAAO,EAAE,IAAI,EACb,WAAW,EAAE,MAAM,EACnB,WAAW,EAAE,EAAE,GAChB"
+}
