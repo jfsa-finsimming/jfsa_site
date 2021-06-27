@@ -91,6 +91,8 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+
+
 class NewsPost(models.Model):
     title = models.CharField(max_length=100)
     thumnail = models.ImageField(upload_to='newsimages/', null=True)
@@ -118,6 +120,38 @@ class NewsPost(models.Model):
 
     def formatted_markdown(self):
         return markdownify(self.contents)
+
+    def __str__(self):
+        if self.is_public :
+            return self.title
+        else:
+            return 'Not Checked: ' + self.title
+
+
+
+
+class Event(models.Model):
+    title = models.CharField(max_length=100)
+    owner = models.CharField(max_length=100,blank=True, null=True)
+    thumnail = models.ImageField(upload_to='eventimages/', null=True)
+    tags = models.ManyToManyField(Tag, blank=True)
+    place = models.CharField(max_length=100,blank=True, null=True)
+    entry_fee = models.CharField(max_length=100,blank=True, null=True)
+    deadline = models.DateTimeField(blank=True, null=True)
+    event_date = models.DateTimeField(blank=True, null=True)
+    published_at = models.DateTimeField(blank=True, null=True)
+    is_public = models.BooleanField(default=False)
+    event_url = models.URLField(blank=True)
+
+    objects = PostManager.as_manager()
+
+    class Meta:
+        ordering = ['-event_date']
+
+    def save(self, *args, **kwargs):
+        if self.is_public and not self.published_at:
+            self.published_at = timezone.now()
+        super().save(*args, **kwargs)
 
     def __str__(self):
         if self.is_public :

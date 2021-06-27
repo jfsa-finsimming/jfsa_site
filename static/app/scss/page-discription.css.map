@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "page-discription.css",
+	"sources": [
+		"page-discription.scss"
+	],
+	"names": [],
+	"mappings": "AAAkB,AAAlB,iBAAmC,CAAA,EACjC,MAAM,EAAE,oBAAoB,EAC5B,KAAK,EAAC,MAAM,EACZ,OAAO,EAAE,IAAI,GACd"
+}

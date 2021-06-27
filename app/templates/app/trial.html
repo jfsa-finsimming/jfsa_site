@@ -1,87 +1,126 @@
-{% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本学生フィンスイミング連盟</title>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/style.scss' %}">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/page-topimg.scss' %}">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/page-discription.scss' %}">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/page-discription-img.scss' %}">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/page-discription-p.scss' %}">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/trial-info-elem-block-list-tags.scss' %}">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/trial-info-elem-block-list.scss' %}">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/trial-info-elem-block-list-tags-left.scss' %}">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/trial-info-elem-block-list-tags-right.scss' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="{% static 'app/js/navi.js' %}"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__name">
+      JFSA
+    </div>
+    <div class="navi">
+      <p class="navi__btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </p>
+      <nav class="navi__global">
+        <ul class="navi__list">
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'top' %}">> ホーム</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'trial' %}">> 体験する</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'team' %}">> チームを見る</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'college' %}">大学チーム</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'club' %}">クラブチーム</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'national' %}">代表チーム</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'training' %}">> 練習する</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'training_jfsa' %}">学生練習会</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'training_story' %}">学生の練習風景</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'race' %}">> 試合に出る</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'race_jfsa' %}">学生記録会</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'race_online' %}">オンライン記録会</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'news' %}">> ニュースを見る</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'about' %}">> 私たちについて</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'about_jfsa' %}">JFSA</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'about_finswimming' %}">フィンスイミング</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 
-{% block title %}TRIAL{% endblock %}
-{% block css %}{% static 'app/css/trial.css' %}{% endblock %}
+  <section class="page-topimg">
+    <img src="{% static 'app/img/page-top.jpg' %}" class="page-topimg__img" alt="img">
+    <div class="page-topimg__cover"></div>
+    <div class="page-topimg__en">TRIAL</div>
+    <div class="page-topimg__ja">フィンスイミングを体験する<div class="page-topimg__bar"></div></div>
+  </section>
 
+  <section class="page-discription">
+    <div class="page-discription-img">
+      <img src="{% static 'app/img/trial.png' %}" class="page-discription-img__img" alt="img">
+      <div class="page-discription-img__cover"></div>
+    </div>
+    <div class="page-discription-p">
+      <p class="page-discription-p__title">今までにないスピード体験を</p>
+      <div class="page-discription-p__ja">
+        『フィンを履いて泳いでみたい』そんなあなたは必見！JFSAはたくさんの方々にフィンスイミングの魅力を実感してもらうため、フィンスイミング体験会を実施しています。水泳未経験者の方でも、もちろん経験者の方でも！日本を代表するトップスイマーにフィンスイミングの基礎から教われる貴重なチャンスです。皆さんも一度モノフィンを履いて、“イルカの気持ち”を味わってみませんか？<img src="{% static 'app/img/diagonal-line.png' %}" alt="img" class="page-discription-p__bottom">
+      </div>
+    </div>
+  </section>
 
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
-{% block page_title %}TRIAL{% endblock %}
-{% block page_minititle %}フィンスイミングを体験する{% endblock %}
+  <section class="page-discription">
+    <div class="page-discription-p--left">
+      <p class="page-discription-p__title--left">全国の体験会情報を掲載</p>
+      <div class="page-discription-p__ja--left">
+        フィンスイミングは各クラブチームでも体験することができます。JFSAは他クラブの体験会の情報もすべて掲載しています。地方にお住いの体験希望者の方は、下の体験会情報から体験会を探してみてください。JFSAは体験希望者とクラブチームをつなぐ、橋渡し役も担っています。お困りの際は、僕たちまで連絡して下さい。<img src="{% static 'app/img/diagonal-line.png' %}" alt="img" class="page-discription-p__bottom--left">
+      </div>
+    </div>
+    <div class="page-discription-img">
+      <img src="{% static 'app/img/trial2.png' %}" class="page-discription-img__img" alt="img">
+      <div class="page-discription-img__cover--left"></div>
+    </div>
+  </section>
 
-
-{% block body_detail %}
-<div class="block_space"></div>
-<div class="trial_description">
-  <img src="{% static 'app/img/trial2.png' %}" class="trial_img1">
-  <div class="description1">
-    <div class="description_cover"></div>
-    <div class="triangle_upper_right"></div>
-    <div class="triangle_lower_left"></div>
-    <p class="description_title">
-      フィンスイミング体験会
-    </p>
-    <p class="description_text">
-    <b>『フィンスイミングをマイナースポーツからメジャースポーツへ』</b><br><br>
-    JFSAは<b>普及活動</b>にも積極的に取り組んでいます。<br>この取り組みの１つとして、
-    <b>フィンスイミング体験会</b>を実施しています。<br>
-<b>日本を代表するトップスイマー</b>に、フィンスイミングの基礎から教われる貴重なチャンスです。
-<br><br>皆さんも一度モノフィンを履いて、<b>“イルカの気持ち”</b>を味わってみませんか？
-</p>
-  </div>
-</div>
-
-<div class="block_space"></div>
-<div class="trial_description">
-  <img src="{% static 'app/img/trial2.png' %}" class="trial_img2">
-  <div class="description2">
-    <div class="description_cover"></div>
-    <div class="triangle_upper_right"></div>
-    <div class="triangle_lower_left"></div>
-    <p class="description_title">
-      題名をここに入力
-    </p>
-    <p class="description_text">
-フィンスイミグは各クラブチームでも体験することができます。<br>
-JFSAは体験希望者とクラブチームをつなぐ、橋渡し役も担っています。<br>
-地方にお住いの体験希望者の方、体験会後も継続的に練習を行いたい方は、お気軽にご連絡ください。
-
-    </p>
-  </div>
-</div>
-<div class="block_space"></div>
-<div class="detail_bar">
-  <div class="detail_bar1"></div>
-  <div class="detail_bar2"></div>
-  <div class="detail_bar3"></div>
-</div>
-<p class="page_subtitle1"></p>
-<div class="page_subtitle1_bar"></div>
-<div class="event_dates">
-  <p class="event_date_title">EVENT DATE</p>
-  <div class="event_date_bar"></div>
-  <div class="event_scroll">
-    <div class="events_cover"></div>
-    {% for event in  trial_events %}
-      <div id="event{{ forloop.counter }}">
-        <a href="{{ event.get_absolute_url }}">
-          <img class="event_thumnail" src="{{event.thumnail.url}}" width=400>
-          <div class="event_cover"></div>
-          <div class="triangle_upper_left"></div>
-          <div class="triangle_lower_right"></div>
-          <p class="event_date">{{event.event_date|date:"Y.m.d"}}</p>
-          <div class="trial_mark"></div>
-          <p class="event_title">{{event.title}}</p>
-          <div class="event_contents">
-            {% with description=event.formatted_markdown|safe %}
-            {{description|truncatechars:65}}
-            {% endwith %}
+  <section class="trial-info">
+    <div class="block-name">
+      <p class="block-name__en">TRIAL INFO</p>
+      <p class="block-name__ja">体験会情報</p>
+      <div class="block-name__bar"></div>
+    </div>
+    <div class="trial-info-elem">
+      <div class="trial-info-elem-left">
+        <div class="trial-info-elem-left__upbar"></div>
+        <div class="trial-info-elem-left__p">体験会の情報を開催日が近い順に並べています。日程や場所を確認して、体験会の予約をしてみて下さい。</div>
+        <div class="trial-info-elem-left__downbar"></div>
+      </div>
+      <div class="trial-info-elem-block">
+        {% for event in events %}
+        <a class="trial-info-elem-block-list" href="{{ event.event_url }}">
+          <img class="trial-info-elem-block-list__img" src="{{event.thumnail.url}}">
+          <div class="trial-info-elem-block-list__cover"></div>
+          <div class="trial-info-elem-block-list-tags">
+            <div class="trial-info-elem-block-list-tags-left">
+              <div class="trial-info-elem-block-list-tags-left__eventdate">{{event.event_date|date:"m/d"}}</div>
+              <div class="trial-info-elem-block-list-tags-left__eventdateyear">{{event.event_date|date:"Y"}}</div>
+            </div>
+            <div class="trial-info-elem-block-list-tags-right">
+              <div class="trial-info-elem-block-list-tags-right__owner">主催者：　{{event.owner}}</div>
+              <div class="trial-info-elem-block-list-tags-right__place">場所：　　{{event.place}}</div>
+              <div class="trial-info-elem-block-list-tags-right__entryfee">参加費：　{{event.entry_fee}}</div>
+              <div class="trial-info-elem-block-list-tags-right__deadline">申込期限：{{event.deadline|date:"Y.m.d"}}</div>
+            </div>
           </div>
         </a>
+        {% endfor %}
       </div>
-    {% endfor %}
     </div>
-</div>
-
-{% endblock %}
+  </section>

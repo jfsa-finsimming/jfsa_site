@@ -1,0 +1,27 @@
+%trial-info-elem-block-list-tags-right,.trial-info-elem-block-list-tags-right{
+  display: flex;
+  flex-direction: column;
+  margin: 4% 0 0 4%;
+  &__owner:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0c0";
+    font-size: 16px;
+    margin-right: 4px;
+  }
+  &__place:before{
+    @extend .trial-info-elem-block-list-tags-right__owner;
+    content: "\f3c5";
+    margin:0 8px 0 4px;
+  }
+  &__entryfee:before{
+    @extend .trial-info-elem-block-list-tags-right__owner;
+    content: "\f653";
+    margin:0 4px 0 2px;
+  }
+  &__deadline:before{
+    @extend .trial-info-elem-block-list-tags-right__owner;
+    content: "\f14a";
+    margin:0 5px 0 3px;
+  }
+}

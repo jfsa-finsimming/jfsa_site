@@ -28,22 +28,22 @@
       </p>
       <nav class="navi__global">
         <ul class="navi__list">
-          <li class="navi__list-elem"><a class="navi__list-name" href="#">> ホーム</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name" href="#">> 体験をする</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name" href="#">> チームを見る</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name--sub" href="#">大学チーム</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name--sub" href="#">クラブチーム</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name--sub" href="#">代表チーム</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name" href="#">> 練習をする</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name--sub" href="#">学生練習会</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name--sub" href="#">学生の練習風景</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name" href="#">> 試合に出る</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name--sub" href="#">学生記録会</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name--sub" href="#">オンライン記録会</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name" href="#">> ニュースを見る</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name" href="#">> 私たちについて</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name--sub" href="#">JFSA</a></li>
-          <li class="navi__list-elem"><a class="navi__list-name--sub" href="#">フィンスイミング</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'top' %}">> ホーム</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'trial' %}">> 体験する</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'team' %}">> チームを見る</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'college' %}">大学チーム</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'club' %}">クラブチーム</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'national' %}">代表チーム</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'training' %}">> 練習する</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'training_jfsa' %}">学生練習会</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'training_story' %}">学生の練習風景</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'race' %}">> 試合に出る</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'race_jfsa' %}">学生記録会</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'race_online' %}">オンライン記録会</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'news' %}">> ニュースを見る</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'about' %}">> 私たちについて</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'about_jfsa' %}">JFSA</a></li>
+          <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'about_finswimming' %}">フィンスイミング</a></li>
         </ul>
       </nav>
     </div>
@@ -160,10 +160,11 @@
            {% for week in month_days %}
            <tr>
              {% for day in week %}
-              <td class="calendar__day">
               {% if month_current.month != day.month %}
-                {{ day | date:"m/d" }}
+              <td class="calendar__falday">
+                {{ day.day }}
               {% else %}
+              <td class="calendar__truday">
                 {{ day.day }}
               {% endif %}
               </td>

@@ -1,0 +1,17 @@
+.page-discription-p, .page-discription-p--left { margin: 180px 0 0 -60px; width: 560px; position: relative; z-index: 3; }
+
+.page-discription-p--left { margin: 180px -60px 0 0; }
+
+.page-discription-p__title, .page-discription-p__title--left { font-size: 40px; font-weight: 700; }
+
+.page-discription-p__title--left { padding: 0 0 0 40px; }
+
+.page-discription-p__ja, .page-discription-p__ja--left { margin-top: 8px; padding: 0 40px 60px 0; position: relative; }
+
+.page-discription-p__ja--left { padding: 0 0 60px 40px; }
+
+.page-discription-p__bottom, .page-discription-p__bottom--left { width: 200px; position: absolute; bottom: 0; right: 0; z-index: -1; }
+
+.page-discription-p__bottom--left { left: 0; transform: scale(-1, 1); }
+
+/*# sourceMappingURL=page-discription-p.css.map */

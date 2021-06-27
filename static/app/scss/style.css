@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: Hiragino Sans; color: #04111C; }
 
-body { background-color: #F6F6F6; overflow-y: scroll; }
+body { background-color: #F6F6F6; overflow-y: scroll; width: calc(100vw - 15px); }
 
 .block-name { margin-left: 80px; }
 
@@ -32,9 +32,9 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 .calendar-exp__p { font-weight: 700; }
 
-.calendar, .calendar__day, .calendar__week, .calendar__month, .calendar__block { font-family: 'Anton', sans-serif; text-align: center; width: 640px; }
+.calendar, .calendar__falday, .calendar__truday, .calendar__week, .calendar__month, .calendar__block { font-family: 'Anton', sans-serif; text-align: center; width: 640px; }
 
-@media screen and (max-width: 639px) { .calendar, .calendar__day, .calendar__week, .calendar__month, .calendar__block { width: 96vw; } }
+@media screen and (max-width: 639px) { .calendar, .calendar__falday, .calendar__truday, .calendar__week, .calendar__month, .calendar__block { width: 96vw; } }
 
 .calendar__block { width: 560px; height: 420px; margin: 0 auto; border-top: solid  4px; border-bottom: solid 4px; }
 
@@ -44,7 +44,9 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 .calendar__week { font-size: 18px; color: #646464; width: auto; vertical-align: top; padding: 16px 0 16px 0; }
 
-.calendar__day { font-size: 18px; width: auto; vertical-align: top; }
+.calendar__truday { font-size: 18px; width: auto; vertical-align: top; }
+
+.calendar__falday { font-size: 18px; color: #8e8e8e; width: auto; vertical-align: top; }
 
 .page-transition { display: flex; flex-wrap: wrap; width: 468px; align-items: center; justify-content: space-between; margin: 40px 0 -16px 0; }
 
@@ -142,7 +144,7 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 .footer { display: flex; justify-content: space-between; width: 100%; height: 240px; background-color: #1F3741; align-items: center; }
 
-.header, .header__name { height: 60px; line-height: 60px; position: fixed; top: 0px; left: 0px; z-index: 100; width: 100%; background-color: #1F3741; }
+.header, .header__name { height: 60px; line-height: 60px; position: fixed; top: 0px; left: 0px; width: calc(100vw - 15px); z-index: 100; background-color: #1F3741; }
 
 .header__name { padding-left: 5%; letter-spacing: 4px; font-family: 'Anton', sans-serif; font-size: 32px; color: #F6F6F6; }
 
