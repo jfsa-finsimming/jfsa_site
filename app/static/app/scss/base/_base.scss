@@ -4,10 +4,10 @@
   box-sizing: border-box;
   font-family: Hiragino Sans;
   color: #04111C;
+  -webkit-overflow-scrolling: touch;
 }
 
 body{
   background-color: #F6F6F6;
   overflow-y: scroll;
-  width: calc(100vw - 15px);
 }
