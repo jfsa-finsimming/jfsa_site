@@ -3,7 +3,7 @@
   text-align: center;
   width: 640px;
   @media screen and (max-width:639px){
-    width:  96vw;
+    width:  96%;
   }
   &__block{
     @extend .calendar;
@@ -13,7 +13,7 @@
     border-top:solid  4px;
     border-bottom:solid 4px;
     @media screen and (max-width:559px){
-      width: 96vw;
+      width: 96%;
       height: 120vw;
     }
   }
