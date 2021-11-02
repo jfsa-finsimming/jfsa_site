@@ -5,10 +5,10 @@
   margin: 40px auto 0 0;
   @media screen and (min-width:900px) and (max-width: 1199px){
     margin: 40px auto 0 auto;
-    width: 80vw;
+    width: 80%;
   }
   @media screen and (max-width:899px){
-    width: 96vw;
-    margin: 40px auto 0 auto;
+    width: 100%;
+    justify-content: center;
   }
 }
