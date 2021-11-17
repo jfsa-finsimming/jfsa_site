@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from app import views
+
+handler500 = views.my_customized_server_error
 
 urlpatterns = [
     path('', views.TopView.as_view(), name='top'),
