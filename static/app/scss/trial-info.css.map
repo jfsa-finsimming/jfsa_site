@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "trial-info.css",
+	"sources": [
+		"trial-info.scss"
+	],
+	"names": [],
+	"mappings": "AAAY,AAAZ,WAAuB,CAAA,EACrB,MAAM,EAAE,eAAe,GACxB"
+}

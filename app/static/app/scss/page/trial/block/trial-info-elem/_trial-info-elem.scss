@@ -1,0 +1,9 @@
+@import "./trial-info-elem-block/trial-info-elem-block";
+
+%trial-info-elem,.trial-info-elem{
+  display: flex;
+  margin-top: 40px;
+  @media screen and (max-width:1334px) {
+    flex-flow: column;
+  }
+}

@@ -1,0 +1,9 @@
+.trial-info-elem-left { display: flex; flex-direction: column; margin: 0 auto 0 auto; justify-content: center; align-items: center; }
+
+@media screen and (max-width: 1199px) { .trial-info-elem-left { display: none; } }
+
+.trial-info-elem-left__upbar, .trial-info-elem-left__downbar { width: 4px; height: 60px; background-color: #04111C; }
+
+.trial-info-elem-left__p { width: 295px; margin: 32px 0 32px 0; }
+
+/*# sourceMappingURL=trial-info-elem-left.css.map */

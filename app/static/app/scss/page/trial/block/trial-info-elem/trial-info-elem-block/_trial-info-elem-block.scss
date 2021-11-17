@@ -1,0 +1,18 @@
+@import "./trial-info-elem-block-list/trial-info-elem-block-list";
+@import "./trial-info-elem-block-list/trial-info-elem-block-list-tags";
+
+%trial-info-elem-block,.trial-info-elem-block{
+  display: flex;
+  width: 880px;
+  overflow-x: scroll;
+  z-index: 60;
+  @media screen and (max-width:1334px){
+    align-self: flex-end;
+  }
+  @media screen and (min-width:900px) and (max-width:960px){
+    width: calc(100vw - 80px);
+  }
+  @media screen and (max-width:899px){
+    width: 98%;
+  }
+}

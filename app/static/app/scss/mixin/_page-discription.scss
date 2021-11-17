@@ -1,0 +1,18 @@
+@import "./page-discription-elem/page-discription-img";
+@import "./page-discription-elem/page-discription-p";
+
+%page-discription,.page-discription{
+  margin: 100px auto 100px auto;
+  width:1120px;
+  display: flex;
+  @media screen and (min-width: 900px) and (max-width:1166px) {
+    width:96%;
+    margin: 100px 2% 100px 2%;
+  }
+  @media screen and (max-width: 899px){
+    width: 96%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

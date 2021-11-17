@@ -1,0 +1,17 @@
+%trial-info-elem-block-list-tags-left,.trial-info-elem-block-list-tags-left{
+  &__eventdate{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 60px;
+    @media screen and (max-width:579px) {
+      font-size: 11vw;
+    }
+  }
+  &__eventtime{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 24px;
+    margin-left: 2vw;
+    @media screen and (max-width:579px) {
+      font-size: 4vw;
+    }
+  }
+}

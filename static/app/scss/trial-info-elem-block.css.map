@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "trial-info-elem-block.css",
+	"sources": [
+		"trial-info-elem-block.scss"
+	],
+	"names": [],
+	"mappings": "AAAuB,AAAvB,sBAA6C,CAAA,EAC3C,OAAO,EAAE,IAAI,EACb,KAAK,EAAE,KAAK,EACZ,UAAU,EAAE,MAAM,GACnB"
+}
