@@ -1,0 +1,71 @@
+.trial-info-elem-left { display: flex; flex-direction: column; margin: 0 auto 40px auto; justify-content: center; align-items: center; }
+
+@media screen and (max-width: 1334px) { .trial-info-elem-left { flex-direction: row; } }
+
+@media screen and (max-width: 440px) { .trial-info-elem-left { width: 96%; } }
+
+.trial-info-elem-left__upbar, .trial-info-elem-left__downbar { width: 4px; height: 60px; background-color: #04111C; }
+
+@media screen and (max-width: 1334px) { .trial-info-elem-left__upbar, .trial-info-elem-left__downbar { display: none; } }
+
+@media screen and (max-width: 1334px) { .trial-info-elem-left__downbar { width: 40px; height: 4px; display: block; } }
+
+@media screen and (max-width: 440px) { .trial-info-elem-left__downbar { width: 13vw; } }
+
+.trial-info-elem-left__p { width: 295px; margin: 16px 40px 16px 40px; }
+
+@media screen and (max-width: 440px) { .trial-info-elem-left__p { margin: 0 2% 0 2%; } }
+
+.trial-info-elem-block-list { display: block; min-width: 480px; height: 480px; position: relative; text-decoration: none; }
+
+@media screen and (max-width: 579px) { .trial-info-elem-block-list { min-width: 80vw; height: 80vw; } }
+
+.trial-info-elem-block-list__img { width: 100%; height: 100%; object-fit: cover; }
+
+.trial-info-elem-block-list__cover { width: 100%; height: 29%; position: absolute; bottom: 0; background-color: #F6F6F6; opacity: 0.8; }
+
+.trial-info-elem-block-list-tags-left__eventdate { font-family: 'Didact Gothic', sans-serif; font-size: 60px; }
+
+@media screen and (max-width: 579px) { .trial-info-elem-block-list-tags-left__eventdate { font-size: 11vw; } }
+
+.trial-info-elem-block-list-tags-left__eventtime { font-family: 'Didact Gothic', sans-serif; font-size: 24px; margin-left: 2vw; }
+
+@media screen and (max-width: 579px) { .trial-info-elem-block-list-tags-left__eventtime { font-size: 4vw; } }
+
+.trial-info-elem-block-list-tags-right { display: flex; flex-direction: column; margin: 0 0 0 2%; }
+
+@media screen and (max-width: 579px) { .trial-info-elem-block-list-tags-right__owner, .trial-info-elem-block-list-tags-right__deadline:before, .trial-info-elem-block-list-tags-right__deadline, .trial-info-elem-block-list-tags-right__entryfee:before, .trial-info-elem-block-list-tags-right__entryfee, .trial-info-elem-block-list-tags-right__place:before, .trial-info-elem-block-list-tags-right__place { font-size: 2.7vw; } }
+
+.trial-info-elem-block-list-tags-right__owner:before, .trial-info-elem-block-list-tags-right__deadline:before, .trial-info-elem-block-list-tags-right__entryfee:before, .trial-info-elem-block-list-tags-right__place:before { font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0c0"; font-size: 16px; margin-right: 4px; }
+
+@media screen and (max-width: 579px) { .trial-info-elem-block-list-tags-right__owner:before, .trial-info-elem-block-list-tags-right__deadline:before, .trial-info-elem-block-list-tags-right__entryfee:before, .trial-info-elem-block-list-tags-right__place:before { font-size: 2.6vw; margin-right: 0.7vw; } }
+
+.trial-info-elem-block-list-tags-right__place:before { content: "\f3c5"; margin: 0 8px 0 4px; }
+
+@media screen and (max-width: 579px) { .trial-info-elem-block-list-tags-right__place:before { margin: 0 1.4vw 0 0.7vw; } }
+
+.trial-info-elem-block-list-tags-right__entryfee:before { content: "\f653"; margin: 0 4px 0 2px; }
+
+@media screen and (max-width: 579px) { .trial-info-elem-block-list-tags-right__entryfee:before { margin: 0 0.7vw 0 0.35vw; } }
+
+.trial-info-elem-block-list-tags-right__deadline:before { content: "\f14a"; margin: 0 5px 0 3px; }
+
+@media screen and (max-width: 579px) { .trial-info-elem-block-list-tags-right__deadline:before { margin: 0 1vw 0 0.5vw; } }
+
+.trial-info-elem-block-list-tags { width: 100%; height: 29%; position: absolute; bottom: 0; display: flex; align-items: center; padding-left: 6%; }
+
+.trial-info-elem-block { display: flex; width: 880px; overflow-x: scroll; z-index: 60; }
+
+@media screen and (max-width: 1334px) { .trial-info-elem-block { align-self: flex-end; } }
+
+@media screen and (min-width: 900px) and (max-width: 960px) { .trial-info-elem-block { width: calc(100vw - 80px); } }
+
+@media screen and (max-width: 899px) { .trial-info-elem-block { width: 98%; } }
+
+.trial-info-elem { display: flex; margin-top: 40px; }
+
+@media screen and (max-width: 1334px) { .trial-info-elem { flex-flow: column; } }
+
+.trial-info { margin: 100px 0 100px 0; }
+
+/*# sourceMappingURL=style.css.map */

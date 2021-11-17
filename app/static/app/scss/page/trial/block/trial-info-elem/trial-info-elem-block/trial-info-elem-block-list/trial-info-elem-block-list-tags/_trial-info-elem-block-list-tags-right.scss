@@ -1,0 +1,54 @@
+%trial-info-elem-block-list-tags-right,.trial-info-elem-block-list-tags-right{
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 2%;
+  &__owner{
+    @media screen and (max-width:579px) {
+      font-size: 2.7vw;
+    }
+    &:before{
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f0c0";
+      font-size: 16px;
+      margin-right: 4px;
+      @media screen and (max-width:579px) {
+        font-size: 2.6vw;
+        margin-right: 0.7vw;
+      }
+    }
+  }
+  &__place{
+    @extend .trial-info-elem-block-list-tags-right__owner;
+    &:before{
+      @extend .trial-info-elem-block-list-tags-right__owner;
+      content: "\f3c5";
+      margin:0 8px 0 4px;
+      @media screen and (max-width:579px) {
+        margin: 0 1.4vw 0 0.7vw;
+      }
+    }
+  }
+  &__entryfee{
+    @extend .trial-info-elem-block-list-tags-right__owner;
+    &:before{
+      @extend .trial-info-elem-block-list-tags-right__owner;
+      content: "\f653";
+      margin:0 4px 0 2px;
+      @media screen and (max-width:579px) {
+        margin: 0 0.7vw 0 0.35vw;
+      }
+    }
+  }
+  &__deadline{
+    @extend .trial-info-elem-block-list-tags-right__owner;
+    &:before{
+      @extend .trial-info-elem-block-list-tags-right__owner;
+      content: "\f14a";
+      margin:0 5px 0 3px;
+      @media screen and (max-width:579px) {
+        margin: 0 1vw 0 0.5vw;
+      }
+    }
+  }
+}
