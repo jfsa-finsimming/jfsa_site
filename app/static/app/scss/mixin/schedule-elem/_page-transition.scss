@@ -5,20 +5,17 @@
   align-items: center;
   justify-content: space-between;
   margin:40px 0 -16px 0;
-  @media screen and (min-width:900px) and (max-width:1079px) {
-    width: auto;
-  }
-  @media screen and (min-width:468px) and (max-width:899px) {
+  @media screen and (min-width:500px) and (max-width:1268px) {
     width: 468px;
     margin:40px 0 -16px 0;
   }
-  @media screen and (max-width:467px) {
+  @media screen and (max-width:499px) {
     width: 100%;
     margin:40px 0 -16px 0;
   }
   &__btn{
     margin-bottom: 16px;
-    @media screen and (max-width:467px) {
+    @media screen and (max-width:499px) {
       margin-left: auto;
     }
   }
@@ -29,7 +26,7 @@
     @media screen and (min-width:900px) and (max-width:1079px) {
       margin-bottom: 4px;
     }
-    @media screen and (max-width:467px) {
+    @media screen and (max-width:99px) {
       margin-bottom: 4px;
     }
   }

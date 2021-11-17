@@ -50,7 +50,7 @@ class TrialView(CommonTemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        data = Event.objects.filter(tags__name="trial").order_by('-event_date').published().is_public()[0:6]
+        data = Event.objects.filter(tags__name="trial").order_by('event_date').published().is_public()[0:6]
         context.update({'events':data})
         return context
 
