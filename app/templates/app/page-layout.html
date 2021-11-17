@@ -1,189 +1,154 @@
 {% load static %}
+{% load sass_tags %}
 <!DOCTYPE html>
 <html lang=ja dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% block css %}{% endblock %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app/css/page-layout.css' %}">
-    <script src="https://kit.fontawesome.com/b51ecb5f42.js" crossorigin="anonymous"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/style.scss' %}">
+    <link rel="stylesheet" type="text/css" href="{% block a %}{% endblock %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{% static 'app/js/navi.js' %}"></script>
   </head>
   <body>
-
-      <img src="{% block page_top_img %}{% endblock %}" class="img_top" alt="img">
-      <div class="cover"></div>
-
-      <ul id="menu1">
-        <li><a href="{% url 'top' %}">HOME</a></li>
-        <li><a href="{% url 'trial' %}">TRIAL</a></li>
-
-        <li><a href="{% url 'team' %}">TEAM</a>
-          <ul>
-            <li><a href="{% url 'college' %}">COLLEGE</a></li>
-            <li><a href="{% url 'club' %}">CLUB</a></li>
-            <li><a href="{% url 'national' %}">NATIONAL</a></li>
-          </ul>
-        </li>
-
-        <li><a href="{% url 'training' %}">TRAINING</a>
-          <ul>
-            <li><a href="{% url 'training_jfsa' %}">TRAINING JFSA</a></li>
-            <li><a href="{% url 'training_story' %}">TRAINING STORY</a></li>
-          </ul>
-        </li>
-
-        <li><a href="{% url 'race' %}">RACE</a>
-          <ul>
-            <li><a href="{% url 'race_jfsa' %}"> JFSA CUP</a></li>
-          </ul>
-        </li>
-
-        <li><a href="{% url 'news' %}">NEWS</a></li>
-
-        <li><a href="{% url 'about' %}">ABOUT</a>
-          <ul>
-            <li><a href="{% url 'about_finswimming' %}">FINSWIMMING</a></li>
-            <li><a href="{% url 'about_jfsa' %}">JFSA</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <div id="nav-drawer">
-       <input id="nav-input" type="checkbox" class="nav-unshown">
-       <label id="nav-open" for="nav-input"><span></span></label>
-       <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-       <div id="nav-content">
-      <ul id="menu3">
-        <li><a href="{% url 'top' %}">HOME</a></li>
-        <li><a href="{% url 'trial' %}">TRIAL</a></li>
-
-        <li><a href="{% url 'team' %}">TEAM</a>
-          <ul>
-            <li><a href="{% url 'college' %}">COLLEGE</a></li>
-            <li><a href="{% url 'club' %}">CLUB</a></li>
-            <li><a href="{% url 'national' %}">NATIONAL</a></li>
-          </ul>
-        </li>
-
-        <li><a href="{% url 'training' %}">TRAINING</a>
-          <ul>
-            <li><a href="{% url 'training_jfsa' %}">TRAINING JFSA</a></li>
-            <li><a href="{% url 'training_story' %}">TRAINING STORY</a></li>
-          </ul>
-        </li>
-
-        <li><a href="{% url 'race' %}">RACE</a>
-          <ul>
-            <li><a href="{% url 'race_jfsa' %}"> JFSA CUP</a></li>
-          </ul>
-        </li>
-
-        <li><a href="{% url 'news' %}">NEWS</a></li>
-
-        <li><a href="{% url 'about' %}">ABOUT</a>
-          <ul>
-            <li><a href="{% url 'about_finswimming' %}">FINSWIMMING</a></li>
-            <li><a href="{% url 'about_jfsa' %}">JFSA</a></li>
-          </ul>
-        </li>
-
-      </ul>
+    <header class="header">
+      <div class="header__name">
+        JFSA
       </div>
+      <div class="navi">
+        <p class="navi__btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+        <nav class="navi__global">
+          <ul class="navi__list">
+            <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'top' %}">> ホーム</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'trial' %}">> 体験する</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'team' %}">> チームを見る</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'college' %}">大学チーム</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'club' %}">クラブチーム</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'national' %}">代表チーム</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'training' %}">> 練習する</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'training_jfsa' %}">学生練習会</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'training_story' %}">学生の練習風景</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'race' %}">> 試合に出る</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'race_jfsa' %}">学生記録会</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'race_online' %}">オンライン記録会</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'news' %}">> ニュースを見る</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name" href="{% url 'about' %}">> 私たちについて</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'about_jfsa' %}">JFSA</a></li>
+            <li class="navi__list-elem"><a class="navi__list-name--sub" href="{% url 'about_finswimming' %}">フィンスイミング</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <p class="page_title">{% block page_title %}{% endblock %}</p>
-      <div id="page_minititle">{% block page_minititle %}{% endblock %}</div>
-      <div id="page_minititlele_bar"></div>
-      <div class="header_space"></div>
-
-<script src="{% static 'app/js/page-layout.js' %}"></script>
+    <section class="page-topimg">
+      <img src="{% static 'app/img/page-top.jpg' %}" class="page-topimg__img" alt="img">
+      <div class="page-topimg__cover"></div>
+      <div class="page-topimg__en">{% block page_title %}{% endblock %}</div>
+      <div class="page-topimg__ja">{% block page_minititle %}{% endblock %}<div class="page-topimg__bar"></div></div>
+    </section>
 
 {% block body_detail %}{% endblock %}
 
-<!-- コンテンツとフッター部分の間のスペース -->
-<div class="footer_space"></div>
-
-<!-- カレンダー全体のブロック指定 -->
-<div class="calendar_block">
-  <!-- カレンダーのみの表示 -->
-  <div class="calendar">
-    <p class="month">{{month_current.month}}</p>
-    <table>
-      <thead>
-       <tr>
-         {% for w in week_names %}
-          <th>{{ w }}</th>
+<!-- カレンダー -->
+<section class="schedule">
+  <div class="block-name">
+    <p class="block-name__en">SCHEDULE</p>
+    <p class="block-name__ja">月間スケジュール</p>
+    <div class="block-name__bar"></div>
+  </div>
+  <div class="schedule-block">
+    <div class="calendar">
+      <p class="calendar__month">{{month_current.month}}</p>
+      <table class="calendar__block">
+        <thead>
+         <tr>
+           {% for w in week_names %}
+            <th class="calendar__week">{{ w }}</th>
+           {% endfor %}
+         </tr>
+       </thead>
+       <tbody>
+         {% for week in month_days %}
+         <tr>
+           {% for day in week %}
+            {% if month_current.month != day.month %}
+            <td class="calendar__falday">
+              {{ day.day }}
+            {% else %}
+            <td class="calendar__truday">
+              {{ day.day }}
+            {% endif %}
+            </td>
+           {% endfor %}
+         </tr>
          {% endfor %}
-       </tr>
-    </thead>
-    <tbody>
-      {% for week in month_days %}
-      <tr>
-        {% for day in week %}
-          {% if now == day %}
-          <td>
-          {% else %}
-          <td>
-          {% endif %}
-          {% if month_current.month != day.month %}
-            {{ day | date:"m/d" }}
-          {% else %}
-            {{ day.day }}
-          {% endif %}
-          </td>
-        {% endfor %}
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  </div>
-  <div class="calendar_trial_mark"></div>
-  <p class="calendar_trial">体験会</p>
-  <div class="calendar_training_mark"></div>
-  <p class="calendar_training">練習会</p>
-  <div class="calendar_race_mark"></div>
-  <p class="calendar_race">競技会</p>
-</div>
-
-<div class="footer_space"></div>
-
-<div class="footer_block">
-  <ul id="footer_menu">
-    <li><a href="{% url 'top' %}">HOME</a></li>
-    <li><a href="{% url 'trial' %}">TRIAL</a></li>
-    <li><a href="{% url 'team' %}">TEAM</a></li>
-    <li><a href="{% url 'training' %}">TRAINING</a></li>
-    <li><a href="{% url 'race' %}">RACE</a></li>
-    <li><a href="{% url 'news' %}">NEWS</a></li>
-    <li><a href="{% url 'about' %}">ABOUT</a></li>
-  </ul>
-  <p class="footer_mail">Mail : fin.univ.assoc@gmail.com</p>
-  <div class="footer_icons">
-    <div class="footer_icon">
-      <a href="#">
-        <i class="fab fa-line footer_line"></i>
-      </a>
+        </tbody>
+      </table>
     </div>
-    <div class="footer_icon">
-      <a href="#">
-        <i class="fab fa-instagram-square footer_inst"></i>
-      </a>
-    </div>
-    <div class="footer_icon">
-      <a href="#">
-        <i class="fab fa-facebook-square footer_facebook"></i>
-      </a>
-    </div>
-    <div class="footer_icon">
-      <a href="#">
-        <i class="fab fa-twitter-square footer_twitter"></i>
-      </a>
+    <div class="schedule-exp">
+      <div class="calendar-exp">
+        <i class="fas fa-circle circle-mark calendar-exp__mark"></i>
+        <p class="calendar-exp__p">体験会</p>
+        <i class="fas fa-circle circle-mark--train calendar-exp__mark"></i>
+        <p class="calendar-exp__p">練習会</p>
+        <i class="fas fa-circle circle-mark--race calendar-exp__mark"></i>
+        <p class="calendar-exp__p">試合</p>
+      </div>
+      <div class="schedule-exp__p">JFSAでは、フィンスイミングのイベント情報を全て掲載しています。どのイベントもどなたでも参加可能です。予定が合う日をチェックしてイベントに参加してみませんか？</div>
+      <div class="page-transition">
+        <div class="page-transition__p">フィンスイミングの体験会に参加</div>
+        <a class="button page-transition__btn" href="#">
+          <div class="button__text">Trial page</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+        <div class="page-transition__p">JFSAが主催する練習会に参加</div>
+        <a class="button page-transition__btn" href="#">
+          <div class="button__text">Training page</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+        <div class="page-transition__p">フィンスイミングの試合に参加</div>
+        <a class="button page-transition__btn" href="#">
+          <div class="button__text">Race page</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+      </div>
     </div>
   </div>
-  <p class="jfsa_romaji">JAPAN FINSWIMMING STUDENT ASSOCIATION</p>
-  <p class="jfsa">日本フィンスイミング学生連合</p>
-</div>
-<div class="bottom_space"></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-left">
+    <div class="footer-left__upname">JFSA</div>
+    <div class="footer-left__jfname">JAPAN FINSWIMMING</div>
+    <div class="footer-left__saname">STUDENT ASSOCIATION</div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-menu">
+      <a class="footer-menu__list">ホーム</a>
+      <a class="footer-menu__list">体験をする</a>
+      <a class="footer-menu__list">チームを見る</a>
+      <a class="footer-menu__list">練習をする</a>
+      <a class="footer-menu__list">試合に出る</a>
+      <a class="footer-menu__list">ニュースを見る</a>
+      <a class="footer-menu__list">私たちについて</a>
+    </div>
+    <div class="footer-sns">
+      <i class="fab fa-line footer-sns__list"></i>
+      <i class="fab fa-instagram footer-sns__list"></i>
+      <i class="fab fa-twitter-square footer-sns__list"></i>
+      <i class="fab fa-youtube-square footer-sns__list"></i>
+    </div>
+    <div class="footer-right__mail">fin.univ.assoc@gmail.com</div>
+  </div>
+</footer>
 </body>
 </html>
