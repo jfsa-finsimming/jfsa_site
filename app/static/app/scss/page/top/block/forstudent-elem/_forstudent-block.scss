@@ -1,4 +1,4 @@
-$text-color: #404040;
+$text-color: #04111C;
 
 %forstudent-block,.forstudent-block{
   width: 50%;
@@ -58,7 +58,7 @@ $text-color: #404040;
   }
   &__ja{
     font-size: 24px;
-    position: absolute; top: 71%;
+    position: absolute; top: 50%;
     font-weight: 700;
     z-index: 4;
     color: $text-color;

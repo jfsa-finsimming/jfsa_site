@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"style.scss",
+		"block/_team-info.scss",
+		"block/_team-q-a.scss"
+	],
+	"names": [],
+	"mappings": "ACAW,AAAX,UAAqB,CAAA,EACnB,OAAO,EAAE,eAAe,EACxB,gBAAgB,EAAE,OAAO,GAI1B;;AAHC,MAAM,8BAHR,GAAW,AAAX,UAAqB,CAAA,EAIjB,OAAO,EAAE,aAAa,GAEzB,EAAA;;ACNS,AAAV,SAAmB,CAAA,EACjB,OAAO,EAAE,eAAe,GAIzB;;AAHC,MAAM,8BAFR,GAAU,AAAV,SAAmB,CAAA,EAGf,OAAO,EAAE,aAAa,GAEzB,EAAA"
+}

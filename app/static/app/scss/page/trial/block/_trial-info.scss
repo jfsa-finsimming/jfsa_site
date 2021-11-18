@@ -3,4 +3,7 @@
 
 %trial-info,.trial-info{
   margin: 100px 0 100px 0;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
 }
