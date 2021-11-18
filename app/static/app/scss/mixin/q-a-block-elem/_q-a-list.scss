@@ -1,0 +1,23 @@
+
+%q-a-list,.q-a-list{
+  display: inline-block;
+  margin-top: 60px;
+  &:nth-of-type(even){
+    display: block;
+    text-align: right;
+    @media screen and (max-width:899px) {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+  &__question{
+    font-size: 32px;
+    font-weight: 700;
+    @media screen and (max-width:659px) {
+      font-size: 5vw;
+    }
+  }
+  &__btn{
+    margin: 20px 20px 0 auto;
+  }
+}

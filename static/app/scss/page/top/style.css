@@ -92,13 +92,13 @@
 
 @media screen and (max-width: 899px) { .forstudent-block__en { font-size: 8vw; } }
 
-.forstudent-block__ja { font-size: 24px; position: absolute; top: 71%; font-weight: 700; z-index: 4; color: #404040; }
+.forstudent-block__ja { font-size: 24px; position: absolute; top: 50%; font-weight: 700; z-index: 4; color: #04111C; }
 
-@media screen and (min-width: 900px) and (max-width: 1199px) { .forstudent-block__ja { font-size: 2vw; color: #404040; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { .forstudent-block__ja { font-size: 2vw; color: #04111C; } }
 
-@media screen and (max-width: 899px) { .forstudent-block__ja { font-size: 4.8vw; color: #404040; } }
+@media screen and (max-width: 899px) { .forstudent-block__ja { font-size: 4.8vw; color: #04111C; } }
 
-.forstudent-block__bar { width: 100%; height: 4px; background-color: #404040; }
+.forstudent-block__bar { width: 100%; height: 4px; background-color: #04111C; }
 
 .forstudent { padding: 100px 0 100px 0; }
 

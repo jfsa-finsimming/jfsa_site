@@ -1,0 +1,9 @@
+@import "./q-a-block-elem/q-a-list";
+@import "./q-a-block-elem/q-a-list-answer";
+
+%q-a-block,.q-a-block{
+  margin: 0 80px 0 80px;
+  @media screen and (max-width:899px) {
+    margin: 0 2% 0 2%;
+  }
+}

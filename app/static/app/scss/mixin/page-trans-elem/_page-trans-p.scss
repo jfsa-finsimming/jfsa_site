@@ -1,0 +1,29 @@
+
+%page-trans-p,.page-trans-p{
+  margin: 180px 0 0 -60px;
+  width: 560px;
+  position: relative;
+  z-index: 3;
+  @media screen and (min-width: 900px) and (max-width:1159px) {
+    margin:180px 0 0 calc(-60px - (1160px - 100vw));
+  }
+  @media screen and (max-width: 899px){
+    width: 100%;
+    margin: 16px 0 0 0;
+  }
+  &__title{
+    font-size: 40px;
+    font-weight: 700;
+    @media screen and (max-width: 549px){
+      font-size: 5.8vw;
+    }
+  }
+  &__ja{
+    margin-top: 8px;
+    padding: 0 40px 60px 0;
+    position: relative;
+  }
+  &__bottom{
+    position: absolute; bottom:0;left:0;
+  }
+}

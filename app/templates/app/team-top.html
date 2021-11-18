@@ -1,118 +1,122 @@
 {% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
 
 
 {% block title %}TEAM{% endblock %}
-{% block css %}{% static 'app/css/team.css' %}{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/team/style.scss' %}{% endblock %}
 
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
+
 {% block page_title %}TEAM{% endblock %}
 {% block page_minititle %}チーム情報を見る{% endblock %}
 
+
 {% block body_detail %}
-<div class="block_space"></div>
-<div class="box1">
-  <img src="{% static 'app/img/home7.png' %}" class="imgh7">
-  <div class="cover2"></div>
-  <p class="box1-text1">COLLEGE TEAM</p>
-  <p class="box1-text2">大学フィンスイミングチーム</p>
-  <div class="bar2"></div>
-  <p class="box1-text3">
-    各大学のフィンスイミングチームを紹介します。<br>
-  大学のプールを拠点とするチーム、学生練習会やクラブチームでの練習を主とするチームなど、
-  いろいろな活動スタイルがあります。
-
-  </p>
-</div>
-<div class="block_mini_space"></div>
-<div class="box2">
-  <img src="{% static 'app/img/home7.png' %}" class="imgh7">
-  <div class="cover2"></div>
-  <p class="box2-text1">FINSWIMMING CLUB</p>
-  <p class="box2-text2">フィンスイミングクラブ</p>
-  <div class="bar3"></div>
-  <p class="box2-text3">
-    日本全国のフィンスイミングクラブを紹介します。<br>
-ジュニアからマスターズまで、幅広い世代が一緒に練習しています。
-
-  </p>
-</div>
-<div class="block_mini_space"></div>
-      <div class="box3">
-        <img src="{% static 'app/img/home7.png' %}" class="imgh7">
-        <div class="cover2"></div>
-        <p class="box3-text1">NATIONAL TEAM</p>
-        <p class="box3-text2">日本代表＆学生代表</p>
-        <div class="bar4"></div>
-        <p class="box3-text3">
-      　国際大会の代表選手や学生日本代表、ユース日本代表選手を紹介します。
-  　　　</p>
+  <section class="team-info">
+    <div class="block-name">
+      <p class="block-name__en">TEAM INFO</p>
+      <p class="block-name__ja">チーム情報</p>
+      <div class="block-name__bar"></div>
+    </div>
+    <div class="page-trans">
+      <div class="page-trans-img">
+        <img src="{% static 'app/img/team-college.png' %}" class="page-trans-img__img" alt="img">
+        <div class="page-trans-img__cover"></div>
       </div>
-  <div class="block_mini_space"></div>
-      <div class="race_schedule">
-        <p class="race_schedule_title">TEAM Q&A</p>
-        <div class="race_schedule_bar"></div>
-        <div class="cp_qa">
-          <div class="cp_actab">
-          <input id="cp_tabfour011" type="checkbox" name="tabs">
-          <label for="cp_tabfour011">フィンスイミングができる大学はどのくらいある？</label>
-          <div class="cp_actab-content">
-          	<p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-      　　　</p>
-          </div>
-          </div>
+      <div class="page-trans-p">
+        <p class="page-trans-p__title">大学フィンスイミングチーム</p>
+        <div class="page-trans-p__ja">
+          各大学のフィンスイミングチームを紹介します。大学のプールを拠点とするチーム、学生練習会やクラブチームでの練習を主とするチームなど、いろいろな活動スタイルがあります。
+        </div>
+        <a class="button page-trans-p__bottom" href="#">
+          <div class="button__text">Veiw more</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+      </div>
+    </div>
+    <div class="page-trans">
+      <div class="page-trans-img">
+        <img src="{% static 'app/img/team-club.png' %}" class="page-trans-img__img" alt="img">
+        <div class="page-trans-img__cover"></div>
+      </div>
+      <div class="page-trans-p">
+        <p class="page-trans-p__title">フィンスイミングクラブ</p>
+        <div class="page-trans-p__ja">
+          日本全国のフィンスイミングクラブを紹介します。ジュニアからマスターズまで、幅広い世代が一緒に練習しています。多くの学生がクラブチームで練習をしています。
+        </div>
+        <a class="button page-trans-p__bottom" href="#">
+          <div class="button__text">Veiw more</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+      </div>
+    </div>
+    <div class="page-trans">
+      <div class="page-trans-img">
+        <img src="{% static 'app/img/team-national.png' %}" class="page-trans-img__img" alt="img">
+        <div class="page-trans-img__cover"></div>
+      </div>
+      <div class="page-trans-p">
+        <p class="page-trans-p__title">日本代表 & 学生代表</p>
+        <div class="page-trans-p__ja">
+          国際大会の代表や学生日本代表、ユース日本代表選手を紹介します。各代表になるために、どんな方法があるのか詳しく解説しています。多くの代表選手が世界で活躍しています。
+        </div>
+        <a class="button page-trans-p__bottom" href="#">
+          <div class="button__text">Veiw more</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
-          <div class="cp_actab">
-          <input id="cp_tabfour012" type="checkbox" name="tabs">
-          <label for="cp_tabfour012">大学で1人でも、インカレに出場できる？</label>
-          <div class="cp_actab-content">
-          	<p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
+  <section class="team-q-a">
+    <div class="block-name">
+      <p class="block-name__en">TEAM Q&A</p>
+      <p class="block-name__ja">チームに関するQ&A</p>
+      <div class="block-name__bar"></div>
+    </div>
+    <div class="q-a-block">
+        <div class="q-a-list">
+          <div class="q-a-list__question">Q.フィンスイミングができる大学はどのくらいありますか？</div>
+          <div class="q-a-list-answer">
+            <p class="q-a-list-answer__a">A.</p>
+            <p class="q-a-list-answer__p">
+              大学に部活やサークルとして活動拠点があるのは以下の大学です。
+              <br>・早稲田大学
+              <br>・日本体育大学
+              <br>・明治大学
+              <br>・九州産業大学
+              <br>部活動やサークルとして活動していない学生は、私たちが運営する学生練習会に参加したり、クラブチームの練習会に参加したりしています。
+              <br>詳しくは、上のページでチームを検索してみてください！
             </p>
-        	</div>
           </div>
-
-          <div class="cp_actab">
-          <input id="cp_tabfour013" type="checkbox" name="tabs">
-          <label for="cp_tabfour013">地方でもフィンスイミングはできる？</label>
-          <div class="cp_actab-content">
-          	<p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
-            </p>
-        	</div>
-          </div>
-
-          <div class="cp_actab">
-          <input id="cp_tabfour014" type="checkbox" name="tabs">
-          <label for="cp_tabfour014">地方でもフィンスイミングはできる？</label>
-          <div class="cp_actab-content">
-          	<p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
-            </p>
-        	</div>
-          </div>
-
-          <div class="cp_actab">
-          <input id="cp_tabfour015" type="checkbox" name="tabs">
-          <label for="cp_tabfour015">地方でもフィンスイミングはできる？</label>
-          <div class="cp_actab-content">
-          	<p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-              お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
-            </p>
-        	</div>
-          </div>
-
+        </div>
+      <div class="q-a-list">
+        <div class="q-a-list__question">Q.部活やサークルに所属していなくても大会に出場できる？</div>
+        <div class="q-a-list-answer">
+          <p class="q-a-list-answer__a">A.</p>
+          <p class="q-a-list-answer__p">
+            できます。しかし大会に出場するためには団体登録をする必要があります。団体登録の詳細については日本水中スポーツ連盟（JUSF）のサイトをご覧ください。
+          </p>
+        </div>
+        <a class="button q-a-list__btn" href="#">
+          <div class="button__text">JUSF site</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+      </div>
+      <div class="q-a-list">
+        <div class="q-a-list__question">Q.地方でもフィンスイミングはできる？</div>
+        <div class="q-a-list-answer">
+          <p class="q-a-list-answer__a">A.</p>
+          <p class="q-a-list-answer__p">
+            できます。JFSAは地方の体験希望者が体験しやすいよう、お住まいの地域の
+            <br>クラブチームへの橋渡しの役割も担っています。
+            <br>詳しくは、上のページでチームを検索してみてください！
+          </p>
         </div>
       </div>
-{% endblock %}
+    </div>
+  </section>
+
+
+
+  {% endblock %}
