@@ -64,7 +64,7 @@ class TeamCollegeView(CommonListView):
     # 大学チームを表示させるビュー
     template_name = 'app/team-college.html'
     model = Team
-    paginate_by = 8
+    paginate_by = 3
     queryset = Team.objects.filter(college_or_club = 'college')
     context_object_name = "teams"
 

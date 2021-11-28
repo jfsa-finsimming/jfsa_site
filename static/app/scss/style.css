@@ -1,4 +1,6 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Hiragino Sans; color: #04111C; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Hiragino Sans; color: #04111C; font-size: 16px; }
+
+@media screen and (max-width: 899px) { * { font-size: 14px; } }
 
 body { background-color: #F6F6F6; overflow-y: scroll; }
 
@@ -18,9 +20,15 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 .button { display: flex; flex-direction: row; justify-content: center; align-items: center; width: 200px; height: 40px; background-color: #1F3741; border-radius: 24px; text-decoration: none; }
 
+@media screen and (max-width: 899px) { .button { width: 160px; height: 32px; } }
+
 .button__text { color: #F6F6F6; font-family: 'Didact Gothic', sans-serif; font-size: 20px; text-align: center; }
 
+@media screen and (max-width: 899px) { .button__text { font-size: 14px; } }
+
 .button__arrow { font-size: 16px; color: #F6F6F6; margin-left: 16px; -webkit-transition: all .3s; transition: all .3s; }
+
+@media screen and (max-width: 899px) { .button__arrow { font-size: 12px; } }
 
 .button:hover > .button__arrow { margin-left: 24px; }
 
@@ -128,7 +136,7 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 @media screen and (max-width: 899px) { .page-topimg__en { top: 30%; } }
 
-@media screen and (max-width: 549px) { .page-topimg__en { font-size: 17.5vw; top: 25vw; } }
+@media screen and (max-width: 549px) { .page-topimg__en { font-size: 14vw; top: 25vw; } }
 
 .page-topimg__ja { font-family: Hiragino Sans; font-size: 32px; font-weight: 700; position: absolute; top: 68%; }
 
@@ -171,6 +179,14 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 @media screen and (min-width: 900px) and (max-width: 1159px) { .page-trans { width: calc(100vw - 80px); margin: 50px auto 50px 80px; } }
 
 @media screen and (max-width: 899px) { .page-trans { width: 96%; flex-flow: column; justify-content: center; align-items: center; } }
+
+.pagination { display: flex; justify-content: center; align-items: center; margin-top: 60px; column-gap: 2%; }
+
+@media screen and (max-width: 899px) { .pagination { column-gap: 4%; } }
+
+.pagination__first, .pagination__last, .pagination__next, .pagination__pre { font-size: 28px; opacity: 0.5; }
+
+.pagination__num { font-weight: 700; align-self: center; opacity: 0.5; }
 
 .q-a-list { display: inline-block; margin-top: 60px; }
 

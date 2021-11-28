@@ -1,0 +1,28 @@
+%pagination,.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  column-gap: 2%;
+  @media screen and (max-width:899px) {
+    column-gap: 4%;
+  }
+  &__first{
+    font-size: 28px;
+    opacity: 0.5;
+  }
+  &__pre{
+    @extend .pagination__first;
+  }
+  &__num{
+    font-weight: 700;
+    align-self:center;
+    opacity: 0.5;
+  }
+  &__next{
+    @extend .pagination__first;
+  }
+  &__last{
+    @extend .pagination__first;
+  }
+}
