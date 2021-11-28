@@ -9,11 +9,18 @@
   background-color: #1F3741;
   border-radius: 24px;
   text-decoration: none;
+  @media screen and (max-width:899px) {
+    width: 160px;
+    height: 32px;
+  }
   &__text{
     color: #F6F6F6;
     font-family: 'Didact Gothic', sans-serif;
     font-size: 20px;
     text-align: center;
+    @media screen and (max-width:899px) {
+      font-size: 14px;
+    }
   }
   &__arrow{
     font-size: 16px;
@@ -21,6 +28,9 @@
     margin-left: 16px;
     -webkit-transition: all .3s;
     transition: all .3s;
+    @media screen and (max-width:899px) {
+      font-size: 12px;
+    }
   }
   &:hover > &__arrow{
     margin-left: 24px
