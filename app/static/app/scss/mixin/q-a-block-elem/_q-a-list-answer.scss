@@ -3,21 +3,20 @@
   justify-content: flex-end;
   margin-top: 16px;
   text-align: left;
-  @media screen and (max-width:659px) {
+  @media screen and (max-width:899px) {
     margin-top: 2.5vw;
   }
   &__a{
     font-size: 32px;
-    font-weight: 700;
     margin-right: 32px;
-    @media screen and (max-width:659px) {
-      font-size: 5vw;
+    @media screen and (max-width:899px) {
+      font-size: 18px;
       margin-right: 5vw;
     }
   }
   &__p{
     width: 560px;
-    @media screen and (max-width:659px) {
+    @media screen and (max-width:899px) {
       width:85vw;
     }
   }

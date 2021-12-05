@@ -1,0 +1,9 @@
+%team-block-icon,.team-block-icon{
+  display: flex;
+  margin: 4px 20px 0 20px;
+  &__elem{
+    font-size: 24px;
+    margin-right: 12px;
+    color: #1F3741;
+  }
+}

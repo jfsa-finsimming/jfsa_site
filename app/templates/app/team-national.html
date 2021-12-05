@@ -1,97 +1,84 @@
 {% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
 
 
 {% block title %}NATIONAL TEAM{% endblock %}
-{% block css %}{% static 'app/css/team-national.css' %}{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/team-national/style.scss' %}{% endblock %}
 
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
-{% block page_title %}NATIONAL TEAM{% endblock %}
-{% block page_minititle %}日本代表＆学生代表{% endblock %}
+
+{% block page_title %}National Team{% endblock %}
+{% block page_minititle %}日本代表&学生代表{% endblock %}
+
 
 {% block body_detail %}
-<div class="block_space"></div>
-<div class="detail_bar">
-  <div class="detail_bar1"></div>
-  <div class="detail_bar2"></div>
-  <div class="detail_bar3"></div>
-</div>
-<p class="selected_year">{{year}}</p>
-<div class="national_members_all">
-  {% for member in members %}
-  <div class="member">
-    <img class="member_thumnail" src="{{member.image.url}}" width=160>
-    <p class="member_name_romaji">{{member.name_romaji}}</p>
-    <p class="member_name">{{member.name}}</p>
-    <p class="member_team">チーム：{{member.team.short_name}}</p>
-    <p class="member_race">レース：{{member.race}}</p>
+<section class="national-member">
+
+  <div class="block-name">
+    <p class="block-name__en">National Member</p>
+    <p class="block-name__ja">代表選手の紹介</p>
+    <div class="block-name__bar"></div>
   </div>
-  {% endfor %}
-</div>
-<div class="race_schedule">
-  <p class="race_schedule_title">NATIONAL TEAM Q&A</p>
-  <div class="race_schedule_bar"></div>
-  <div class="cp_qa">
-    <div class="cp_actab">
-    <input id="cp_tabfour011" type="checkbox" name="tabs">
-    <label for="cp_tabfour011">日本代表と学生代表の違いは？</label>
-    <div class="cp_actab-content">
-      <p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-　　　</p>
-    </div>
-    </div>
 
-    <div class="cp_actab">
-    <input id="cp_tabfour012" type="checkbox" name="tabs">
-    <label for="cp_tabfour012">日本代表や学生代表はどのように選ばれる？</label>
-    <div class="cp_actab-content">
-      <p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
-      </p>
+  <div class="national-mem-block">
+    <div class="select">
+      <span class="placeholder">View: {{year}}</span>
+      <ul>
+        {% for upload_year in upload_years %}
+        <li><a href="{% url 'national' upload_year.selected_year.year %}">View: {{upload_year.selected_year|date:"Y"}}</a></li>
+        {% endfor %}
+      </ul>
+      <input type="hidden" name="changeme"/>
     </div>
+    <div class="national-mem-block-box">
+      {% for member in members %}
+      <div class="national-mem-block-box-elem">
+        <img class="national-mem-block-box-elem__img" src="{{member.image.url}}">
+        <p class="national-mem-block-box-elem__name">{{member.name}}</p>
+        <p class="national-mem-block-box-elem__romaji">{{member.name_romaji}}</p>
+        <p class="national-mem-block-box-elem__team">所属チーム：{{member.team.short_name}}</p>
+        <p class="national-mem-block-box-elem__race">出場レース：<br>{{member.race}}</p>
+      </div>
+      {% endfor %}
     </div>
-
-    <div class="cp_actab">
-    <input id="cp_tabfour013" type="checkbox" name="tabs">
-    <label for="cp_tabfour013">大学生だけど日本代表になれる？</label>
-    <div class="cp_actab-content">
-      <p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
-      </p>
-    </div>
-    </div>
-
-    <div class="cp_actab">
-    <input id="cp_tabfour014" type="checkbox" name="tabs">
-    <label for="cp_tabfour014">代表として出場できる試合はどのくらいある？</label>
-    <div class="cp_actab-content">
-      <p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
-      </p>
-    </div>
-    </div>
-
-    <div class="cp_actab">
-    <input id="cp_tabfour015" type="checkbox" name="tabs">
-    <label for="cp_tabfour015">ああああああああああああ？</label>
-    <div class="cp_actab-content">
-      <p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
-      </p>
-    </div>
-    </div>
-
   </div>
-</div>
+</<section>
+
+<section class="national-q-a">
+  <div class="block-name">
+    <p class="block-name__en">National Team Q&A</p>
+    <p class="block-name__ja">日本代表&学生代表に関するQ&A</p>
+    <div class="block-name__bar"></div>
+  </div>
+  <div class="q-a-block">
+      <div class="q-a-list">
+        <div class="q-a-list__question">Q.日本代表にはどうなったらなれますか？</div>
+        <div class="q-a-list-answer">
+          <p class="q-a-list-answer__a">A.</p>
+          <p class="q-a-list-answer__p">
+            選考対象となる大会（日本選手権など）で標準記録を突破し、かつ2位以内に入れば日本代表に内定します。
+          </p>
+        </div>
+      </div>
+    <div class="q-a-list">
+      <div class="q-a-list__question">Q.日本代表と学生代表、ユース代表の違いは何ですか？</div>
+      <div class="q-a-list-answer">
+        <p class="q-a-list-answer__a">A.</p>
+        <p class="q-a-list-answer__p">
+          学生代表は大学生、ユース代表は18歳以下の日本代表のことを指します。選考基準は各世代で標準記録を突破した上位2名です。世界学生選手権や世界ユース選手権に派遣されます。
+        </p>
+      </div>
+    </div>
+    <div class="q-a-list">
+      <div class="q-a-list__question">Q.日本代表はどんな大会に派遣されますか？</div>
+      <div class="q-a-list-answer">
+        <p class="q-a-list-answer__a">A.</p>
+        <p class="q-a-list-answer__p">
+          隔年で開催される世界選手権とアジア選手権に派遣されます。また、日本代表のうちさらに基準を突破した選手が、第二のオリンピックと呼ばれる『World Games』に派遣されます。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

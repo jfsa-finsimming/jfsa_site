@@ -23,7 +23,7 @@
     position: absolute;top:0;
   }
   &__en{
-    font-family: 'Anton', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
     font-size: 96px;
     position: absolute;top: 40%;
     @media screen and (max-width:899px) {
@@ -35,9 +35,7 @@
     }
   }
   &__ja{
-    font-family: Hiragino Sans;
     font-size: 32px;
-    font-weight: 700;
     position: absolute; top:68%;
     @media screen and (max-width:549px) {
       font-size: 5.8vw;

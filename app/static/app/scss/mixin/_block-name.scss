@@ -4,14 +4,13 @@
     margin-left: 2%;
   }
   &__en{
-    font-family: 'Anton', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
     font-size: 60px;
     @media screen and (max-width:899px) {
       font-size: 6.6vw;
     }
   }
   &__ja{
-    font-size: 16px;
     margin-bottom: 16px;
     @media screen and (max-width:899px) {
       margin-bottom: 2vw;

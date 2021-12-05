@@ -1,0 +1,16 @@
+%team-block,.team-block{
+  margin: 60px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 2%;
+  row-gap:60px;
+  width: 800px;
+  @media screen and (min-width: 900px) and (max-width:959px) {
+    margin: 40px 80px 0 80px;
+    width: auto;
+  }
+  @media screen and (max-width:899px) {
+    width: 96%;
+  }
+}

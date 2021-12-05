@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.template.defaultfilters import slugify
 from django.urls import reverse
 from cloudinary.models import CloudinaryField
+from datetime import date
 
 
 class Team(models.Model):
@@ -35,12 +36,17 @@ class NationalMember(models.Model):
     name = models.CharField(max_length=100)
     team = models.ForeignKey(Team, on_delete=models.PROTECT,null=True, blank=True)
     race = models.CharField(max_length=200)
-    selected_year = models.DateField(null=True)
+    selected_year = models.DateField(blank=True, null=True)
     rank = models.IntegerField(default=1)
     image = models.ImageField(upload_to='nationalimages/')
 
     class Meta:
         ordering = ['-selected_year','rank','name']
+
+    def save(self, *args, **kwargs):
+        if not self.selected_year.month==1 or not self.selected_year.day==1:
+            self.selected_year = date(self.selected_year.year,1,1)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         if self.rank==1 :
