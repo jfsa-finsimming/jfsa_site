@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/style.scss' %}">
     <link rel="stylesheet" type="text/css" href="{% block a %}{% endblock %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{% static 'app/js/navi.js' %}"></script>
+    <script src="{% static 'app/js/select.js' %}"></script>
   </head>
   <body>
     <header class="header">
@@ -60,7 +61,7 @@
 <!-- カレンダー -->
 <section class="schedule">
   <div class="block-name">
-    <p class="block-name__en">SCHEDULE</p>
+    <p class="block-name__en">Schedule</p>
     <p class="block-name__ja">月間スケジュール</p>
     <div class="block-name__bar"></div>
   </div>
@@ -127,8 +128,8 @@
 <footer class="footer">
   <div class="footer-left">
     <div class="footer-left__upname">JFSA</div>
-    <div class="footer-left__jfname">JAPAN FINSWIMMING</div>
-    <div class="footer-left__saname">STUDENT ASSOCIATION</div>
+    <div class="footer-left__jfname">Japan Finswimming</div>
+    <div class="footer-left__saname">Student Association</div>
   </div>
   <div class="footer-right">
     <div class="footer-menu">

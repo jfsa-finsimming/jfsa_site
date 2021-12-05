@@ -4,7 +4,6 @@ from django.core.paginator import Paginator
 from django.views import generic
 from . import calendar
 
-
 class CommonTemplateView(calendar.MonthCalendarMixin, generic.TemplateView):
     # 月間カレンダーを表示するTemplatView
     def get_context_data(self, **kwargs):
@@ -89,7 +88,8 @@ class TeamNationalView(CommonTemplateView):
             year = str(NationalMember.objects.first().selected_year.year)
 
         data = NationalMember.objects.filter(selected_year__year=year)
-        context.update({'members':data,'year':year,})
+        upload_years = NationalMember.objects.order_by('-selected_year').values('selected_year').distinct()
+        context.update({'members':data,'year':year,'upload_years':upload_years})
         return context
 
 

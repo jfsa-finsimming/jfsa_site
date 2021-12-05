@@ -1,0 +1,77 @@
+%national-member,.national-member{
+  padding: 100px 0 100px 0;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}
+
+%national-mem-block,.national-mem-block{
+  margin: 40px auto 0 120px;
+  @media screen and (max-width: 899px){
+    margin: 40px 2% 0 2%;
+  }
+  &__title{
+    font-size: 28px;
+    font-weight: 700;
+    @media screen and (max-width: 899px) {
+      font-size: 18px;
+    }
+  }
+}
+
+%national-mem-block-box,.national-mem-block-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-top: 32px;
+  width: 1120px;
+  @media screen and (max-width: 1239px) {
+    width:100%;
+  }
+  @media screen and (max-width: 899px) {
+    column-gap: 2%;
+  }
+}
+
+%national-mem-block-box-elem,.national-mem-block-box-elem{
+  display: flex;
+  flex-flow:column;
+  width: 240px;
+  @media screen and (min-width: 397px) and (max-width: 899px) {
+    width:180px;
+  }
+  @media screen and (max-width: 396px){
+    width: 49%;
+  }
+
+  &__img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+  }
+  &__name{
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 4px;
+    @media screen and (max-width: 899px) {
+      font-size: 16px;
+    }
+  }
+  &__romaji{
+    font-style: italic;
+  }
+  &__team{
+    margin-top: 4px;
+  }
+}
+
+
+
+%national-q-a,.national-q-a{
+  padding: 100px 0 100px 0;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}

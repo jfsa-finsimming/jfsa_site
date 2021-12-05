@@ -1,0 +1,39 @@
+.national-member { padding: 100px 0 100px 0; }
+
+@media screen and (max-width: 899px) { .national-member { padding: 60px 0 60px 0; } }
+
+.national-mem-block { margin: 40px auto 0 120px; }
+
+@media screen and (max-width: 899px) { .national-mem-block { margin: 40px 2% 0 2%; } }
+
+.national-mem-block__title { font-size: 28px; font-weight: 700; }
+
+@media screen and (max-width: 899px) { .national-mem-block__title { font-size: 18px; } }
+
+.national-mem-block-box { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 20px; row-gap: 40px; margin-top: 32px; width: 1120px; }
+
+@media screen and (max-width: 1239px) { .national-mem-block-box { width: 100%; } }
+
+@media screen and (max-width: 899px) { .national-mem-block-box { column-gap: 2%; } }
+
+.national-mem-block-box-elem { display: flex; flex-flow: column; width: 240px; }
+
+@media screen and (min-width: 397px) and (max-width: 899px) { .national-mem-block-box-elem { width: 180px; } }
+
+@media screen and (max-width: 396px) { .national-mem-block-box-elem { width: 49%; } }
+
+.national-mem-block-box-elem__img { width: 160px; height: 160px; object-fit: cover; }
+
+.national-mem-block-box-elem__name { font-size: 24px; font-weight: 700; margin-top: 4px; }
+
+@media screen and (max-width: 899px) { .national-mem-block-box-elem__name { font-size: 16px; } }
+
+.national-mem-block-box-elem__romaji { font-style: italic; }
+
+.national-mem-block-box-elem__team { margin-top: 4px; }
+
+.national-q-a { padding: 100px 0 100px 0; }
+
+@media screen and (max-width: 899px) { .national-q-a { padding: 60px 0 60px 0; } }
+
+/*# sourceMappingURL=style.css.map */
