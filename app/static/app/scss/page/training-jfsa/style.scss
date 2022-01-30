@@ -1,0 +1,98 @@
+%training-jfsa-contents,.training-jfsa-contents{
+  padding: 0 0 60px calc((100vw / 2) - (800px / 1.414));
+  display: flex;
+  @media screen and (max-width:899px) {
+    padding: 0 0 40px 0;
+  }
+}
+
+%training-in-jfsa-q-a,.training-in-jfsa-q-a{
+  padding: 100px 0 100px 0;
+  background-color: #EFEFEF;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}
+
+%training-jfsa-contents-lineouter,.training-jfsa-contents-lineouter{
+  width: 0px;
+  height: calc( 800px / 1.414 );
+  @media screen and (max-width:1172px) {
+    height: 520px;
+  }
+}
+
+%training-jfsa-contents-line,.training-jfsa-contents-line{
+  width: 800px;
+  height: 4px;
+  margin-top: calc( 400px / 1.414 );
+  transform: rotate(45deg);
+  background-color: #04111C;
+  @media screen and (max-width:1172px) {
+    width: 520px;
+    height: 4px;
+    transform: rotate(90deg);
+    margin: 258px 0 0 calc( 50vw - 460px ) ;
+  }
+  @media screen and (max-width:460px) {
+    display: none;
+  }
+}
+
+%training-jfsa-contents-box,.training-jfsa-contents-box{
+  display: flex;
+  flex-flow: column;
+  margin-left: 197px;
+  @media screen and (max-width:1172px) {
+    margin: 0 auto;
+  }
+  @media screen and (max-width:460px) {
+    width:96%
+  }
+}
+
+%training-jfsa-contents-box-elem,.training-jfsa-contents-box-elem{
+  display: flex;
+  z-index: 2;
+  @media screen and (max-width:460px) {
+    flex-direction: column;
+  }
+  &__img{
+    width: 240px;
+    height: 120px;
+    object-fit: cover;
+    @media screen and (max-width:460px) {
+      width: 100%;
+      height: 48vw;
+    }
+  }
+  &__arrow{
+    margin: auto 0 4px 8px;
+    @media screen and (max-width:460px) {
+      margin: 12px 0 0 0 ;
+    }
+  }
+  &__p{
+    margin: auto 0 0 8px;
+    text-decoration: none;
+    @media screen and (max-width:460px) {
+      margin: -17px 0 0 20px ;
+    }
+  }
+  &:first-of-type{
+    margin-top:20px;
+  }
+  &:nth-of-type(2){
+    margin: 60px 0 0 180px;
+    @media screen and (max-width:1172px) {
+      margin: 60px 0 0 0;
+    }
+  }
+  &:nth-of-type(3){
+    margin: 60px 0 0 360px;
+    @media screen and (max-width:1172px) {
+      margin: 60px 0 0 0;
+    }
+  }
+
+}

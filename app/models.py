@@ -164,3 +164,22 @@ class Event(models.Model):
             return self.title
         else:
             return 'Not Checked: ' + self.title
+
+class Race(models.Model):
+    name = models.CharField(max_length=100)
+    month = models.CharField(max_length=10)
+    image = models.ImageField(upload_to='raceimages/')
+    race_info_url=models.URLField(blank=True)
+    entry_info_url=models.URLField(blank=True)
+    is_public = models.BooleanField(default=False)
+
+    objects = PostManager.as_manager()
+
+    class Meta:
+        ordering = ['month']
+
+    def __str__(self):
+        if self.is_public :
+            return self.month + '月:' + self.name
+        else:
+            return 'Not Checked: ' + self.month + '月:' + self.name

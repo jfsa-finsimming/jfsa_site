@@ -1,0 +1,89 @@
+{% extends 'app/page-layout.html' %}
+{% load static %}
+{% load sass_tags %}
+
+
+{% block title %}TRAINIG{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/training/style.scss' %}{% endblock %}
+
+
+{% block page_title %}Training{% endblock %}
+{% block page_minititle %}練習について{% endblock %}
+
+
+{% block body_detail %}
+  <section class="training-info">
+    <div class="block-name">
+      <p class="block-name__en">Training Info</p>
+      <p class="block-name__ja">練習情報</p>
+      <div class="block-name__bar"></div>
+    </div>
+    <div class="page-trans">
+      <div class="page-trans-img">
+        <img src="{% static 'app/img/team-college.png' %}" class="page-trans-img__img" alt="img">
+        <div class="page-trans-img__cover"></div>
+      </div>
+      <div class="page-trans-p">
+        <p class="page-trans-p__title">学生練習会に参加する</p>
+        <div class="page-trans-p__ja">
+          JFSAは大学生・大学院生・専門学生を対象に練習会を開催しています。練習する環境がない、学生フィンスイマーの繋がりを深めたい、といった学生の方、ぜひ参加してみてください！
+        </div>
+        <a class="button page-trans-p__bottom" href="#">
+          <div class="button__text">Veiw more</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+      </div>
+    </div>
+    <div class="page-trans">
+      <div class="page-trans-img">
+        <img src="{% static 'app/img/team-club.png' %}" class="page-trans-img__img" alt="img">
+        <div class="page-trans-img__cover"></div>
+      </div>
+      <div class="page-trans-p">
+        <p class="page-trans-p__title">学生フィンスイマーの練習</p>
+        <div class="page-trans-p__ja">
+          学生フィンスイマーのみんなが、どのように練習をして今まで成果を残してきたのか。練習の取り組み方や学生生活の送り方など、複数の学生にインタビューしてみました。
+        </div>
+        <a class="button page-trans-p__bottom" href="#">
+          <div class="button__text">Veiw more</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="training-q-a">
+    <div class="block-name">
+      <p class="block-name__en">Training Q&A</p>
+      <p class="block-name__ja">練習に関するQ&A</p>
+      <div class="block-name__bar"></div>
+    </div>
+    <div class="q-a-block">
+        <div class="q-a-list">
+          <div class="q-a-list__question">Q.練習ができる場所を教えてください！</div>
+          <div class="q-a-list-answer">
+            <p class="q-a-list-answer__a">A.</p>
+            <p class="q-a-list-answer__p">
+              早稲田大学や日本体育大学などは大学のプールで練習しています。またクラブチームは辰巳や横国といった各地のプールで練習しています。詳しくはチーム情報のページをご覧ください。また大学で練習拠点がない場合は、ぜひ学生練習会へお越しください！
+            </p>
+          </div>
+          <a class="button q-a-list__btn" href="#">
+            <div class="button__text">Team page</div>
+            <i class="fas fa-arrow-right button__arrow"></i>
+          </a>
+        </div>
+      <div class="q-a-list">
+        <div class="q-a-list__question">Q.練習費用はどれくらいですか？</div>
+        <div class="q-a-list-answer">
+          <p class="q-a-list-answer__a">A.</p>
+          <p class="q-a-list-answer__p">
+            学生練習会では1,000円／回で練習ができます。クラブチームでの練習費は1,000~2,000円／回となっております。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  {% endblock %}

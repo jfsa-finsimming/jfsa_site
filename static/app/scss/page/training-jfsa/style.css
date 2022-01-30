@@ -1,0 +1,51 @@
+.training-jfsa-contents { padding: 0 0 60px calc((100vw / 2) - (800px / 1.414)); display: flex; }
+
+@media screen and (max-width: 899px) { .training-jfsa-contents { padding: 0 0 40px 0; } }
+
+.training-in-jfsa-q-a { padding: 100px 0 100px 0; background-color: #EFEFEF; }
+
+@media screen and (max-width: 899px) { .training-in-jfsa-q-a { padding: 60px 0 60px 0; } }
+
+.training-jfsa-contents-lineouter { width: 0px; height: calc( 800px / 1.414); }
+
+@media screen and (max-width: 1172px) { .training-jfsa-contents-lineouter { height: 520px; } }
+
+.training-jfsa-contents-line { width: 800px; height: 4px; margin-top: calc( 400px / 1.414); transform: rotate(45deg); background-color: #04111C; }
+
+@media screen and (max-width: 1172px) { .training-jfsa-contents-line { width: 520px; height: 4px; transform: rotate(90deg); margin: 258px 0 0 calc( 50vw - 460px); } }
+
+@media screen and (max-width: 460px) { .training-jfsa-contents-line { display: none; } }
+
+.training-jfsa-contents-box { display: flex; flex-flow: column; margin-left: 197px; }
+
+@media screen and (max-width: 1172px) { .training-jfsa-contents-box { margin: 0 auto; } }
+
+@media screen and (max-width: 460px) { .training-jfsa-contents-box { width: 96%; } }
+
+.training-jfsa-contents-box-elem { display: flex; z-index: 2; }
+
+@media screen and (max-width: 460px) { .training-jfsa-contents-box-elem { flex-direction: column; } }
+
+.training-jfsa-contents-box-elem__img { width: 240px; height: 120px; object-fit: cover; }
+
+@media screen and (max-width: 460px) { .training-jfsa-contents-box-elem__img { width: 100%; height: 48vw; } }
+
+.training-jfsa-contents-box-elem__arrow { margin: auto 0 4px 8px; }
+
+@media screen and (max-width: 460px) { .training-jfsa-contents-box-elem__arrow { margin: 12px 0 0 0; } }
+
+.training-jfsa-contents-box-elem__p { margin: auto 0 0 8px; text-decoration: none; }
+
+@media screen and (max-width: 460px) { .training-jfsa-contents-box-elem__p { margin: -17px 0 0 20px; } }
+
+.training-jfsa-contents-box-elem:first-of-type { margin-top: 20px; }
+
+.training-jfsa-contents-box-elem:nth-of-type(2) { margin: 60px 0 0 180px; }
+
+@media screen and (max-width: 1172px) { .training-jfsa-contents-box-elem:nth-of-type(2) { margin: 60px 0 0 0; } }
+
+.training-jfsa-contents-box-elem:nth-of-type(3) { margin: 60px 0 0 360px; }
+
+@media screen and (max-width: 1172px) { .training-jfsa-contents-box-elem:nth-of-type(3) { margin: 60px 0 0 0; } }
+
+/*# sourceMappingURL=style.css.map */

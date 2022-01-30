@@ -1,209 +1,95 @@
 {% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
 
 
 {% block title %}RACE{% endblock %}
-{% block css %}{% static 'app/css/race-top.css' %}{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/race/style.scss' %}{% endblock %}
 
 
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
-{% block page_title %}RACE{% endblock %}
-{% block page_minititle %}大会情報を見る{% endblock %}
+{% block page_title %}Race{% endblock %}
+{% block page_minititle %}大会情報を探す{% endblock %}
+
 
 {% block body_detail %}
-<div class="block_space"></div>
-<div class="trial_description">
-  <img src="{% static 'app/img/trial2.png' %}" class="trial_img1">
-  <div class="description1">
-    <div class="description_cover"></div>
-    <div class="triangle_upper_right"></div>
-    <div class="triangle_lower_left"></div>
-    <p class="description_title">
-      題名をここに入力
-    </p>
-    <p class="description_text">
-      お試しの文章が入ってますが、
-      今後トレーニングに関する文章に変わる予定でえす。
-      お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
-      お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
-      今気づいたけど結構な文章量入ります。ここまででも約140文字。
-    </p>
-  </div>
-</div>
-<div class="block_space"></div>
-<div class="detail_bar">
-  <div class="detail_bar1"></div>
-  <div class="detail_bar2"></div>
-  <div class="detail_bar3"></div>
-</div>
+  <section class="race-info">
+    <div class="block-name">
+      <p class="block-name__en">Race Info</p>
+      <p class="block-name__ja">大会情報</p>
+      <div class="block-name__bar"></div>
+    </div>
 
-<div class="race_schedule">
-  <p class="race_schedule_title">RACE SCHEDULE</p>
-  <div class="race_schedule_bar"></div>
-  <ul class="timeline">
-    <li>
-      <p class="timeline-date">4月</p>
-      <div class="timeline-content">
-        <h3>　</h3>
-        <p></p>
+    <div class="race-info-box">
+      {% for race in races %}
+      <div class="race-info-elem">
+        <div class="race-info-elem__month">{{race.month}}月</div>
+        <div class="race-info-elem__race">{{race.name}}</div>
+        <img src="{{race.image.url}}" class="race-info-elem__img">
+        <div class="race-info-elem-bottom">
+          <div class="race-info-elem-bottom__back"></div>
+          {% if not race.race_info_url == '' %}
+          <a class="button race-info-elem-bottom__btn" href="#">
+            <div class="button__text">Race info</div>
+            <i class="fas fa-arrow-right button__arrow"></i>
+          </a>
+          {% endif %}
+          {% if not race.entry_info_url == '' %}
+          <a class="button race-info-elem-bottom__btn" href="#">
+            <div class="button__text">Entry</div>
+            <i class="fas fa-arrow-right button__arrow"></i>
+          </a>
+          {% endif %}
+        </div>
       </div>
-    </li>
-    <li>
-      <p class="timeline-date">5月</p>
-      <div class="timeline-content">
-        <h3>フィンスイミング日本選手権大会</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">6月</p>
-      <div class="timeline-content">
-        <h3>横浜国際プール長水路記録会</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-        <h3>フィンスイミング学生記録会</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">7月</p>
-      <div class="timeline-content">
-        <h3>　</h3>
-        <p></p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">8月</p>
-      <div class="timeline-content">
-        <h3>　</h3>
-        <p></p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">9月</p>
-      <div class="timeline-content">
-        <h3>湘南オープンウォーター</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-        <h3>東京辰巳国際国際水泳場杯水泳大会</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">10月</p>
-      <div class="timeline-content">
-        <h3>横浜国際プール淡水路記録会</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">11月</p>
-      <div class="timeline-content">
-        <h3>　</h3>
-        <p></p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">12月</p>
-      <div class="timeline-content">
-        <h3>フィンスイミング短水路日本選手権</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">1月</p>
-      <div class="timeline-content">
-        <h3>関東オープンスイミング大会</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">2月</p>
-      <div class="timeline-content">
-        <h3>　</h3>
-        <p></p>
-      </div>
-    </li>
-    <li>
-      <p class="timeline-date">3月</p>
-      <div class="timeline-content">
-        <h3>フィンスイミング日本学生選手権大会</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-        <h3>千葉チャレンジカップ水泳大会</h3>
-        <p>
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-          お試しの文章です。お試しの文章です。お試しの文章です。お試しの文章です。
-        </p>
-      </div>
-    </li>
-  </ul>
-</div>
+      {% endfor %}
+    </div>
+  </section>
 
-<div class="block_space"></div>
+  <section class="race-record">
+    <div class="block-name">
+      <p class="block-name__en">Record</p>
+      <p class="block-name__ja">世界記録・アジア記録・日本記録</p>
+      <div class="block-name__bar"></div>
+    </div>
+    <div class="race-record-box">
+      <img src="{% static 'app/img/clock.png' %}" class="race-record-box__clock">
+      <div class="race-record-box__bar"></div>
+      <a class="button race-record-box___btn" href="#">
+        <div class="button__text">Record</div>
+        <i class="fas fa-arrow-right button__arrow"></i>
+      </a>
+    </div>
+    <img src="{% static 'app/img/polka-dots.png' %}" class="race-record-back-img">
+  </section>
 
-<div class="record">
-  <p class="race_schedule_title">RECORD</p>
-  <div class="race_schedule_bar"></div>
-  <div class="box1">
-
-      <img src="{% static 'app/img/training1.jpg' %}" class="img-training4">
-      <div class="cover2"></div>
-      <div class="button4">
-      <div class="eff-2"></div>
-      <a href="#">WORLD RECORD<br><span class="btext4">世界記録を見る</span></a>
+  <section class="race-q-a">
+    <div class="block-name">
+      <p class="block-name__en">Race Q&A</p>
+      <p class="block-name__ja">試合に関するQ&A</p>
+      <div class="block-name__bar"></div>
+    </div>
+    <div class="q-a-block">
+        <div class="q-a-list">
+          <div class="q-a-list__question">Q.JFSA所属として試合に出られますか？</div>
+          <div class="q-a-list-answer">
+            <p class="q-a-list-answer__a">A.</p>
+            <p class="q-a-list-answer__p">
+              現在、JFSA所属とした試合への参加は行っておりません。大学チームやクラブチームからの参加をお願いします。クラブチームへ入会したい場合はお気軽にお問い合わせください。
+            </p>
+          </div>
+        </div>
+      <div class="q-a-list">
+        <div class="q-a-list__question">Q.大会はどこで開催していますか？</div>
+        <div class="q-a-list-answer">
+          <p class="q-a-list-answer__a">A.</p>
+          <p class="q-a-list-answer__p">
+            多くの大会は関東近郊のプール（辰巳・横国・千葉国等）で行われます。詳細は大会要項をご覧ください。入場料もなく誰でも観戦できますので、会場で実際にフィンスイミングのスピード感をお楽しみください。またJFSAでは学生記録会も開催しておりますので、ぜひご参加ください。
+          </p>
+        </div>
       </div>
+    </div>
+  </section>
 
 
-      <img src="{% static 'app/img/training2.jpg' %}" class="img-training5">
-      <div class="cover3"></div>
-      <div class="button5">
-      <div class="eff-2"></div>
-      <a href="#">ASIA RECORD<br><span class="btext5">アジア記録を見る</span></a>
-      </div>
 
-      <img src="{% static 'app/img/training3.jpg' %}" class="img-training6">
-      <div class="cover4"></div>
-      <div class="button6">
-      <div class="eff-2"></div>
-      <a href="#">NATIONAL RECORD<br><span class="btext6">日本記録を見る</span></a>
-      </div>
-
-      </div>
-
-
-{% endblock %}
+  {% endblock %}

@@ -1,0 +1,9 @@
+.training-info { padding: 100px 0 100px 0; background-color: #EFEFEF; }
+
+@media screen and (max-width: 899px) { .training-info { padding: 60px 0 60px 0; } }
+
+.training-q-a { padding: 100px 0 100px 0; }
+
+@media screen and (max-width: 899px) { .training-q-a { padding: 60px 0 60px 0; } }
+
+/*# sourceMappingURL=style.css.map */
