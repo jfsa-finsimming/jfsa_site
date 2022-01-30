@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"style.scss",
+		"block/_training-info.scss",
+		"block/_training-q-a.scss"
+	],
+	"names": [],
+	"mappings": "ACAe,AAAf,cAA6B,CAAA,EAC3B,OAAO,EAAE,eAAe,EACxB,gBAAgB,EAAE,OAAO,GAI1B;;AAHC,MAAM,8BAHR,GAAe,AAAf,cAA6B,CAAA,EAIzB,OAAO,EAAE,aAAa,GAEzB,EAAA;;ACNa,AAAd,aAA2B,CAAA,EACzB,OAAO,EAAE,eAAe,GAIzB;;AAHC,MAAM,8BAFR,GAAc,AAAd,aAA2B,CAAA,EAGvB,OAAO,EAAE,aAAa,GAEzB,EAAA"
+}

@@ -1,18 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Team, NationalMember, Position, Member, Tag, NewsPost,PostManager, Event
+from .models import Team, NationalMember, Position, Member, Tag, NewsPost,PostManager, Event, Race
 from django.core.paginator import Paginator
 from django.views import generic
 from . import calendar
-
-from django.views.decorators.csrf import requires_csrf_token
-from django.http import HttpResponseServerError
-
-@requires_csrf_token
-def my_customized_server_error(request, template_name='500.html'):
-    import sys
-    from django.views import debug
-    error_html = debug.technical_500_response(request, *sys.exc_info()).content
-    return HttpResponseServerError(error_html)
 
 
 
@@ -124,6 +114,11 @@ class RaceView(CommonTemplateView):
     # raceのトップページを表示させるビュー
     template_name = 'app/race-top.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        data = Race.objects.is_public()
+        context.update({'races':data})
+        return context
 
 class RaceJfsaView(CommonTemplateView):
     # 学生記録会のページを表示させるビュー

@@ -1,93 +1,76 @@
 {% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
 
+{% block title %}TRIAL{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/training-jfsa/style.scss' %}{% endblock %}
 
-{% block title %}TRAINING JFSA{% endblock %}
-{% block css %}{% static 'app/css/training-jfsa.css' %}{% endblock %}
-
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
-{% block page_title %}TRAINING JFSA{% endblock %}
+{% block page_title %}Training in JFSA{% endblock %}
 {% block page_minititle %}学生練習会に参加する{% endblock %}
 
 {% block body_detail %}
-<div class="block_space"></div>
-<div class="trial_description">
-  <img src="{% static 'app/img/trial2.png' %}" class="trial_img1">
-  <div class="description1">
-    <div class="description_cover"></div>
-    <div class="triangle_upper_right"></div>
-    <div class="triangle_lower_left"></div>
-    <p class="description_title">
-      題名をここに入力
-    </p>
-    <p class="description_text">
-      学生練習会では、各大学の学生フィンスイマーが集まり練習をしています。<br>
-練習責任者の学生がメニューを作り、説明しながら進行するため、<br><br>
-
-<b>『フィンスイミングを始めたいけど、どうやって練習したらいいの？』</b><br><br>
-
-そんなあなたも参加しやすくなっています。<br>
-大学、専門学校問わず参加できるので、<b>学生間の交流も盛ん</b>です。<br>
-普段所属チームで練習している学生も、フィンスイミングを始めたいそこのあなたも！<br>
-学生練習会で切磋琢磨しながらフィンスイミングを楽しみませんか？
-
-    </p>
-  </div>
-</div>
-
-<div class="block_space"></div>
-<div class="trial_description">
-  <img src="{% static 'app/img/trial2.png' %}" class="trial_img2">
-  <div class="description2">
-    <div class="description_cover"></div>
-    <div class="triangle_upper_right"></div>
-    <div class="triangle_lower_left"></div>
-    <p class="description_title">
-      題名をここに入力
-    </p>
-    <p class="description_text">
-      練習会情報を見たい方はコチラ<br>
-  練習メニューを見たい方はコチラ<br>
-  練習風景を見たい方はコチラ
-
-    </p>
-  </div>
-</div>
-<div class="block_space"></div>
-<div class="detail_bar">
-  <div class="detail_bar1"></div>
-  <div class="detail_bar2"></div>
-  <div class="detail_bar3"></div>
-</div>
-
-<div class="block_space"></div>
-
-<div class="box1">
-
-    <img src="{% static 'app/img/training1.jpg' %}" class="img-training4">
-    <div class="cover2"></div>
-    <div class="button4">
-    <div class="eff-2"></div>
-    <a href="#">TIME TREE<br><span class="btext4">練習日程の確認や出欠登録を行う</span></a>
+  <section class="page-discription">
+    <div class="page-discription-img">
+      <img src="{% static 'app/img/trial.png' %}" class="page-discription-img__img" alt="img">
+      <div class="page-discription-img__cover"></div>
     </div>
-
-
-    <img src="{% static 'app/img/training2.jpg' %}" class="img-training5">
-    <div class="cover3"></div>
-    <div class="button5">
-    <div class="eff-2"></div>
-    <a href="#">MENU<br><span class="btext5">学生練習会の練習メニューを見る</span></a>
+    <div class="page-discription-p">
+      <p class="page-discription-p__title">フィンを続けられる環境を</p>
+      <div class="page-discription-p__ja">
+        『フィンスイミングを始めたいけど、どうやって練習したらいいの？』
+        <br>そんなあなたはぜひ学生練習会にお越しください！学生練習会は、初心者から日本代表まで、学生ならば誰でも参加できる練習会です。メニュー作成者からのアドバイス・サポートも手厚く、学生間の交流も盛んです。普段所属チームで練習している学生も、フィンスイミングを始めたいそこのあなたも！学生練習会で切磋琢磨しながらフィンスイミングを楽しみませんか？<img src="{% static 'app/img/diagonal-line.png' %}" alt="img" class="page-discription-p__bottom">
+      </div>
     </div>
+  </section>
 
-    <img src="{% static 'app/img/training3.jpg' %}" class="img-training6">
-    <div class="cover4"></div>
-    <div class="button6">
-    <div class="eff-2"></div>
-    <a href="#">BLOG<br><span class="btext6">学生練習会の様子を見る</span></a>
+  <section class="training-jfsa-contents">
+    <div class="training-jfsa-contents-lineouter">
+      <div class="training-jfsa-contents-line"></div>
     </div>
-
+    <div class="training-jfsa-contents-box">
+      <div class="training-jfsa-contents-box-elem">
+        <img src="{% static 'app/img/trial.png' %}" class="training-jfsa-contents-box-elem__img">
+        <i class="fas fa-chevron-right training-jfsa-contents-box-elem__arrow"></i>
+        <a href="" class="training-jfsa-contents-box-elem__p">練習会の日程を確認する</a>
+      </div>
+      <div class="training-jfsa-contents-box-elem">
+        <img src="{% static 'app/img/trial.png' %}" class="training-jfsa-contents-box-elem__img">
+        <i class="fas fa-chevron-right training-jfsa-contents-box-elem__arrow"></i>
+        <a href="" class="training-jfsa-contents-box-elem__p">練習会のメニューを見る</a>
+      </div>
+      <div class="training-jfsa-contents-box-elem">
+        <img src="{% static 'app/img/trial.png' %}" class="training-jfsa-contents-box-elem__img">
+        <i class="fas fa-chevron-right training-jfsa-contents-box-elem__arrow"></i>
+        <a href="" class="training-jfsa-contents-box-elem__p">練習会のブログ/写真を見る</a>
+      </div>
     </div>
+  </section>
 
-
-
+  <section class="training-in-jfsa-q-a">
+    <div class="block-name">
+      <p class="block-name__en">Training in JFSA Q&A</p>
+      <p class="block-name__ja">学生練習会に関するQ&A</p>
+      <div class="block-name__bar"></div>
+    </div>
+    <div class="q-a-block">
+        <div class="q-a-list">
+          <div class="q-a-list__question">Q.学生練習会はどのくらいの頻度で開催されますか？</div>
+          <div class="q-a-list-answer">
+            <p class="q-a-list-answer__a">A.</p>
+            <p class="q-a-list-answer__p">
+              JFSAでは週2~3回の練習会を開催しています。練習場所は横浜国際プール（神奈川・北山田）や辰巳国際水泳場（東京・辰巳）です。日程や参加申込は上記のページ、もしくはLINE@に登録してお聞きください。
+            </p>
+          </div>
+        </div>
+      <div class="q-a-list">
+        <div class="q-a-list__question">Q.学生練習会ではどのような練習が行われていますか？</div>
+        <div class="q-a-list-answer">
+          <p class="q-a-list-answer__a">A.</p>
+          <p class="q-a-list-answer__p">
+            Instagramにて練習メニューを公開おり、上記のページから確認できます。また、学生練習会は学生(大学院生、短大、専門学校を含む)であればどなたでもご参加いただけますので、ぜひ一度参加してみてください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}

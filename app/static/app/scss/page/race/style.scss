@@ -1,0 +1,123 @@
+%race-info,.race-info{
+  padding: 100px 0 100px 0;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}
+
+%race-info-box,.race-info-box{
+  display: flex;
+	flex-wrap: wrap;
+  justify-content: space-between;
+  gap:120px 0;
+  width: 920px;
+  margin: 60px 80px 0 auto;
+  @media screen and (min-width:960px) and (max-width:1080px) {
+    width:85%;
+    margin: 60px 0 0 80px;
+  }
+  @media screen and (min-width:900px) and (max-width:959px) {
+    flex-flow: column;
+    align-items: center;
+  }
+  @media screen and (max-width:899px) {
+    flex-flow: column;
+    align-items: center;
+    width: 96%;
+    margin-left: 2%;
+  }
+}
+
+%race-info-elem,.race-info-elem{
+  width: 400px;
+  @media screen and (max-width:420px) {
+    width: 96vw;
+  }
+  &__month{
+  }
+  &__race{
+  }
+  &__img{
+    width:400px;
+    height: 200px;
+    object-fit: cover;
+    @media screen and (max-width:420px) {
+      width: 96vw;
+      height:48vw;
+    }
+  }
+}
+
+%race-info-elem-bottom,.race-info-elem-bottom{
+  margin: -54px 0 0 0;
+  display: flex;
+  width: 400px;
+  @media screen and (max-width:420px) {
+    width: 96vw;
+  }
+  &__btn{
+    width: 160px;
+    height: 32px;
+    margin: 8px 26.6px 0 26.6px;
+    z-index: 2;
+  }
+}
+
+%race-record,.race-record{
+  padding: 100px 0 100px 0;
+  background-color: #EFEFEF;
+  position: relative;
+  z-index: -1;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}
+
+%race-record-box,.race-record-box{
+  margin: 60px 0 0 280px;
+  display: flex;
+  gap:0 160px;
+  align-items: center;
+  @media screen and (max-width:899px) {
+    margin: 60px 0 0 30vw;
+  }
+  @media screen and (max-width:620px) {
+    width: 200px;
+    margin:60px 0 0 auto;
+  }
+  &__clock{
+    width: 100px;
+    height: 100px;
+    @media screen and (max-width:620px) {
+      position: absolute;
+      left: 10vw;
+      opacity: 0.5;
+      z-index: -1;
+    }
+  }
+  &__bar{
+    width: 120px;
+    height: 4px;
+    background-color:#04111C;
+    @media screen and (max-width:1040px) {
+      display: none;
+    }
+  }
+  &__btn{
+  }
+}
+
+%race-record-back-img,.race-record-back-img{
+  width: 280px;
+  position: absolute;
+  right: 60px;
+  bottom: 80px;
+  z-index: -2;
+}
+
+%race-q-a,.race-q-a{
+  padding: 100px 0 100px 0;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}
