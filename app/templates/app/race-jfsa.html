@@ -1,63 +1,100 @@
 {% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
 
 
 {% block title %}JFSA CUP{% endblock %}
-{% block css %}{% static 'app/css/race-jfsa.css' %}{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/race-jfsa/style.scss' %}{% endblock %}
 
 
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
 {% block page_title %}JFSA CUP{% endblock %}
-{% block page_minititle %}学生記録会の情報をみる{% endblock %}
+{% block page_minititle %}学生記録会の情報を見る{% endblock %}
 
 {% block body_detail %}
-<div class="block_space"></div>
-<div class="trial_description">
-  <img src="{% static 'app/img/trial2.png' %}" class="trial_img1">
-  <div class="description1">
-    <div class="description_cover"></div>
-    <div class="triangle_upper_right"></div>
-    <div class="triangle_lower_left"></div>
-    <p class="description_title">
-      題名をここに入力
-    </p>
-    <p class="description_text">
-      学生記録会は、<b>『学生からフィンを盛り上げよう』</b>をモットーにJFSAが企画・運営をしている、
-      <b>学生による、学生のための記録会</b>です。<br><br>
-  <b>新人戦・プレインカレ</b>と題して年間２回開催し、あらゆる競技レベルに実戦の場を設けることで
-  競技人口の増加と競技力の向上に努めています。<br><br>
-  さらに、<b>他大学との交流</b>を目的としたイベントレースも実施しており、学生全体でより一層の
-  <b>一体感</b>を創り上げています。
-
-    </p>
+<section class="page-discription">
+  <div class="page-discription-img">
+    <img src="{% static 'app/img/trial.png' %}" class="page-discription-img__img" alt="img">
+    <div class="page-discription-img__cover"></div>
   </div>
-</div>
-
-<div class="block_space"></div>
-<div class="trial_description">
-  <img src="{% static 'app/img/trial2.png' %}" class="trial_img2">
-  <div class="description2">
-    <div class="description_cover"></div>
-    <div class="triangle_upper_right"></div>
-    <div class="triangle_lower_left"></div>
-    <p class="description_title">
-      題名をここに入力
-    </p>
-    <p class="description_text">
-      学生記録会の情報を掲載しています。<br>
-      競技結果・新記録を見たい方はコチラ
-    </p>
+  <div class="page-discription-p">
+    <p class="page-discription-p__title">学生フィンを盛り上げよう</p>
+    <div class="page-discription-p__ja">
+      学生記録会は、企画から運営まで全て学生が行う、学生のための記録会です。新人戦・プレインカレと題して年間２回開催され、他大学の選手たちと競い合います。独自のルールに則って行われるため、フィンスイミングを始めたばかりの方も参加しやすい記録会となっています。さらに、他大学との交流を目的としたイベントレースも実施しており、学生全体でより一層の一体感を創り上げます。<img src="{% static 'app/img/diagonal-line.png' %}" alt="img" class="page-discription-p__bottom">
+    </div>
   </div>
-</div>
-<div class="block_space"></div>
-<div class="detail_bar">
-  <div class="detail_bar1"></div>
-  <div class="detail_bar2"></div>
-  <div class="detail_bar3"></div>
-</div>
+</section>
 
-<div class="race_schedule">
-  <p class="race_schedule_title">GAME RECORD/RESULT</p>
-  <div class="race_schedule_bar"></div>
-</div>
+<section class="record-result">
+  <div class="block-name">
+    <p class="block-name__en">Record & Result</p>
+    <p class="block-name__ja">大会記録 & 歴代の結果</p>
+    <div class="block-name__bar"></div>
+  </div>
+  <div class="record-result-block">
+    {% for event in events %}
+    <a class="trial-info-elem-block-list" href="{{ event.event_url }}">
+      <img class="trial-info-elem-block-list__img" src="{{event.thumnail.url}}">
+      <div class="trial-info-elem-block-list__cover"></div>
+      <div class="trial-info-elem-block-list-tags">
+        <div class="trial-info-elem-block-list-tags-left">
+          <div class="trial-info-elem-block-list-tags-left__eventdate">{{event.event_date|date:"m/d"}}</div>
+          <div class="trial-info-elem-block-list-tags-left__eventtime">{{event.event_date|date:"A g:i"}} ~</div>
+        </div>
+        <div class="trial-info-elem-block-list-tags-right">
+          <div class="trial-info-elem-block-list-tags-right__owner">主催者：　{{event.owner}}</div>
+          <div class="trial-info-elem-block-list-tags-right__place">場所：　　{{event.place}}</div>
+          <div class="trial-info-elem-block-list-tags-right__entryfee">参加費：　{{event.entry_fee}} 円</div>
+          <div class="trial-info-elem-block-list-tags-right__deadline">申込期限：{{event.deadline|date:"Y.m.d"}}</div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+
+</section>
+
+<section class="jfsa-cup-photos">
+  <div class="block-name">
+    <p class="block-name__en">JFSA CUP photos</p>
+    <p class="block-name__ja">学生記録会の様子</p>
+    <div class="block-name__bar"></div>
+  </div>
+</section>
+
+<section class="jfsa-cup-q-a">
+  <div class="block-name">
+    <p class="block-name__en">JFSA CUP Q&A</p>
+    <p class="block-name__ja">学生記録会に関するQ&A</p>
+    <div class="block-name__bar"></div>
+  </div>
+  <div class="q-a-block">
+      <div class="q-a-list">
+        <div class="q-a-list-question">
+          <p class="q-a-list-question__q">Q.</p>
+          <p class="q-a-list-question__p">学生記録会には参加資格はありますか？</p>
+        </div>
+        <div class="q-a-list-answer">
+          <p class="q-a-list-answer__a">A.</p>
+          <p class="q-a-list-answer__p">
+            学生記録会は、全国の大学生・大学院生および専門学生が参加することができます。
+          </p>
+        </div>
+      </div>
+    <div class="q-a-list">
+      <div class="q-a-list-question">
+        <p class="q-a-list-question__q">Q.</p>
+        <p class="q-a-list-question__p">学生記録会はどこで開催していますか？</p>
+      </div>
+      <div class="q-a-list-answer">
+        <p class="q-a-list-answer__a">A.</p>
+        <p class="q-a-list-answer__p">普及の観点から、フィンスイミングを行うことができるプールを増やすため、様々なプールでの大会開催を考えています。第1回、第2回では、東京の池袋にある立教大学のプールをお借りして大会を開催いたしました。できます。しかし大会に出場するためには団体登録をする必要があります。団体登録の詳細については日本水中スポーツ連盟（JUSF）のサイトをご覧ください。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 {% endblock %}

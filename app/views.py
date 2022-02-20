@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Team, NationalMember, Position, Member, Tag, NewsPost,PostManager, Event, Race
+from .models import Team, NationalMember, Position, Member, Tag, NewsPost,PostManager, Event, Race, JFSACupResult, JFSACupRecord, JFSACupMedia
 from django.core.paginator import Paginator
 from django.views import generic
 from . import calendar
@@ -123,6 +123,20 @@ class RaceView(CommonTemplateView):
 class RaceJfsaView(CommonTemplateView):
     # 学生記録会のページを表示させるビュー
     template_name = 'app/race-jfsa.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        result = JFSACupResult.objects.first()
+        records = JFSACupRecord.objects.is_public()[0:6]
+
+        max_id = JFSACupMedia.objects.all().aggregate(max_id=Max("id"))['max_id']
+        for i in range(10):
+            while True:
+                pk = random.randint(1, max_id)
+                photos = JFSACupMedia.objects.filter(pk=pk).first()
+        
+        context.update({'result':result,'records':records,'photos':photos})
+        return context
 
 
 class RaceOnlineView(CommonTemplateView):

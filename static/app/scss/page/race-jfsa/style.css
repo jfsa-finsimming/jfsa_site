@@ -1,0 +1,13 @@
+.record-result { padding: 100px 0 100px 0; background-color: #EFEFEF; }
+
+@media screen and (max-width: 899px) { .record-result { padding: 60px 0 60px 0; } }
+
+.jfsa-cup-photos { padding: 100px 0 100px 0; }
+
+@media screen and (max-width: 899px) { .jfsa-cup-photos { padding: 60px 0 60px 0; } }
+
+.jfsa-cup-q-a { padding: 100px 0 100px 0; background-color: #EFEFEF; }
+
+@media screen and (max-width: 899px) { .jfsa-cup-q-a { padding: 60px 0 60px 0; } }
+
+/*# sourceMappingURL=style.css.map */

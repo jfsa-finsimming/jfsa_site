@@ -183,3 +183,36 @@ class Race(models.Model):
             return self.month + '月:' + self.name
         else:
             return 'Not Checked: ' + self.month + '月:' + self.name
+
+
+
+class JFSACupResult(models.Model):
+    name = models.CharField(max_length=100)
+    display_name = models.CharField(max_length=100)
+    event_date = models.DateTimeField(blank=True, null=True)
+    thumnail = models.ImageField(upload_to='jfsacupresultimages/',null=True)
+    upload = models.FileField(upload_to='file/%Y/%m/%d')
+    is_public = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['-event_date']
+
+    def __str__(self):
+        if self.is_public :
+            return self.name
+        else:
+            return 'Not Checked: ' + self.name
+
+
+
+class JFSACupRecord(models.Model):
+    upload = models.FileField(upload_to='file/%Y/%m/%d')
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return str(self.updated_at)
+
+
+
+class JFSACupMedia(models.Model):
+    images = models.ImageField(upload_to='jfsacupimages/')
