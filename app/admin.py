@@ -16,13 +16,13 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
 
     def add_view(self, request, form_url="", extra_context=None):
         extra_context = extra_context or {}
-        extra_context['form'] = JFSACupForm()
+        extra_context['form'] = JFSACupForm(request.POST,request.FILES)
         return super(JFSACupMediaAdmin, self).add_view(request, form_url=form_url, extra_context=extra_context)
 
     def change_view(self, request, object_id, form_url="", extra_context=None):
         extra_context = extra_context or {}
         post = JFSACupMedia.objects.get(id=object_id)
-        extra_context["form"] = JFSACupForm()
+        extra_context["form"] = JFSACupForm(request.POST,request.FILES)
         return super(JFSACupMediaAdmin, self).change_view(request, object_id, form_url=form_url, extra_context=extra_context)
 #
     def save_model(self, request, obj, form, change):
