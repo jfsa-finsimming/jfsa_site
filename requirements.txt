@@ -9,7 +9,8 @@ pytz==2018.7
 psycopg2-binary==2.8.6
 foreman==0.9.6
 pillow==8.0.1
-django-markdownx==3.0.1
 libsass==0.20.1
 django-compressor==2.4
 django-sass-processor==0.8.2
+django-mdeditor==0.1.20
+Markdown==3.3.4

@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'markdownx',
     'cloudinary',
     'cloudinary_storage',
+    'mdeditor',
 ]
 
 MIDDLEWARE = [
@@ -87,6 +88,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+MDEDITOR_CONFIGS = {
+    'default': {
+        'language': 'en',
+        'toolbar': ["undo", "redo", "|",
+                    "bold", "del", "italic", "quote", "|",
+                    "h1", "h2", "h3", "|",
+                    "list-ul", "list-ol", "hr", "|",
+                    "link", "reference-link", "image", "code", "code-block", "table", "datetime", "|",
+                    "||", "preview", "watch", "fullscreen"],
+        'lineWrapping': True
+    }
+}
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'hzvuiry8d',

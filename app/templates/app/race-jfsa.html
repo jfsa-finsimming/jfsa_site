@@ -2,8 +2,13 @@
 {% load static %}
 {% load sass_tags %}
 
-
 {% block title %}JFSA CUP{% endblock %}
+{% block swiper %}
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+{% endblock %}
 {% block a %}{% sass_src 'app/scss/page/race-jfsa/style.scss' %}{% endblock %}
 
 
@@ -30,28 +35,24 @@
     <p class="block-name__ja">大会記録 & 歴代の結果</p>
     <div class="block-name__bar"></div>
   </div>
-  <div class="record-result-block">
-    {% for event in events %}
-    <a class="trial-info-elem-block-list" href="{{ event.event_url }}">
-      <img class="trial-info-elem-block-list__img" src="{{event.thumnail.url}}">
-      <div class="trial-info-elem-block-list__cover"></div>
-      <div class="trial-info-elem-block-list-tags">
-        <div class="trial-info-elem-block-list-tags-left">
-          <div class="trial-info-elem-block-list-tags-left__eventdate">{{event.event_date|date:"m/d"}}</div>
-          <div class="trial-info-elem-block-list-tags-left__eventtime">{{event.event_date|date:"A g:i"}} ~</div>
-        </div>
-        <div class="trial-info-elem-block-list-tags-right">
-          <div class="trial-info-elem-block-list-tags-right__owner">主催者：　{{event.owner}}</div>
-          <div class="trial-info-elem-block-list-tags-right__place">場所：　　{{event.place}}</div>
-          <div class="trial-info-elem-block-list-tags-right__entryfee">参加費：　{{event.entry_fee}} 円</div>
-          <div class="trial-info-elem-block-list-tags-right__deadline">申込期限：{{event.deadline|date:"Y.m.d"}}</div>
-        </div>
-      </div>
-    </a>
-    {% endfor %}
+  <div class="record-result-main">
+    <img class="record-result-main__img" src="https://res.cloudinary.com/hzvuiry8d/image/upload/v1645523335/jfsa_site_main/Icon_ionic-ios-paper_lalq9q.png">
+    <div class="record-result-main__bar"></div>
+    <div class="record-result-block">
+      <a class="record-result-elem" href="{{ record.upload.url }}">
+        <img class="record-result-elem__img" src="{% static 'app/img/trial.png' %}">
+        <div class="record-result-elem__cover"></div>
+        <p class="record-result-elem__p">大会記録</p>
+      </a>
+      {% for result in results %}
+      <a class="record-result-elem" href="{{ result.upload.url }}">
+        <img class="record-result-elem__img" src="{{result.thumnail.url}}">
+        <div class="record-result-elem__cover"></div>
+        <p class="record-result-elem__p">{{ result.display_name }}<br>大会結果</p>
+      </a>
+      {% endfor %}
+    </div>
   </div>
-
-
 </section>
 
 <section class="jfsa-cup-photos">
@@ -60,6 +61,18 @@
     <p class="block-name__ja">学生記録会の様子</p>
     <div class="block-name__bar"></div>
   </div>
+
+  <div class="swiper mySwiper jfsa-cup-photos-block">
+    <div class="swiper-wrapper">
+      {% for photo in photos %}
+      <div class="swiper-slide jfsa-cup-photos-elem">
+        <img class="jfsa-cup-photos-elem__img" src="{{photo.images.url}}">
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
 </section>
 
 <section class="jfsa-cup-q-a">
@@ -95,6 +108,7 @@
   </div>
 </section>
 
-
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="{% static 'app/js/swipe.js' %}"></script>
 
 {% endblock %}

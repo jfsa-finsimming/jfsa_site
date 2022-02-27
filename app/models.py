@@ -1,6 +1,5 @@
 from django.db import models
-from markdownx.models import MarkdownxField
-from markdownx.utils import markdownify
+from mdeditor.fields import MDTextField
 from django.utils import timezone
 from django.template.defaultfilters import slugify
 from django.urls import reverse
@@ -109,7 +108,7 @@ class NewsPost(models.Model):
     is_public = models.BooleanField(default=False)
     event_date = models.DateTimeField(blank=True, null=True)
     slug = models.SlugField(null=True, unique=True)
-    contents = MarkdownxField(help_text='To Write with Markdown format')
+    contents = MDTextField(blank=True)
 
     objects = PostManager.as_manager()
 
@@ -193,6 +192,8 @@ class JFSACupResult(models.Model):
     thumnail = models.ImageField(upload_to='jfsacupresultimages/',null=True)
     upload = models.FileField(upload_to='file/%Y/%m/%d')
     is_public = models.BooleanField(default=False)
+
+    objects = PostManager.as_manager()
 
     class Meta:
         ordering = ['-event_date']
