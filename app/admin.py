@@ -5,24 +5,26 @@ from .forms import JFSACupForm
 @admin.register(JFSACupMedia)
 class JFSACupMediaAdmin(admin.ModelAdmin):
     form = JFSACupForm
-#
-#     def get_form(self, request, obj=None, **kwargs):
-#         try:
-#             instance = kwargs['instance']
-#             return JFSACupForm(instance=instance)
-#         except KeyError:
-#             return JFSACupForm
-#
-#     def add_view(self, request, form_url="", extra_context=None):
-#         extra_context = extra_context or {}
-#         extra_context['form'] = self.get_form(request)
-#         return super(JFSACupMediaAdmin, self).add_view(request, form_url=form_url, extra_context=extra_context)
-#
-#     def change_view(self, request, object_id, form_url="", extra_context=None):
-#         extra_context = extra_context or {}
-#         post = JFSACupMedia.objects.get(id=object_id)
-#         extra_context["form"] = self.get_form(post)
-#         return super(JFSACupMediaAdmin, self).change_view(request, object_id, form_url=form_url, extra_context=extra_context)
+    add_form_template = 'admin/post_form.html'
+    change_form_template = 'admin/post_form.html'
+
+    def get_form(self, request, obj=None, **kwargs):
+        try:
+            instance = kwargs['instance']
+            return JFSACupForm(instance=instance)
+        except KeyError:
+            return JFSACupForm
+
+    def add_view(self, request, form_url="", extra_context=None):
+        extra_context = extra_context or {}
+        extra_context['form'] = self.get_form(request)
+        return super(JFSACupMediaAdmin, self).add_view(request, form_url=form_url, extra_context=extra_context)
+
+    def change_view(self, request, object_id, form_url="", extra_context=None):
+        extra_context = extra_context or {}
+        post = JFSACupMedia.objects.get(id=object_id)
+        extra_context["form"] = self.get_form(post)
+        return super(JFSACupMediaAdmin, self).change_view(request, object_id, form_url=form_url, extra_context=extra_context)
 #
     def save_model(self, request, obj, form, change):
         obj.save()
