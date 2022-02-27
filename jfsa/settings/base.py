@@ -33,9 +33,9 @@ INSTALLED_APPS = [
     'sass_processor',
     'app',
     'markdownx',
+    'mdeditor',
     'cloudinary',
     'cloudinary_storage',
-    'mdeditor',
 ]
 
 MIDDLEWARE = [
