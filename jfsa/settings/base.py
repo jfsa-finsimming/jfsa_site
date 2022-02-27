@@ -32,7 +32,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sass_processor',
     'app',
-    'markdownx',
     'cloudinary',
     'cloudinary_storage',
     'mdeditor',
