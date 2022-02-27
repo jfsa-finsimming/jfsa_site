@@ -213,7 +213,5 @@ class JFSACupRecord(models.Model):
     def __str__(self):
         return str(self.updated_at)
 
-
-
 class JFSACupMedia(models.Model):
     images = models.ImageField(upload_to='jfsacupimages/')
