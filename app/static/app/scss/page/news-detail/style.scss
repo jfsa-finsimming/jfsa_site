@@ -1,0 +1,121 @@
+%news-detail,.news-detail{
+  padding: 100px 0 100px 0;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}
+
+%news-detail-block,.news-detail-block{
+  margin: 0 auto 0 12%;
+  width: 720px;
+  @media screen and (max-width:899px) {
+    width: 80%;
+    margin: 0 auto 0 10%;
+  }
+  &__title{
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  &__thumnail{
+    width: 720px;
+    height: 360px;
+    object-fit: cover;
+    @media screen and (max-width:899px) {
+      width: 100%;
+      height: 40vw;
+    }
+  }
+  &__contents{
+    width: 100%;
+    h1 {
+      font-size: 1.4rem;
+      font-weight: normal;
+      margin: 1rem 0 1rem 0;
+      border-bottom: 2px solid #04111C;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      margin: 0.8rem 0 0.8rem 0;
+      &::before{
+        background-color: #6AABF7;
+        border-radius: 2px;
+        content: "";
+        display: inline-block;
+        height: 1.4rem;
+        margin: 0 10px 4px 0;
+        vertical-align: middle;
+        width: 4px;
+      }
+    }
+    h3 {
+      font-weight: 600;
+      margin: 0.4rem 0 0.4rem 0;
+      &::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f058";
+        color: #1F3741;
+        text-align: center;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin-right: 8px;
+      }
+    }
+    p {
+      margin: 0.4rem 0 0.4rem 0;
+      img {
+        width: 80%;
+        height: 320px;
+        transform: translateX(10%);
+        margin: 1rem 0 1rem 0;
+        @media screen and (max-width:899px) {
+          height: 32vw;
+        }
+      }
+      strong {
+        font-weight: 600;
+      }
+      em {
+        font-style: normal;
+        background:linear-gradient(transparent 60%, #ff6 60%);
+      }
+    }
+  }
+}
+
+%news-detail-titlebelow,.news-detail-titlebelow{
+  display: flex;
+  align-items: center;
+  gap:0 12px;
+  &__publish{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0.8rem;
+    &::before{
+      font-family: "Font Awesome 5 Free";
+      content: "\f093";
+      font-weight: 900;
+      font-size: 0.8rem;
+      margin-right: 4px;
+    }
+  }
+  &__update{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0.8rem;
+    &::before{
+      font-family: "Font Awesome 5 Free";
+      content: "\f044";
+      font-size: 0.8rem;
+      margin-right: 4px;
+    }
+  }
+}
+
+%news-elem-mark,.news-elem-mark{
+  display: flex;
+  gap:0 4px;
+  &__elem{
+    font-size: 0.8rem;
+  }
+}

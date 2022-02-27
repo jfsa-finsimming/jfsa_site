@@ -1,3 +1,6 @@
+from django.conf.urls import url, include
+from django.conf.urls.static import static
+from django.conf import settings
 from django.urls import path
 from . import views
 
@@ -20,4 +23,5 @@ urlpatterns = [
     path('about/', views.AboutView.as_view(), name='about'),
     path('about/finswimming/', views.AboutFinView.as_view(), name='about_finswimming'),
     path('about/jfsa/', views.AboutJfsaView.as_view(), name='about_jfsa'),
+    url(r'mdeditor/', include('mdeditor.urls')),
 ]

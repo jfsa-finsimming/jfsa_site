@@ -2,9 +2,39 @@
 
 @media screen and (max-width: 899px) { .record-result { padding: 60px 0 60px 0; } }
 
+.record-result-main { display: flex; align-items: center; justify-content: flex-end; gap: 0 160px; margin: 60px 0 0 0; }
+
+.record-result-main__img { width: 80px; height: 80px; }
+
+@media screen and (max-width: 1256px) { .record-result-main__img { display: none; } }
+
+.record-result-main__bar { width: 120px; height: 4px; background-color: #04111C; }
+
+@media screen and (max-width: 1040px) { .record-result-main__bar { display: none; } }
+
+.record-result-block { display: flex; width: 640px; overflow-x: scroll; }
+
+@media screen and (max-width: 656px) { .record-result-block { width: 98%; } }
+
+.record-result-elem { min-width: 200px; height: 200px; position: relative; text-decoration: none; }
+
+.record-result-elem__img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+
+.record-result-elem__cover { position: absolute; width: 100%; height: 100%; background-color: #F6F6F6; opacity: 0.6; }
+
+.record-result-elem__p { position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); font-weight: bold; text-align: center; }
+
 .jfsa-cup-photos { padding: 100px 0 100px 0; }
 
 @media screen and (max-width: 899px) { .jfsa-cup-photos { padding: 60px 0 60px 0; } }
+
+.jfsa-cup-photos-block { width: 80%; margin: 60px 0 0 auto; }
+
+.jfsa-cup-photos-elem { background-position: center; background-size: cover; width: 400px; height: 200px; }
+
+@media screen and (max-width: 656px) { .jfsa-cup-photos-elem { width: 80%; height: 36vw; } }
+
+.jfsa-cup-photos-elem__img { display: block; width: 100%; object-fit: cover; object-position: center; }
 
 .jfsa-cup-q-a { padding: 100px 0 100px 0; background-color: #EFEFEF; }
 

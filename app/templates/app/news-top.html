@@ -1,59 +1,48 @@
 {% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
 
-{% block title %}NEWS{% endblock %}
-{% block css %}{% static 'app/css/news.css' %}{% endblock %}
+{% block title %}news{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/news/style.scss' %}{% endblock %}
 
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
 {% block page_title %}NEWS{% endblock %}
 {% block page_minititle %}お知らせを見る{% endblock %}
 
-
-
 {% block body_detail %}
-<div id="news_all">
-{% for news in news_posts %}
-  <div id="news{{ forloop.counter }}">
-    <a href="{{ news.get_absolute_url }}">
-      <img class="news_thumnail" src="{{news.thumnail.url}}" width=400>
-      <div class="news_cover"></div>
-      <div class="triangle_upper_left"></div>
-      <div class="triangle_lower_right"></div>
-      <p class="published_date">{{news.published_at|date:"Y.m.d"}}</p>
-      {% for tag in news.tags.all %}
+<section class="news">
+  <div class="news_list">
+    {% for news_post in news_posts %}
+    <a class="news-elem" href="{{ news_post.get_absolute_url }}">
+      <p class="news-elem__date">{{news_post.published_at|date:"Y.m.d"}}</p>
+      <div class="news-elem-mark">
+      {% for tag in news_post.tags.all %}
         {% if tag.name == 'trial' %}
-          <div class="trial_mark"></div>
+        <div class="fas fa-circle news-elem-mark__elem circle-mark"></div>
         {% elif tag.name == 'race' %}
-          <div class="race_mark"></div>
+        <div class="fas fa-circle news-elem-mark__elem circle-mark--race"></div>
         {% elif tag.name == 'training' %}
-            <div class="training_mark"></div>
+        <div class="fas fa-circle news-elem-mark__elem circle-mark--train"></div>
         {% endif %}
       {% endfor %}
-      <p class="news_title">{{news.title}}</p>
-      <div class="news_contents">
-        {% with description=news.formatted_markdown|safe %}
-        {{description|truncatechars:65}}
-        {% endwith %}
       </div>
+      <p class="news-elem__title">{{news_post.title}}</p>
+      <img class="news-elem__thumnail" src="{{news_post.thumnail.url}}">
     </a>
+    {% endfor %}
   </div>
-{% endfor %}
-</div>
-
-<script src="{% static 'app/js/news.js' %}"></script>
-
-<div class="pagination">
-  {% if page_obj.has_previous %}
-    <a href="?page=1"><img src="{% static 'app/img/first_page.png' %}"></a>
-    <a href="?page={{ page_obj.previous_page_number }}"><img src="{% static 'app/img/prev_page.png' %}"></a>
-  {% endif %}
-  <span class="current">
-    {{page_obj.number}} / {{page_obj.paginator.num_pages}}
-  </span>
-  {% if page_obj.has_next %}
-    <a href="?page={{ page_obj.next_page_number }}"><img src="{% static 'app/img/next_page.png' %}"></a>
-    <a href="?page={{ page_obj.paginator.num_pages }}"><img src="{% static 'app/img/last_page.png' %}"></a>
-  {% endif %}
-</div>
+  <div class="pagination">
+    {% if page_obj.has_previous %}
+      <a href="?page=1"><i class="fas fa-step-backward pagination__first"></i></a>
+      <a href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-angle-left pagination__pre"></i></a>
+    {% endif %}
+    <span class="pagination__num">
+      {{page_obj.number}} / {{page_obj.paginator.num_pages}}
+    </span>
+    {% if page_obj.has_next %}
+      <a href="?page={{ page_obj.next_page_number }}"><i class="fas fa-angle-right pagination__next"></i></a>
+      <a href="?page={{ page_obj.paginator.num_pages }}"><i class="fas fa-step-forward pagination__last"></i></a>
+    {% endif %}
+  </div>
+</section>
 
 {% endblock %}
