@@ -26,10 +26,10 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
         post = JFSACupMedia.objects.get(id=object_id)
         extra_context["form"] = post
         return super(JFSACupMediaAdmin, self).change_view(request, object_id, form_url=form_url, extra_context=extra_context)
-#
+
     def save_model(self, request, obj, form, change):
         obj.save()
-        images = request.FILES.getlist('images')
+        images = request.FILES.getlist('images')[1:]
         for image in images:
             JFSACupMedia.objects.create(images=image)
         return super().save_model(request, obj, form, change)
