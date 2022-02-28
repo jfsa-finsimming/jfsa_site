@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Team, NationalMember, Position, Member, Tag, NewsPost, Event, Race, JFSACupResult, JFSACupRecord,  JFSACupMedia
 from .forms import JFSACupForm
-from cloudinary.forms import cl_init_js_callbacks 
+from cloudinary.forms import cl_init_js_callbacks
 
 @admin.register(JFSACupMedia)
 class JFSACupMediaAdmin(admin.ModelAdmin):
@@ -25,7 +25,7 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
         extra_context = extra_context or {}
         extra_context = dict( backend_form = JFSACupForm())
         post = JFSACupMedia.objects.get(id=object_id)
-        extra_context["form"] = self.get_form(instancce=post)
+        extra_context["form"] = self.get_form(request.POST,request.FILES)
         return super(JFSACupMediaAdmin, self).change_view(request, object_id, form_url=form_url, extra_context=extra_context)
 #
     def save_model(self, request, obj, form, change):
