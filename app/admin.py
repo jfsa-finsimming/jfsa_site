@@ -24,7 +24,7 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
     def change_view(self, request, object_id, form_url="", extra_context=None):
         extra_context = extra_context or {}
         post = JFSACupMedia.objects.get(id=object_id)
-        extra_context["form"] = post.instance
+        extra_context["form"] = post
         return super(JFSACupMediaAdmin, self).change_view(request, object_id, form_url=form_url, extra_context=extra_context)
 #
     def save_model(self, request, obj, form, change):
