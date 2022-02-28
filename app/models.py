@@ -214,4 +214,4 @@ class JFSACupRecord(models.Model):
         return str(self.updated_at)
 
 class JFSACupMedia(models.Model):
-    images = models.ImageField(upload_to='jfsacupimages/')
+    images = CloudinaryField('image')
