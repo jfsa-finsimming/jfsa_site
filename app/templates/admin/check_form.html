@@ -1,7 +1,7 @@
 {% extends "admin/base_site.html" %}
 
 {% block content %}
-  <a href="{{form.images.url}}">写真のリンク</a>
+  <img src="{{form.images.url}}">
   <button type="button" onclick="history.back()">戻る</button>
 
 {% endblock %}

@@ -18,7 +18,7 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
     def add_view(self, request, form_url="", extra_context=None):
         extra_context = extra_context or {}
         extra_context = dict( backend_form = JFSACupForm())
-        extra_context['form'] = self.get_form(request.POST,request.FILES)
+        extra_context['form'] = self.get_form(request.POST)
         return super(JFSACupMediaAdmin, self).add_view(request, form_url=form_url, extra_context=extra_context)
 
     def change_view(self, request, object_id, form_url="", extra_context=None):
