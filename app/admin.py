@@ -29,7 +29,8 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         max_id = request.FILES.getlist('images').aggregate(max_id=Max("id"))['max_id']
-        images = request.FILES.getlist('images')[0:max_id]
+        get_id = max_id-1
+        images = request.FILES.getlist('images')[0:get_id]
         for image in images:
             JFSACupMedia.objects.create(images=image)
         obj.save()
