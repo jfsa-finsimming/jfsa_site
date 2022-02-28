@@ -6,7 +6,7 @@ from cloudinary.forms import cl_init_js_callbacks
 @admin.register(JFSACupMedia)
 class JFSACupMediaAdmin(admin.ModelAdmin):
     add_form_template = 'admin/post_form.html'
-    change_form_template = 'admin/post_form.html'
+    change_form_template = 'admin/check_form.html'
 
     def get_form(self, request, obj=None, **kwargs):
         try:
@@ -23,9 +23,8 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
 
     def change_view(self, request, object_id, form_url="", extra_context=None):
         extra_context = extra_context or {}
-        extra_context = dict( backend_form = JFSACupForm())
         post = JFSACupMedia.objects.get(id=object_id)
-        extra_context["form"] = self.get_form(request.POST,request.FILES)
+        extra_context["form"] = post.instance
         return super(JFSACupMediaAdmin, self).change_view(request, object_id, form_url=form_url, extra_context=extra_context)
 #
     def save_model(self, request, obj, form, change):
