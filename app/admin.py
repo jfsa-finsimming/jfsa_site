@@ -18,7 +18,7 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
     def add_view(self, request, form_url="", extra_context=None):
         extra_context = extra_context or {}
         extra_context = dict( backend_form = JFSACupForm())
-        extra_context['form'] = self.get_form(request.POST)
+        extra_context['form'] = self.get_form(request)
         return super(JFSACupMediaAdmin, self).add_view(request, form_url=form_url, extra_context=extra_context)
 
     def change_view(self, request, object_id, form_url="", extra_context=None):
@@ -28,10 +28,10 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
         return super(JFSACupMediaAdmin, self).change_view(request, object_id, form_url=form_url, extra_context=extra_context)
 #
     def save_model(self, request, obj, form, change):
+        obj.save()
         images = request.FILES.getlist('images')
         for image in images:
             JFSACupMedia.objects.create(images=image)
-        obj.save()
         return super().save_model(request, obj, form, change)
 
 
