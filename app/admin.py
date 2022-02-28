@@ -28,7 +28,8 @@ class JFSACupMediaAdmin(admin.ModelAdmin):
         return super(JFSACupMediaAdmin, self).change_view(request, object_id, form_url=form_url, extra_context=extra_context)
 
     def save_model(self, request, obj, form, change):
-        images = request.FILES.getlist('images')[1:]
+        max_id = request.FILES.getlist('images').aggregate(max_id=Max("id"))['max_id']
+        images = request.FILES.getlist('images')[0:max_id]
         for image in images:
             JFSACupMedia.objects.create(images=image)
         obj.save()
