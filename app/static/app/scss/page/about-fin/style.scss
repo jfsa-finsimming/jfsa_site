@@ -47,10 +47,9 @@
   &__en{
     font-family: 'Didact Gothic', sans-serif;
     font-size: 2rem;
-    font-weight: bold;
   }
   &__ja{
-    font-weight: 600;
+    font-weight: 520;
   }
 }
 
@@ -89,11 +88,11 @@
     }
   }
   &__name{
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 520;
   }
   &__size{
-    font-weight: 600;
+    font-weight: 520;
   }
   &__weight{
     @extend .tool-elem__size;

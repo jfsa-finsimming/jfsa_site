@@ -51,7 +51,7 @@ class TopView(CommonTemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         data = NewsPost.objects.order_by('-published_at').published().is_public()[0:6]
-        context.update({'news_lists':data})
+        context.update({'news_posts':data})
         return context
 
 

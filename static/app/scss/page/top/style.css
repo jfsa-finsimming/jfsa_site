@@ -12,7 +12,7 @@
 
 @media screen and (min-width: 550px) and (max-width: 1124px) { .intro__bar { width: 50%; } }
 
-@media screen and (max-width: 549px) { .intro__bar { width: 24%; } }
+@media screen and (max-width: 549px) { .intro__bar { width: 24%; height: 2px; } }
 
 .intro__ja { font-size: 16px; padding: 40px 10% 40px 10%; width: 754px; }
 
@@ -30,9 +30,7 @@
 
 @media screen and (max-width: 900px) { .finswimming-exp { display: block; position: relative; left: 0%; padding-left: 2%; } }
 
-.finswimming-exp__en { font-family: 'Didact Gothic', sans-serif; font-size: 48px; }
-
-@media screen and (max-width: 549px) { .finswimming-exp__en { font-size: 40px; } }
+.finswimming-exp__en { font-family: 'Didact Gothic', sans-serif; font-size: 2rem; }
 
 .finswimming-exp__ja { width: 320px; }
 
@@ -92,16 +90,20 @@
 
 @media screen and (max-width: 899px) { .forstudent-block__en { font-size: 8vw; } }
 
-.forstudent-block__ja { font-size: 24px; position: absolute; top: 50%; z-index: 4; color: #04111C; }
+.forstudent-block__ja { font-size: 1.4rem; position: absolute; top: 50%; z-index: 4; color: #04111C; }
 
-@media screen and (min-width: 900px) and (max-width: 1199px) { .forstudent-block__ja { font-size: 2vw; color: #04111C; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { .forstudent-block__ja { color: #04111C; } }
 
-@media screen and (max-width: 899px) { .forstudent-block__ja { font-size: 4.8vw; color: #04111C; } }
+@media screen and (max-width: 899px) { .forstudent-block__ja { color: #04111C; } }
 
 .forstudent-block__bar { width: 100%; height: 4px; background-color: #04111C; }
+
+@media screen and (max-width: 899px) { .forstudent-block__bar { height: 2px; } }
 
 .forstudent { padding: 100px 0 100px 0; }
 
 @media screen and (max-width: 899px) { .forstudent { padding: 60px 0 60px 0; } }
+
+.top-news { margin-top: 60px; }
 
 /*# sourceMappingURL=style.css.map */

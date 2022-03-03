@@ -4,11 +4,11 @@
 
 @media screen and (max-width: 440px) { .trial-info-elem-left { width: 96%; } }
 
-.trial-info-elem-left__upbar, .trial-info-elem-left__downbar { width: 4px; height: 60px; background-color: #04111C; }
+.trial-info-elem-left__upbar, .trial-info-elem-left__downbar { width: 2px; height: 60px; background-color: #04111C; }
 
 @media screen and (max-width: 1334px) { .trial-info-elem-left__upbar, .trial-info-elem-left__downbar { display: none; } }
 
-@media screen and (max-width: 1334px) { .trial-info-elem-left__downbar { width: 40px; height: 4px; display: block; } }
+@media screen and (max-width: 1334px) { .trial-info-elem-left__downbar { width: 40px; height: 2px; display: block; } }
 
 @media screen and (max-width: 440px) { .trial-info-elem-left__downbar { width: 13vw; } }
 

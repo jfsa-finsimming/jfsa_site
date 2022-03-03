@@ -18,9 +18,9 @@
 
 .style-elem-name { display: flex; align-items: baseline; gap: 0 0.5rem; margin: 0.2rem; }
 
-.style-elem-name__en { font-family: 'Didact Gothic', sans-serif; font-size: 2rem; font-weight: bold; }
+.style-elem-name__en { font-family: 'Didact Gothic', sans-serif; font-size: 2rem; }
 
-.style-elem-name__ja { font-weight: 600; }
+.style-elem-name__ja { font-weight: 520; }
 
 .tool { padding: 100px 0 100px 0; }
 
@@ -38,9 +38,9 @@
 
 @media screen and (max-width: 375px) { .tool-elem__img { width: 100%; height: 48vw; } }
 
-.tool-elem__name { font-size: 2rem; font-weight: 600; }
+.tool-elem__name { font-size: 1.4rem; font-weight: 520; }
 
-.tool-elem__size, .tool-elem__mtrl, .tool-elem__weight { font-weight: 600; }
+.tool-elem__size, .tool-elem__mtrl, .tool-elem__weight { font-weight: 520; }
 
 .tool-elem__mtrl { margin-bottom: 0.4rem; }
 
