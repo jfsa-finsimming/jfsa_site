@@ -24,21 +24,17 @@
   }
   &__en{
     font-family: 'Didact Gothic', sans-serif;
-    font-size: 96px;
+    font-size: 4rem;
     position: absolute;top: 40%;
-    @media screen and (max-width:899px) {
-      top: 30%;
-    }
     @media screen and (max-width:549px) {
-      font-size: 14vw;
       top: 25vw;
+      font-size: 3rem;
     }
   }
   &__ja{
-    font-size: 32px;
+    font-size: 1.4rem;
     position: absolute; top:68%;
     @media screen and (max-width:549px) {
-      font-size: 5.8vw;
       top: 50vw;
     }
   }

@@ -1,42 +1,56 @@
 {% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
 
 
-{% block title %}ABOUT{% endblock %}
-{% block css %}{% static 'app/css/about-top.css' %}{% endblock %}
+{% block title %}About{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/about/style.scss' %}{% endblock %}
 
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
-{% block page_title %}ABOUT{% endblock %}
-{% block page_minititle %}このサイトについて{% endblock %}
+
+{% block page_title %}About{% endblock %}
+{% block page_minititle %}フィンスイミングのあれこれ{% endblock %}
+
 
 {% block body_detail %}
-<div class="block_space"></div>
-<div class="box1">
-  <img src="{% static 'app/img/home7.png' %}" class="imgh7">
-  <div class="cover2"></div>
-  <p class="box1-text1">FINSWIMMING</p>
-  <p class="box1-text2">フィンスイミング</p>
-  <div class="bar2"></div>
-  <p class="box1-text3">
-    お試しの文章です。大学フィンスイミングチームについての説明が入ります。
-    お試しの文章です。大学フィンスイミングチームについての説明が入ります。
-    お試しの文章です。大学フィンスイミングチームについての説明。あああ
-  </p>
-</div>
-<div class="block_mini_space"></div>
-<div class="box2">
-  <img src="{% static 'app/img/home7.png' %}" class="imgh7">
-  <div class="cover2"></div>
-  <p class="box2-text1">JFSA</p>
-  <p class="box2-text2">日本フィンスイミング学生連合</p>
-  <div class="bar3"></div>
-  <p class="box2-text3">
-    お試しの文章です。大学フィンスイミングチームについての説明が入ります。
-    お試しの文章です。大学フィンスイミングチームについての説明が入ります。
-    お試しの文章です。大学フィンスイミングチームについての説明。
-  </p>
-</div>
-<div class="block_mini_space"></div>
+  <section class="about-info">
+    <div class="block-name">
+      <p class="block-name__en">About</p>
+      <p class="block-name__ja">私たちについて</p>
+      <div class="block-name__bar"></div>
+    </div>
+    <div class="page-trans">
+      <div class="page-trans-img">
+        <img src="{% static 'app/img/team-college.png' %}" class="page-trans-img__img" alt="img">
+        <div class="page-trans-img__cover"></div>
+      </div>
+      <div class="page-trans-p">
+        <p class="page-trans-p__title">フィンスイミングについて</p>
+        <div class="page-trans-p__ja">
+          フィンスイミングはどういう競技なんだろう？そんな疑問に応えるために、種目や道具を説明しています。Youtubeの動画もあるので、ぜひ見てみてください！
+        </div>
+        <a class="button page-trans-p__bottom" href="#">
+          <div class="button__text">Veiw more</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+      </div>
+    </div>
+    <div class="page-trans">
+      <div class="page-trans-img">
+        <img src="{% static 'app/img/team-club.png' %}" class="page-trans-img__img" alt="img">
+        <div class="page-trans-img__cover"></div>
+      </div>
+      <div class="page-trans-p">
+        <p class="page-trans-p__title">JFSAについて</p>
+        <div class="page-trans-p__ja">
+          日本学生フィンスイミング連合（JFSA）について説明しています。2019年11月に設立してから、誰もがフィンスイミングができる環境づくりを目指して活動しています。
+        </div>
+        <a class="button page-trans-p__bottom" href="#">
+          <div class="button__text">Veiw more</div>
+          <i class="fas fa-arrow-right button__arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
 
-{% endblock %}
+  {% endblock %}
