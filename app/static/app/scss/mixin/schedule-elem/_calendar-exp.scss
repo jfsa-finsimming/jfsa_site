@@ -2,7 +2,10 @@
   display: flex;
   flex-wrap:wrap;
   align-items: center;
-  width: 88px;
+  width: 6rem;
+  @media screen and (max-width:899px){
+    width: 7rem;
+  }
   &__mark{
     margin-right: 24px;
   }

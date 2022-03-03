@@ -1,0 +1,113 @@
+%style,.style{
+  padding: 100px 0 100px 0;
+  background-color: #EFEFEF;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}
+
+%style-block,.style-block{
+  display: flex;
+  flex-wrap: wrap;
+  width: 84%;
+  justify-content: space-around;
+  gap: 4rem 6rem ;
+  margin: 4rem auto 0 auto;
+  @media screen and (max-width:550px) {
+    width: 96%
+  }
+}
+
+%style-elem,.style-elem{
+  width: 480px;
+  @media screen and (max-width:550px) {
+    width: 100%
+  }
+  &__img{
+    width: 360px;
+    height: 180px;
+    object-fit: cover;
+    @media screen and (max-width:375px) {
+      width: 100%;
+      height:48vw;
+    }
+  }
+  &__text{
+  }
+  &__btm{
+    margin: 1rem 0 0 auto;
+  }
+}
+
+%style-elem-name,.style-elem-name{
+  display: flex;
+  align-items: baseline;
+  gap:0 0.5rem;
+  margin: 0.2rem;
+  &__en{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &__ja{
+    font-weight: 600;
+  }
+}
+
+
+%tool,.tool{
+  padding: 100px 0 100px 0;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}
+
+%tool-block,.tool-block{
+  display: flex;
+  flex-wrap: wrap;
+  width: 84%;
+  justify-content: space-around;
+  gap: 4rem 6rem ;
+  margin: 4rem auto 0 auto;
+  @media screen and (max-width:550px) {
+    width: 96%
+  }
+}
+
+%tool-elem,.tool-elem{
+  width: 480px;
+  @media screen and (max-width:550px) {
+    width: 100%
+  }
+  &__img{
+    width: 360px;
+    height: 180px;
+    object-fit: cover;
+    @media screen and (max-width:375px) {
+      width: 100%;
+      height:48vw;
+    }
+  }
+  &__name{
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  &__size{
+    font-weight: 600;
+  }
+  &__weight{
+    @extend .tool-elem__size;
+  }
+  &__mtrl{
+    @extend .tool-elem__size;
+    margin-bottom: 0.4rem;
+  }
+}
+
+%fin-q-a,.fin-q-a{
+  padding: 100px 0 100px 0;
+  background-color: #EFEFEF;
+  @media screen and (max-width:899px) {
+    padding: 60px 0 60px 0;
+  }
+}

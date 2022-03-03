@@ -1,224 +1,179 @@
 {% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
 
 
-{% block title %}FINSWIMMING{% endblock %}
-{% block css %}{% static 'app/css/about-fin.css' %}{% endblock %}
+{% block title %}Finswimming{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/about-fin/style.scss' %}{% endblock %}
 
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
-{% block page_title %}FINSWIMMING{% endblock %}
+
+{% block page_title %}Finswimming{% endblock %}
 {% block page_minititle %}フィンスイミングについて{% endblock %}
 
+
 {% block body_detail %}
-<div class="block_space"></div>
-<div class="race_schedule">
-  <p class="race_schedule_title">FINSWMMING</p>
-  <div class="race_schedule_bar"></div>
-  <div class="trial_description">
-    <img src="{% static 'app/img/trial2.png' %}" class="trial_img1">
-    <div class="description1">
-      <div class="description_cover"></div>
-      <div class="triangle_upper_right"></div>
-      <div class="triangle_lower_left"></div>
-      <p class="description_title">
-        題名をここに入力
+<section class="page-discription">
+  <div class="page-discription-img">
+    <img src="{% static 'app/img/trial.png' %}" class="page-discription-img__img" alt="img">
+    <div class="page-discription-img__cover"></div>
+  </div>
+  <div class="page-discription-p">
+    <p class="page-discription-p__title">学生フィンを盛り上げよう</p>
+    <div class="page-discription-p__ja">
+      学生記録会は、企画から運営まで全て学生が行う、学生のための記録会です。新人戦・プレインカレと題して年間２回開催され、他大学の選手たちと競い合います。独自のルールに則って行われるため、フィンスイミングを始めたばかりの方も参加しやすい記録会となっています。さらに、他大学との交流を目的としたイベントレースも実施しており、学生全体でより一層の一体感を創り上げます。<img src="{% static 'app/img/diagonal-line.png' %}" alt="img" class="page-discription-p__bottom">
+    </div>
+  </div>
+</section>
+
+<section class="style">
+  <div class="block-name">
+    <p class="block-name__en">Style</p>
+    <p class="block-name__ja">フインスイミングの種目</p>
+    <div class="block-name__bar"></div>
+  </div>
+  <div class="style-block">
+    <div class="style-elem">
+      <img src="{% static 'app/img/trial.png' %}" class="style-elem__img" alt="img">
+      <div class="style-elem-name">
+        <p class="style-elem-name__en">AP</p>
+        <p class="style-elem-name__ja">アプニア</p>
+      </div>
+      <p class="style-elem__text">
+        モノフィン*のみを装着し、水中を無呼吸で泳ぎ切る種目。距離は50mまでしかなく、速さに特化したこの種目はまさに水中競技最速といえます。現在の50mの世界記録は13.70で、これは競泳・自由形の約1.5倍というすさまじいスピードです。
       </p>
-      <p class="description_text">
-        フィンスイミングとは、フィン（足ひれ）を装着して速さを競う競技である。
-  その魅力は何といっても<br><br>
-
-  <b>『圧倒的スピード感』</b><br><br>
-
-  ５０ｍを13秒台で泳ぎ切り、その最高速度は競泳・自由形の1.5倍にも相当する。<br><br>
-
-  まさしく<b>『水中最速競技』</b><br><br>
-
-  フィンスイミングは第2のオリンピックと呼ばれる、World Games（ワールドゲームズ）の正式種目に認定されている。
-
+      <a class="button style-elem__btm" href="#">
+        <div class="button__text">Youtube</div>
+        <i class="fas fa-arrow-right button__arrow"></i>
+      </a>
+    </div>
+    <div class="style-elem">
+      <img src="{% static 'app/img/trial.png' %}" class="style-elem__img" alt="img">
+      <div class="style-elem-name">
+        <p class="style-elem-name__en">AP</p>
+        <p class="style-elem-name__ja">アプニア</p>
+      </div>
+      <p class="style-elem__text">
+        モノフィン*のみを装着し、水中を無呼吸で泳ぎ切る種目。距離は50mまでしかなく、速さに特化したこの種目はまさに水中競技最速といえます。現在の50mの世界記録は13.70で、これは競泳・自由形の約1.5倍というすさまじいスピードです。
       </p>
+      <a class="button style-elem__btm" href="#">
+        <div class="button__text">Youtube</div>
+        <i class="fas fa-arrow-right button__arrow"></i>
+      </a>
     </div>
-  </div>
-</div>
-<div class="block_space"></div>
-<div class="style_block">
-  <p class="race_schedule_title">STYLE</p>
-  <div class="race_schedule_bar"></div>
-  <div class="apnea">
-    <div class="aboutfin_triangle"></div>
-    <img class="style_thumnail" src="{% static 'app/img/home5.png' %}" width=360 height=180>
-    <p class="style_shortname">AP</p>
-    <p class="style_description">
-      <b>モノフィン</b>のみを装着し、水中を<b>無呼吸</b>で泳ぎ切る種目。<br>
-  距離は50mまでしかなく、<b>速さに特化</b>したこの種目はまさに<b>水中競技最速</b>といえる。<br>
-  現在の50mの世界記録は<b>13.70</b>で、これは競泳・<b>自由形の約1.5倍</b>というすさまじいスピードである。
-
-    </p>
-    <div class="button1">
-      <div class="eff-1"></div>
-      <a href="#">MOVIE</a>
-    </div>
-  </div>
-  <div class="surface">
-    <div class="aboutfin_triangle"></div>
-    <img class="style_thumnail" src="{% static 'app/img/home5.png' %}" width=360 height=180>
-    <p class="style_shortname">SF</p>
-    <p class="style_description">
-      <b>モノフィン</b>と<b>シュノーケル</b>を着け、水面をドルフィンキックで進んでいく種目。<br>
-    シュノーケルまたは体の一部が常に水面から出ていないといけないため、
-    まるで<b>水を切り裂く</b>ように泳いでいく。<br>
-    競泳の自由形種目と同様に<b>25~1500m</b>までの距離があり、海で開催される<b>OWS</b>（オープンウォータースイミング）もある。
-
-    </p>
-    <div class="button1">
-      <div class="eff-1"></div>
-      <a href="#">MOVIE</a>
-    </div>
-  </div>
-  <div class="bifin">
-    <div class="aboutfin_triangle"></div>
-    <img class="style_thumnail" src="{% static 'app/img/home5.png' %}" width=360 height=180>
-    <p class="style_shortname">BF</p>
-    <p class="style_description">
-      CMAS（世界水中連盟）に認定された<b>ビーフィン</b>と、<b>シュノーケル</b>を装着して
-      <b>クロール</b>を泳ぐ種目。距離は２５～４００ｍ。<br>最も競泳に近いが
-      その<b>速さは別次元</b>である。<br>
-  日本特有の<b>JBF</b>（ジェービーフィン）という種目もあり、シュノーケルの着用義務はなく、
-  2枚のフィンであれば<b>素材、大きさ、形を問わない</b>。
-
-    </p>
-    <div class="button1">
-      <div class="eff-1"></div>
-      <a href="#">MOVIE</a>
-    </div>
-  </div>
-  <div class="immersion">
-    <div class="aboutfin_triangle"></div>
-    <img class="style_thumnail" src="{% static 'app/img/home5.png' %}" width=360 height=180>
-    <p class="style_shortname">IM</p>
-    <p class="style_description">
-      <b>モノフィン</b>と圧縮空気の呼吸器具（<b>酸素ボンベ</b>）を使用し、
-    AP同様水中ドルフィンキックで進む。<br>距離は<b>１００ｍと４００ｍ</b>のみ。<br>
-    APよりも<b>長い距離を高速で泳ぐ</b>のが魅力だが、モノフィンと酸素ボンベを扱うため最高難易度の種目である。
-
-    </p>
-    <div class="button1">
-      <div class="eff-1"></div>
-      <a href="#">MOVIE</a>
-    </div>
-  </div>
-</div>
-<div class="block_space"></div>
-<div class="tool_block">
-  <p class="race_schedule_title">TOOL</p>
-  <div class="race_schedule_bar"></div>
-  <div class="monofin">
-    <div class="aboutfin_triangle"></div>
-    <img class="tool_thumnail" src="{% static 'app/img/home5.png' %}" width=360 height=180>
-    <p class="tool_shortname">Mono Fin</p>
-    <p class="tool_name">モノフィン</p>
-    <p class="tool_description">
-      W/D/H：760/760/150mm　Weigh：4~5kg　Material：Rubber、Carbon、FRP<br><br>
-
-<b>イルカの尾びれ</b>のような１枚の大きなフィン。両足で履いてドルフィンキックで進む。<br>
-その大きさと重さによって<b>爆発的な推進力</b>を生みだす反面、
-使いこなすには<b>高度な技術</b>が要求される。<br>
-北欧製のモノフィンが国内でもシェアを占め、<b>フルオーダーメイド</b>で作られる。
-
-    </p>
-  </div>
-  <div class="bifin_tool">
-    <div class="aboutfin_triangle"></div>
-    <img class="tool_thumnail" src="{% static 'app/img/home5.png' %}" width=360 height=180>
-    <p class="tool_shortname">Bi Fin</p>
-    <p class="tool_name">ビーフィン</p>
-    <p class="tool_description">
-      W/D：230/675mm　Weigh：1.0~1.5kg　Material：Rubber<br><br>
-
-  馴染みのある２枚のフィンだが、公式戦ではCMAS（世界水中連盟）に認定した
-  ビーフィンのみが使用できる。<br>
-  ドルフィンキックまたはバタ足キックで進み、推進力を生みだすのも比較的容易。<br>
-  ゴムの強度によって<b>フィンの硬さが変わる</b>ため、距離によって<b>フィンを使い分ける</b>。
-    </p>
-  </div>
-  <div class="sunokel">
-    <div class="aboutfin_triangle"></div>
-    <img class="tool_thumnail" src="{% static 'app/img/home5.png' %}" width=360 height=180>
-    <p class="tool_shortname">Bi Fin</p>
-    <p class="tool_name">ビーフィン</p>
-    <p class="tool_description">
-      Length：430mm　Diameter：15~23mm<br><br>
-
-  水中に頭部を入れたまま呼吸をするための器具。<br>
-  SF、BF競技では着用しなければならない。<br>
-  素材、形、カラーの種類は多岐にわたる。
-
-
-    </p>
-  </div>
-</div>
-
-<div class="block_space"></div>
-
-<div class="fin_qa_block">
-  <p class="race_schedule_title">FINSWMMING Q&A</p>
-  <div class="race_schedule_bar"></div>
-  <div class="cp_qa">
-    <div class="cp_actab">
-    <input id="cp_tabfour011" type="checkbox" name="tabs">
-    <label for="cp_tabfour011">フィンスイミングができる大学はどのくらいある？</label>
-    <div class="cp_actab-content">
-      <p>大学に部活やサークルとして活動拠点があるのは以下の大学です。<br>
-・早稲田大学・日本体育大学・明治大学・九州産業大学<br>
-部活動やサークルとして活動していない学生は、学生練習会に参加したり、
-クラブチームの練習会に参加したりしています。<br>
-詳しくはTEAMをご覧ください。
-</p>
-    </div>
-    </div>
-
-    <div class="cp_actab">
-    <input id="cp_tabfour012" type="checkbox" name="tabs">
-    <label for="cp_tabfour012">部活やサークルに所属していなくても大会に出場できる？</label>
-    <div class="cp_actab-content">
-      <p>できます。しかし大会に出場するためには団体登録をする必要があります。
+    <div class="style-elem">
+      <img src="{% static 'app/img/trial.png' %}" class="style-elem__img" alt="img">
+      <div class="style-elem-name">
+        <p class="style-elem-name__en">AP</p>
+        <p class="style-elem-name__ja">アプニア</p>
+      </div>
+      <p class="style-elem__text">
+        モノフィン*のみを装着し、水中を無呼吸で泳ぎ切る種目。距離は50mまでしかなく、速さに特化したこの種目はまさに水中競技最速といえます。現在の50mの世界記録は13.70で、これは競泳・自由形の約1.5倍というすさまじいスピードです。
       </p>
+      <a class="button style-elem__btm" href="#">
+        <div class="button__text">Youtube</div>
+        <i class="fas fa-arrow-right button__arrow"></i>
+      </a>
     </div>
-    </div>
-
-    <div class="cp_actab">
-    <input id="cp_tabfour013" type="checkbox" name="tabs">
-    <label for="cp_tabfour013">地方でもフィンスイミングはできる？</label>
-    <div class="cp_actab-content">
-      <p>できます。JFSAは地方の体験希望者が体験しやすいよう、お住まいの地域のクラブチームへの
-        橋渡しの役割も担っています。詳しくはTEAMをご覧ください。
+    <div class="style-elem">
+      <img src="{% static 'app/img/trial.png' %}" class="style-elem__img" alt="img">
+      <div class="style-elem-name">
+        <p class="style-elem-name__en">AP</p>
+        <p class="style-elem-name__ja">アプニア</p>
+      </div>
+      <p class="style-elem__text">
+        モノフィン*のみを装着し、水中を無呼吸で泳ぎ切る種目。距離は50mまでしかなく、速さに特化したこの種目はまさに水中競技最速といえます。現在の50mの世界記録は13.70で、これは競泳・自由形の約1.5倍というすさまじいスピードです。
       </p>
+      <a class="button style-elem__btm" href="#">
+        <div class="button__text">Youtube</div>
+        <i class="fas fa-arrow-right button__arrow"></i>
+      </a>
     </div>
-    </div>
-
-    <div class="cp_actab">
-    <input id="cp_tabfour014" type="checkbox" name="tabs">
-    <label for="cp_tabfour014">地方でもフィンスイミングはできる？</label>
-    <div class="cp_actab-content">
-      <p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
-      </p>
-    </div>
-    </div>
-
-    <div class="cp_actab">
-    <input id="cp_tabfour015" type="checkbox" name="tabs">
-    <label for="cp_tabfour015">地方でもフィンスイミングはできる？</label>
-    <div class="cp_actab-content">
-      <p>お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示されます。
-        お試しの文章です。ここに回答が表示されます。お試しの文章です。ここに回答が表示され
-      </p>
-    </div>
-    </div>
-
   </div>
-</div>
-{% endblock　%}
+</section>
+
+<section class="tool">
+  <div class="block-name">
+    <p class="block-name__en">Tool</p>
+    <p class="block-name__ja">フインスイミングで使う道具</p>
+    <div class="block-name__bar"></div>
+  </div>
+  <div class="tool-block">
+    <div class="tool-elem">
+      <img src="{% static 'app/img/trial.png' %}" class="tool-elem__img" alt="img">
+      <p class="tool-elem__name">モノフィン</p>
+      <p class="tool-elem__size">横幅：76cm　奥行き：76cm　高さ：15cm</p>
+      <p class="tool-elem__weight">重さ：4~5kg</p>
+      <p class="tool-elem__mtrl">素材：ラバー / カーボン / FRP</p>
+      <p class="tool-elem__detail">イルカの尾びれのような１枚の大きなフィン。両足で履いてドルフィンキックで進みます。その大きさと重さによって爆発的な推進力を生みだす反面、使いこなすには高度な技術が要求されます。北欧製のモノフィンが国内でもシェアを占め、フルオーダーメイドで作られます。</p>
+    </div>
+    <div class="tool-elem">
+      <img src="{% static 'app/img/trial.png' %}" class="tool-elem__img" alt="img">
+      <p class="tool-elem__name">モノフィン</p>
+      <p class="tool-elem__size">横幅：76cm　奥行き：76cm　高さ：15cm</p>
+      <p class="tool-elem__weight">重さ：4~5kg</p>
+      <p class="tool-elem__mtrl">素材：ラバー / カーボン / FRP</p>
+      <p class="tool-elem__detail">イルカの尾びれのような１枚の大きなフィン。両足で履いてドルフィンキックで進みます。その大きさと重さによって爆発的な推進力を生みだす反面、使いこなすには高度な技術が要求されます。北欧製のモノフィンが国内でもシェアを占め、フルオーダーメイドで作られます。</p>
+    </div>
+    <div class="tool-elem">
+      <img src="{% static 'app/img/trial.png' %}" class="tool-elem__img" alt="img">
+      <p class="tool-elem__name">モノフィン</p>
+      <p class="tool-elem__size">横幅：76cm　奥行き：76cm　高さ：15cm</p>
+      <p class="tool-elem__weight">重さ：4~5kg</p>
+      <p class="tool-elem__mtrl">素材：ラバー / カーボン / FRP</p>
+      <p class="tool-elem__detail">イルカの尾びれのような１枚の大きなフィン。両足で履いてドルフィンキックで進みます。その大きさと重さによって爆発的な推進力を生みだす反面、使いこなすには高度な技術が要求されます。北欧製のモノフィンが国内でもシェアを占め、フルオーダーメイドで作られます。</p>
+    </div>
+  </div>
+</section>
+
+<section class="fin-q-a">
+  <div class="block-name">
+    <p class="block-name__en">Finswimming Q&A</p>
+    <p class="block-name__ja">フィンスイミングに関するQ&A</p>
+    <div class="block-name__bar"></div>
+  </div>
+  <div class="q-a-block">
+      <div class="q-a-list">
+        <div class="q-a-list-question">
+          <p class="q-a-list-question__q">Q.</p>
+          <p class="q-a-list-question__p">道具はどこで購入できますか？</p>
+        </div>
+        <div class="q-a-list-answer">
+          <p class="q-a-list-answer__a">A.</p>
+          <p class="q-a-list-answer__p">
+            道具は海外の業者にオーダーメイドで注文します。送料を含めるとかなり高額になるため、各チームでまとめて取り寄せます。道具が購入したい場合はお気軽にご相談ください。
+          </p>
+        </div>
+      </div>
+    <div class="q-a-list">
+      <div class="q-a-list-question">
+        <p class="q-a-list-question__q">Q.</p>
+        <p class="q-a-list-question__p">初期費用はどのくらいですか？</p>
+      </div>
+      <div class="q-a-list-answer">
+        <p class="q-a-list-answer__a">A.</p>
+        <p class="q-a-list-answer__p">道具については、ビーフィンが約1万円、シュノーケルが約3,000円、モノフィンが約8万円となっております。学生練習会では貸出用フィンもあり、サイズ等を確認することができます。
+        </p>
+      </div>
+    </div>
+    <div class="q-a-list">
+      <div class="q-a-list-question">
+        <p class="q-a-list-question__q">Q.</p>
+        <p class="q-a-list-question__p">フィンスイミングをどこで体験できますか？</p>
+      </div>
+      <div class="q-a-list-answer">
+        <p class="q-a-list-answer__a">A.</p>
+        <p class="q-a-list-answer__p">
+          JFSAではフィンスイミング体験会を行っております。詳しくは体験会のページをご覧ください。また各クラブチームでも体験をすることができます。ご質問等あればお気軽にご連絡ください。
+        </p>
+      </div>
+      <a class="button q-a-list__btn" href="#">
+        <div class="button__text">Trial page</div>
+        <i class="fas fa-arrow-right button__arrow"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+  {% endblock %}

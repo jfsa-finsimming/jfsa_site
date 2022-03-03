@@ -10,7 +10,7 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 .block-name__en { font-family: 'Didact Gothic', sans-serif; font-size: 60px; }
 
-@media screen and (max-width: 899px) { .block-name__en { font-size: 6.6vw; } }
+@media screen and (max-width: 899px) { .block-name__en { font-size: 2rem; } }
 
 .block-name__ja { margin-bottom: 16px; }
 
@@ -132,15 +132,13 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 .page-topimg__cover { width: 100%; height: 100%; background-color: #F6F6F6; opacity: 0.5; position: absolute; top: 0; }
 
-.page-topimg__en { font-family: 'Didact Gothic', sans-serif; font-size: 96px; position: absolute; top: 40%; }
+.page-topimg__en { font-family: 'Didact Gothic', sans-serif; font-size: 4rem; position: absolute; top: 40%; }
 
-@media screen and (max-width: 899px) { .page-topimg__en { top: 30%; } }
+@media screen and (max-width: 549px) { .page-topimg__en { top: 25vw; font-size: 3rem; } }
 
-@media screen and (max-width: 549px) { .page-topimg__en { font-size: 14vw; top: 25vw; } }
+.page-topimg__ja { font-size: 1.4rem; position: absolute; top: 68%; }
 
-.page-topimg__ja { font-size: 32px; position: absolute; top: 68%; }
-
-@media screen and (max-width: 549px) { .page-topimg__ja { font-size: 5.8vw; top: 50vw; } }
+@media screen and (max-width: 549px) { .page-topimg__ja { top: 50vw; } }
 
 .page-topimg__bar { width: 100%; height: 4px; background-color: #04111C; }
 
@@ -184,7 +182,7 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 @media screen and (max-width: 899px) { .pagination { column-gap: 4%; } }
 
-.pagination__first, .pagination__last, .pagination__next, .pagination__pre { font-size: 28px; opacity: 0.5; }
+.pagination__first, .pagination__last, .pagination__next, .pagination__pre { font-size: 1.4rem; opacity: 0.5; }
 
 .pagination__num { font-weight: 700; align-self: center; opacity: 0.5; }
 
@@ -224,25 +222,27 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 @media screen and (max-width: 899px) { .q-a-block { margin: 0 2% 0 2%; } }
 
-.calendar-exp { display: flex; flex-wrap: wrap; align-items: center; width: 88px; }
+.calendar-exp { display: flex; flex-wrap: wrap; align-items: center; width: 6rem; }
+
+@media screen and (max-width: 899px) { .calendar-exp { width: 7rem; } }
 
 .calendar-exp__mark { margin-right: 24px; }
 
 .calendar, .calendar__falday, .calendar__truday, .calendar__week, .calendar__month, .calendar__block { font-family: 'Didact Gothic', sans-serif; text-align: center; width: 640px; }
 
-@media screen and (max-width: 639px) { .calendar, .calendar__falday, .calendar__truday, .calendar__week, .calendar__month, .calendar__block { width: 96%; } }
+@media screen and (max-width: 639px) { .calendar, .calendar__falday, .calendar__truday, .calendar__week, .calendar__month, .calendar__block { width: 80%; } }
 
-.calendar__block { width: 560px; height: 420px; margin: 0 auto; border-top: solid  4px; border-bottom: solid 4px; }
+.calendar__block { width: 560px; height: 420px; margin: 0 auto; border-top: solid  2px; border-bottom: solid 2px; }
 
-@media screen and (max-width: 580px) { .calendar__block { width: 96%; height: 120vw; } }
+@media screen and (max-width: 639px) { .calendar__block { width: 100%; height: 100vw; } }
 
-.calendar__month { font-size: 40px; width: auto; vertical-align: top; }
+.calendar__month { font-size: 1.6rem; width: auto; vertical-align: top; }
 
-.calendar__week { font-size: 18px; color: #646464; width: auto; vertical-align: top; padding: 16px 0 16px 0; }
+.calendar__week { color: #646464; width: auto; vertical-align: top; padding: 16px 0 16px 0; }
 
-.calendar__truday { font-size: 18px; width: auto; vertical-align: top; }
+.calendar__truday { width: auto; vertical-align: top; }
 
-.calendar__falday { font-size: 18px; color: #8e8e8e; width: auto; vertical-align: top; }
+.calendar__falday { color: #8e8e8e; width: auto; vertical-align: top; }
 
 .page-transition { display: flex; flex-wrap: wrap; width: 468px; align-items: center; justify-content: space-between; margin: 40px 0 -16px 0; }
 
@@ -254,7 +254,7 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 @media screen and (max-width: 499px) { .page-transition__btn { margin-left: auto; } }
 
-.page-transition__p { margin-bottom: 16px; width: 248px; }
+.page-transition__p { margin-bottom: 16px; width: 16rem; }
 
 @media screen and (min-width: 900px) and (max-width: 1079px) { .page-transition__p { margin-bottom: 4px; } }
 

@@ -93,10 +93,10 @@ MDEDITOR_CONFIGS = {
     'default': {
         'language': 'en',
         'toolbar': ["undo", "redo", "|",
-                    "bold", "del", "italic", "quote", "|",
+                    "bold", "del", "italic", "|",
                     "h1", "h2", "h3", "|",
-                    "list-ul", "list-ol", "hr", "|",
-                    "link", "reference-link", "image", "code", "code-block", "table", "datetime", "|",
+                    "list-ul", "hr", "|",
+                    "link",  "image", "|",
                     "||", "preview", "watch", "fullscreen"],
         'lineWrapping': True
     }
