@@ -27,8 +27,8 @@
     font-size: 4rem;
     position: absolute;top: 40%;
     @media screen and (max-width:549px) {
-      top: 25vw;
-      font-size: 3rem;
+      top: 30vw;
+      font-size: 2.4rem;
     }
   }
   &__ja{
@@ -36,11 +36,15 @@
     position: absolute; top:68%;
     @media screen and (max-width:549px) {
       top: 50vw;
+      font-size: 1.2rem;
     }
   }
   &__bar{
     width: 100%;
     height: 4px;
     background-color: #04111C;
+    @media screen and (max-width:899px) {
+      height: 2px;
+    }
   }
 }

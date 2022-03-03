@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/style.scss' %}">
   <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/page/top/style.scss' %}">
+  <link rel="stylesheet" type="text/css" href="{% sass_src 'app/scss/page/news/style.scss' %}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="{% static 'app/js/navi.js' %}"></script>
   <script src="{% static 'app/js/select.js' %}"></script>
@@ -203,24 +204,24 @@
     <p class="block-name__ja">新着ニュース</p>
     <div class="block-name__bar"></div>
   </div>
-  <div class="news-block">
-    {% for news in news_lists %}
-      <a class="news-list" href="{{ news.get_absolute_url }}">
-        <p class="news-list__date">{{news.published_at|date:"Y.m.d"}}</p>
-        {% for tag in news.tags.all %}
-          {% if tag.name == 'trial' %}
-            <i class="fas fa-circle circle-mark news-list__mark"></i>
-          {% elif tag.name == 'race' %}
-            <i class="fas fa-circle circle-mark--train news-list__mark"></i>
-          {% elif tag.name == 'training' %}
-            <i class="fas fa-circle circle-mark--race news-list__mark"></i>
-          {% elif tag.name == 'none' %}
-            <div class="news-list__no-mark"></div>
-          {% endif %}
-        {% endfor %}
-        <p class="news-list__title">{{news.title}}</p>
-        <div class="news-list__thumnail"><img class="news-list__thumnail" src="{{news.thumnail.url}}"></div>
-      </a>
+  <div class="news_list top-news">
+    {% for news_post in news_posts %}
+    <a class="news-elem" href="{{ news_post.get_absolute_url }}">
+      <p class="news-elem__date">{{news_post.published_at|date:"Y.m.d"}}</p>
+      <div class="news-elem-mark">
+      {% for tag in news_post.tags.all %}
+        {% if tag.name == 'trial' %}
+        <div class="fas fa-circle news-elem-mark__elem circle-mark"></div>
+        {% elif tag.name == 'race' %}
+        <div class="fas fa-circle news-elem-mark__elem circle-mark--race"></div>
+        {% elif tag.name == 'training' %}
+        <div class="fas fa-circle news-elem-mark__elem circle-mark--train"></div>
+        {% endif %}
+      {% endfor %}
+      </div>
+      <p class="news-elem__title">{{news_post.title}}</p>
+      <img class="news-elem__thumnail" src="{{news_post.thumnail.url}}">
+    </a>
     {% endfor %}
   </div>
 </section>

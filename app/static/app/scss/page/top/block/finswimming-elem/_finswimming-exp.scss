@@ -11,10 +11,7 @@
   }
   &__en{
     font-family: 'Didact Gothic', sans-serif;
-    font-size: 48px;
-    @media screen and (max-width:549px){
-      font-size: 40px;
-    }
+    font-size: 2rem;
   }
   &__ja{
     width: 320px;

@@ -11,7 +11,7 @@
     width: 96%;
   }
   &__upbar{
-    width: 4px;
+    width: 2px;
     height: 60px;
     background-color: #04111C;
     @media screen and (max-width:1334px) {
@@ -22,7 +22,7 @@
     @extend .trial-info-elem-left__upbar;
     @media screen and (max-width:1334px) {
       width: 40px;
-      height: 4px;
+      height: 2px;
       display: block;
     }
     @media screen and (max-width:440px) {
