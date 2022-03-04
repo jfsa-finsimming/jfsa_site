@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 1199px) { .forstudent-block-left { display: none; } }
 
-.forstudent-block-left__upbar, .forstudent-block-left__downbar { width: 4px; height: 60px; background-color: #04111C; }
+.forstudent-block-left__upbar, .forstudent-block-left__downbar { width: 2px; height: 60px; background-color: #04111C; }
 
 .forstudent-block-left__downbar { margin-top: 140px; }
 
@@ -72,23 +72,11 @@
 
 @media screen and (max-width: 899px) { .forstudent-block { width: 96%; height: 40vw; } }
 
-.forstudent-block__img { width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 2; }
+.forstudent-block__img { width: 100%; height: 100%; object-fit: cover; vertical-align: top; z-index: 2; }
 
 .forstudent-block__cover { width: 100%; height: 100%; background-color: #F6F6F6; opacity: 0.5; transition: 0.6s; position: absolute; top: 0; z-index: 3; }
 
 .forstudent-block:hover .forstudent-block__cover { opacity: 1; background-color: #e2e2e2; }
-
-.forstudent-block__icon { font-size: 60px; position: absolute; top: 12%; z-index: 4; }
-
-@media screen and (min-width: 900px) and (max-width: 1199px) { .forstudent-block__icon { font-size: 5vw; } }
-
-@media screen and (max-width: 899px) { .forstudent-block__icon { font-size: 12vw; } }
-
-.forstudent-block__en { font-size: 40px; font-family: 'Anton', sans-serif; position: absolute; top: 43%; z-index: 4; }
-
-@media screen and (min-width: 900px) and (max-width: 1199px) { .forstudent-block__en { font-size: 3.3vw; } }
-
-@media screen and (max-width: 899px) { .forstudent-block__en { font-size: 8vw; } }
 
 .forstudent-block__ja { font-size: 1.4rem; position: absolute; top: 50%; z-index: 4; color: #04111C; }
 
@@ -96,9 +84,7 @@
 
 @media screen and (max-width: 899px) { .forstudent-block__ja { color: #04111C; } }
 
-.forstudent-block__bar { width: 100%; height: 4px; background-color: #04111C; }
-
-@media screen and (max-width: 899px) { .forstudent-block__bar { height: 2px; } }
+.forstudent-block__bar { width: 100%; height: 2px; background-color: #04111C; }
 
 .forstudent { padding: 100px 0 100px 0; }
 
