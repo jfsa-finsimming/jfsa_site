@@ -1,115 +1,22 @@
 {% extends 'app/page-layout.html' %}
 {% load static %}
+{% load sass_tags %}
 
 
-{% block title %}TRAINIG STORY{% endblock %}
-{% block css %}{% static 'app/css/training-story.css' %}{% endblock %}
+{% block title %}Training Stories{% endblock %}
+{% block a %}{% sass_src 'app/scss/page/training_story/style.scss' %}{% endblock %}
 
 
-{% block page_top_img %}{% static 'app/img/trial1.jpg' %}{% endblock %}
-{% block page_title %}TRAINIG STORY{% endblock %}
-{% block page_minititle %}学生フィンスイマーの練習風景を見てみる{% endblock %}
+{% block page_title %}Training Stories{% endblock %}
+{% block page_minititle %}学生フィンスイマーの生活{% endblock %}
 
 
 {% block body_detail %}
-<div class="block_space"></div>
-<div class="trial_description">
-  <img src="{% static 'app/img/trial2.png' %}" class="trial_img1">
-  <div class="description1">
-    <div class="description_cover"></div>
-    <div class="triangle_upper_right"></div>
-    <div class="triangle_lower_left"></div>
-    <p class="description_title">
-      題名をここに入力
-    </p>
-    <p class="description_text">
-      お試しの文章が入ってますが、
-      今後トレーニングに関する文章に変わる予定でえす。
-      お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
-      お試しの文章が入ってますが、今後トレーニングに関する文章に変わる予定でえす。
-      今気づいたけど結構な文章量入ります。ここまででも約140文字。
-    </p>
-  </div>
+
+<div class="not-yet">
+  現在インタビュー記事を作成しております。
+  <br>閲覧できるまで少々お待ちください。
 </div>
-<div class="block_space"></div>
-<div class="detail_bar">
-  <div class="detail_bar1"></div>
-  <div class="detail_bar2"></div>
-  <div class="detail_bar3"></div>
-</div>
-<div class="block_space"></div>
-<div class="story_box">
-    <div class="box1">
-      <img src="{% static 'app/img/Tstory1.png' %}" class="img-Tstory1">
-      <img src="{% static 'app/img/Tstory1-2.png' %}" class="img-Tstory1-2">
-      <div class="cover2"></div>
-      <div class="triangle3">
-        <p class="tri-text3">NAOKI ISHIMATSU</p>
-        <p class="tri-text4">RIKKYO UNIV.</p>
-        <p class="tri-text5">2019年5月、フィンスイミング日本選手権
-          を観戦した私は、<br>『あんな風にカッコよく泳いでみたい！』<br>
-          そう考えてフィンスイミングを<br>始めました。<br><br>
-          現在は学生練習会を拠点に練習していて、
-          着実に実力を伸ばせています。<br>学生練習会は同年代トップレベルの
-          選手が多数参加していて、日々刺激を受けながら練習できるとても
-          良い環境です。<br><br>
-          『インカレや日本選手権で結果を出す！』この目標が達成できるように
-          <br>努力していきます。</p>
-      <div class="triangle4"></div>
-      </div>
-    </div>
 
-    <div class="box2">
-      <img src="{% static 'app/img/Tstory2.png' %}" class="img-Tstory2">
-      <img src="{% static 'app/img/Tstory2-2.png' %}" class="img-Tstory2-2">
-      <div class="cover3"></div>
-      <div class="triangle5">
-        <p class="tri-text6">SUMIRE HOSOZAWA</p>
-        <p class="tri-text7">NIHON UNIV. / AQUA FIND</p>
-        <p class="tri-text8">AQUAFinDではチーム代表にメニューを作っていただき、
-        幅広い年代の方々と練習に取り組んでいます。<br>『私には何が足りないんだ』
-        <br>『どのように練習したら速くなれるだろうか』<br>ただ練習に取り組むだけ
-        でなく、質の高い練習を目指して取り組んでいます。<br><br>学生練習会にも
-        参加していて、チームとは違った環境の中で、同世代の選手に刺激をもらい切磋琢磨
-        しています。<br><br>大好きなフィンスイミングで、<br>いざ、世界へ</p>
-      <div class="triangle6"></div>
-      </div>
-    </div>
 
-    <div class="box3">
-      <img src="{% static 'app/img/Tstory3.png' %}" class="img-Tstory3">
-      <img src="{% static 'app/img/Tstory3-2.png' %}" class="img-Tstory3-2">
-      <div class="cover4"></div>
-      <div class="triangle7">
-        <p class="tri-text9">HAYATE FURUSE</p>
-        <p class="tri-text10">WASEDA UNIV.</p>
-        <p class="tri-text11">私は早稲田大学フィンスイミングチームSIXBEATで日々
-          練習に励んでいます。私たちのチ－ムにはコーチがいないため、<br>
-          『楽しく追い込む！』<br>ことができるように学生が工夫してメニューを作り
-          練習しています。<br><br>私個人としては、学生練習会や外部チームの練習
-          にも参加し、<br>日の丸を背負って戦うために心と体を追い込んでいます。
-          <br><br>フィンスイミングに出会わせてくれた<br>SIXBEATと、<br>支えて
-          方々への恩返しを</p>
-        <div class="triangle8"></div>
-      </div>
-    </div>
-
-    <div class="box4">
-      <img src="{% static 'app/img/Tstory4.png' %}" class="img-Tstory4">
-      <img src="{% static 'app/img/Tstory4-2.png' %}" class="img-Tstory4-2">
-      <div class="cover5"></div>
-      <div class="triangle9">
-        <p class="tri-text12">RENA KASAHARA</p>
-        <p class="tri-text13">NATIONAL COLLEGE OF NURSING /<br>
-                              ATHRA Racing team</p>
-        <p class="tri-text14">私はATHRA Racing teamに所属しながら、学生練習会にも
-          携わっています。私がフィンスイミングを始めた6年前とは異なり、今は同世代の
-          フィンスイマーがとても増えました。学生練習会では、<br><br>『私がフィンスイミングを
-          楽しみたい』<br>『日本代表になりたい』<br>『世界で戦いたい』<br><br>それぞれの
-          選手が目標を持って取り組んでいます。各々のスタイルに合わせた練習メニューを
-          作成しているので、誰でも参加しやすい練習会となっています。</p>
-      <div class="triangle10"></div>
-      </div>
-    </div>
-  </div>
 {% endblock %}

@@ -8,7 +8,3 @@ urlpatterns = [
     path('', include('app.urls')),
     path('markdownx/', include('markdownx.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-from app import views
-
-handler500 = views.my_customized_server_error
