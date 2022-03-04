@@ -17,7 +17,6 @@ urlpatterns = [
     path('training/story/', views.TrainingStoryView.as_view(), name='training_story'),
     path('race/', views.RaceView.as_view(), name='race'),
     path('race/jfsa/', views.RaceJfsaView.as_view(), name='race_jfsa'),
-    path('race/jfsa/', views.RaceOnlineView.as_view(), name='race_online'),
     path('news/', views.NewsView.as_view(), name='news'),
     path('news/<slug:slug>/', views.NewsDetailView.as_view(), name='news_detail'),
     path('about/', views.AboutView.as_view(), name='about'),
