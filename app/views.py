@@ -155,12 +155,6 @@ class RaceJfsaView(CommonTemplateView):
         context.update({'record':record,'results':results,'photos':photos})
         return context
 
-
-class RaceOnlineView(CommonTemplateView):
-    # 学生記録会のページを表示させるビュー
-    template_name = 'app/race-online.html'
-
-
 class NewsView(CommonListView):
     # Newsの一覧を表示させるビュー
     template_name = 'app/news-top.html'
