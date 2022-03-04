@@ -106,17 +106,17 @@
       <div class="schedule-exp__p">JFSAでは、フィンスイミングのイベント情報を全て掲載しています。どのイベントもどなたでも参加可能です。予定が合う日をチェックしてイベントに参加してみませんか？</div>
       <div class="page-transition">
         <div class="page-transition__p">フィンスイミングの体験会に参加</div>
-        <a class="button page-transition__btn" href="#">
+        <a class="button page-transition__btn" href="{% url 'trial' %}">
           <div class="button__text">Trial page</div>
           <i class="fas fa-arrow-right button__arrow"></i>
         </a>
         <div class="page-transition__p">JFSAが主催する練習会に参加</div>
-        <a class="button page-transition__btn" href="#">
+        <a class="button page-transition__btn" href="{% url 'training_jfsa' %}">
           <div class="button__text">Training page</div>
           <i class="fas fa-arrow-right button__arrow"></i>
         </a>
         <div class="page-transition__p">フィンスイミングの試合に参加</div>
-        <a class="button page-transition__btn" href="#">
+        <a class="button page-transition__btn" href="{% url 'race' %}">
           <div class="button__text">Race page</div>
           <i class="fas fa-arrow-right button__arrow"></i>
         </a>
@@ -133,13 +133,13 @@
   </div>
   <div class="footer-right">
     <div class="footer-menu">
-      <a class="footer-menu__list">ホーム</a>
-      <a class="footer-menu__list">体験をする</a>
-      <a class="footer-menu__list">チームを見る</a>
-      <a class="footer-menu__list">練習をする</a>
-      <a class="footer-menu__list">試合に出る</a>
-      <a class="footer-menu__list">ニュースを見る</a>
-      <a class="footer-menu__list">私たちについて</a>
+      <a class="footer-menu__list" href="{% url 'top' %}">ホーム</a>
+      <a class="footer-menu__list" href="{% url 'trial' %}">体験をする</a>
+      <a class="footer-menu__list" href="{% url 'team' %}">チームを見る</a>
+      <a class="footer-menu__list" href="{% url 'training' %}">練習をする</a>
+      <a class="footer-menu__list" href="{% url 'race' %}">試合に出る</a>
+      <a class="footer-menu__list" href="{% url 'news' %}">ニュースを見る</a>
+      <a class="footer-menu__list" href="{% url 'about' %}">私たちについて</a>
     </div>
     <div class="footer-sns">
       <i class="fab fa-line footer-sns__list"></i>

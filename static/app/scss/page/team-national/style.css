@@ -32,6 +32,8 @@
 
 .national-mem-block-box-elem__team { margin-top: 4px; }
 
+.national-mem-block-box-elem__race { width: 100%; overflow-wrap: break-word; word-break: break-word; }
+
 .national-q-a { padding: 100px 0 100px 0; }
 
 @media screen and (max-width: 899px) { .national-q-a { padding: 60px 0 60px 0; } }
