@@ -87,7 +87,7 @@
       <div class="finswimming-exp">
         <p class="finswimming-exp__en">Who is the<br>"FAST" swimmer?</p>
         <p class="finswimming-exp__ja">フィンという足ひれを使って、水中でタイムを競うスポーツ。50mを最速で、13秒で泳いでしまう。まだまだ伸び代がある世界、この世界で誰よりも速く泳いでみないか？</p>
-        <a class="button finswimming-exp__btn" href="#">
+        <a class="button finswimming-exp__btn" href="{% url 'about_finswimming' %}">
           <div class="button__text">View more</div>
           <i class="fas fa-arrow-right button__arrow"></i>
         </a>
@@ -107,22 +107,22 @@
         <div class="forstudent-block-left__downbar"></div>
       </div>
       <div class="forstudent-4block">
-        <a class="forstudent-block">
+        <a class="forstudent-block" href="{% url 'trial' %}">
           <img src="https://res.cloudinary.com/hzvuiry8d/image/upload/v1646374987/jfsa_site_main/iOS_%E3%81%AE%E7%94%BB%E5%83%8F_32_buub8d.png" class="forstudent-block__img">
           <div class="forstudent-block__cover"></div>
           <div class="forstudent-block__ja">フィンスイミングを体験する<br><div class="forstudent-block__bar"></div></div>
         </a>
-        <a class="forstudent-block">
+        <a class="forstudent-block" href="{% url 'team' %}">
           <img src="https://res.cloudinary.com/hzvuiry8d/image/upload/v1646360790/jfsa_site_main/team_fy1t9t.png" class="forstudent-block__img">
           <div class="forstudent-block__cover"></div>
           <div class="forstudent-block__ja">チーム情報を見る<br><div class="forstudent-block__bar"></div></div>
         </a>
-        <a class="forstudent-block">
+        <a class="forstudent-block" href="{% url 'training_jfsa' %}">
           <img src="https://res.cloudinary.com/hzvuiry8d/image/upload/v1646360790/jfsa_site_main/training_jyd7nh.jpg" class="forstudent-block__img">
           <div class="forstudent-block__cover"></div>
           <div class="forstudent-block__ja">学生練習会に参加する<br><div class="forstudent-block__bar"></div></div>
         </a>
-        <a class="forstudent-block">
+        <a class="forstudent-block" href="{% url 'race' %}">
           <img src="https://res.cloudinary.com/hzvuiry8d/image/upload/v1646374986/jfsa_site_main/iOS_%E3%81%AE%E7%94%BB%E5%83%8F_1_mnw0ne.png" class="forstudent-block__img">
           <div class="forstudent-block__cover"></div>
           <div class="forstudent-block__ja">大会情報を探す<br><div class="forstudent-block__bar"></div></div>
@@ -178,17 +178,17 @@
         <div class="schedule-exp__p">JFSAでは、フィンスイミングのイベント情報を全て掲載しています。どのイベントもどなたでも参加可能です。予定が合う日をチェックしてイベントに参加してみませんか？</div>
         <div class="page-transition">
           <div class="page-transition__p">フィンスイミングの体験会に参加</div>
-          <a class="button page-transition__btn" href="#">
+          <a class="button page-transition__btn" href="{% url 'trial' %}">
             <div class="button__text">Trial page</div>
             <i class="fas fa-arrow-right button__arrow"></i>
           </a>
           <div class="page-transition__p">JFSAが主催する練習会に参加</div>
-          <a class="button page-transition__btn" href="#">
+          <a class="button page-transition__btn" href="{% url 'training_jfsa' %}">
             <div class="button__text">Training page</div>
             <i class="fas fa-arrow-right button__arrow"></i>
           </a>
           <div class="page-transition__p">フィンスイミングの試合に参加</div>
-          <a class="button page-transition__btn" href="#">
+          <a class="button page-transition__btn" href="{% url 'race' %}">
             <div class="button__text">Race page</div>
             <i class="fas fa-arrow-right button__arrow"></i>
           </a>
@@ -233,13 +233,13 @@
     </div>
     <div class="footer-right">
       <div class="footer-menu">
-        <a class="footer-menu__list">ホーム</a>
-        <a class="footer-menu__list">体験をする</a>
-        <a class="footer-menu__list">チームを見る</a>
-        <a class="footer-menu__list">練習をする</a>
-        <a class="footer-menu__list">試合に出る</a>
-        <a class="footer-menu__list">ニュースを見る</a>
-        <a class="footer-menu__list">私たちについて</a>
+        <a class="footer-menu__list" href="{% url 'top' %}">ホーム</a>
+        <a class="footer-menu__list" href="{% url 'trial' %}">体験をする</a>
+        <a class="footer-menu__list" href="{% url 'team' %}">チームを見る</a>
+        <a class="footer-menu__list" href="{% url 'training' %}">練習をする</a>
+        <a class="footer-menu__list" href="{% url 'race' %}">試合に出る</a>
+        <a class="footer-menu__list" href="{% url 'news' %}">ニュースを見る</a>
+        <a class="footer-menu__list" href="{% url 'about' %}">私たちについて</a>
       </div>
       <div class="footer-sns">
         <i class="fab fa-line footer-sns__list"></i>

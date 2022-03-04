@@ -65,6 +65,11 @@
   &__team{
     margin-top: 4px;
   }
+  &__race{
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
 }
 
 
