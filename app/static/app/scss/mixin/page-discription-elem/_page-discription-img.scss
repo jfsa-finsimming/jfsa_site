@@ -4,13 +4,13 @@
   position: relative;right: 0;
   @media screen and (max-width: 899px){
     width: 100%;
-    height: 60%;
+    height: 50%;
   }
   &__img{
+    width: 100%;
     object-fit: cover;
     @media screen and (max-width: 899px){
-      width: 100%;
-      height: 60%;
+      height: 48vw;
     }
   }
   &__cover{

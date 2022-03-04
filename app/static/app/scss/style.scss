@@ -3,7 +3,6 @@
 @import "./mixin/block-name";
 @import "./mixin/button";
 @import "./mixin/circle-mark";
-@import "./mixin/news";
 @import "./mixin/page-discription";
 @import "./mixin/page-topimg";
 @import "./mixin/page-trans";
@@ -14,76 +13,3 @@
 @import "./module/footer";
 @import "./module/header";
 @import "./module/navi";
-
-
-.select{
-  position: relative;
-  display: block;
-  width: 100%;
-  max-width: 120px;
-  vertical-align: middle;
-  text-align: left;
-  user-select: none;
-  font-weight: bold;
-
-  .placeholder{
-    position: relative;
-    display: block;
-    z-index: 1;
-    padding: 1em;
-    border-radius: 2px;
-    cursor: pointer;
-    font-family: 'Didact Gothic', sans-serif;
-
-    &:hover{
-      color: darken(#393d41,2%);
-    }
-
-    &:after{
-      position: absolute;
-      right: 1em;
-      top: 54%;
-      transform: translateY(-50%);
-      font-family: 'FontAwesome';
-      content: '\f078';
-      z-index: 10;
-    }
-  }
-
-  &.is-open{
-    .placeholder:after{
-      content: '\f077';
-    }
-    ul{
-      display: block;
-    }
-  }
-  ul{
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    overflow-y: auto;
-    width: 100%;
-    border-radius: 2px;
-    top: 100%;
-    left: 0;
-    list-style: none;
-    margin: 5px 0 0 0;
-    padding: 0;
-    z-index: 100;
-    max-height: 120px;
-
-    li{
-      display: block;
-      text-align: left;
-      padding: 0.8em 1em 0.8em 1em;
-      color: #999;
-      cursor: pointer;
-
-      &:hover{
-        background: #4ebbf0;
-        color: #fff;
-      }
-    }
-  }
-}
