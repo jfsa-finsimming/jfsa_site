@@ -16,9 +16,7 @@ body { background-color: #F6F6F6; overflow-y: scroll; }
 
 @media screen and (max-width: 899px) { .block-name__ja { margin-bottom: 2vw; } }
 
-.block-name__bar { width: 60px; height: 4px; background-color: #04111C; }
-
-@media screen and (max-width: 899px) { .block-name__bar { height: 2px; } }
+.block-name__bar { width: 60px; height: 2px; background-color: #04111C; }
 
 .button { display: flex; flex-direction: row; justify-content: center; align-items: center; width: 200px; height: 40px; background-color: #1F3741; border-radius: 24px; text-decoration: none; }
 

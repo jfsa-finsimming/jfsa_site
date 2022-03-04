@@ -18,10 +18,7 @@
   }
   &__bar{
     width: 60px;
-    height: 4px;
+    height: 2px;
     background-color: #04111C;
-    @media screen and (max-width:899px) {
-      height: 2px;
-    }
   }
 }
